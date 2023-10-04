@@ -30,7 +30,7 @@ const NavBar = (props: Props) => {
   }
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ mt: '80px' }}>
       <AppBar handleDrawerToggle={handleDrawerToggle} navItems={navItems} />
       <MobileDrawer
         handleDrawerToggle={handleDrawerToggle}

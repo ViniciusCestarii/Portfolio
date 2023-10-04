@@ -26,14 +26,32 @@ const ElevationScroll = ({ children }: ElevationScrollProps) => {
 
   return cloneElement(children, {
     elevation: trigger ? 4 : 0,
+    style: !trigger && { opacity: 0.9 },
   })
 }
 
 const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
   return (
     <ElevationScroll>
-      <MuiAppBar component="nav">
-        <Toolbar sx={{ position: 'relative', py: 2 }}>
+      <MuiAppBar
+        component="nav"
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          transitionProperty: 'all',
+          transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          transitionDuration: '400ms',
+        }}
+      >
+        <Toolbar
+          sx={{
+            position: 'relative',
+            py: 2,
+            height: 80,
+            maxWidth: '1280px',
+            width: '100%',
+          }}
+        >
           <IconButton
             color="inherit"
             onClick={handleDrawerToggle}
