@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes background-scroll {
+  0% {
+    background-position: 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 2000px 2000px, 0px 0px;
+  }
+}
+
+.bgInfiniteScroll {
+  animation: background-scroll 60s linear infinite;
+}
