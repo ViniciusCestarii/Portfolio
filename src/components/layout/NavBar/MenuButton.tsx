@@ -12,11 +12,10 @@ const MenuButton = ({ handleDrawerToggle }: MenuButtonProps) => {
       <IconButton
         onClick={handleDrawerToggle}
         sx={{
-          '&.MuiButtonBase-root:hover': {
+          '&.MuiButtonBase-root': {
             bgcolor: 'white',
           },
         }}
-        className="bg-white"
       >
         <Menu color="primary" />
       </IconButton>

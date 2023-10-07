@@ -11,11 +11,10 @@ const ToggleColorButton = () => {
       <IconButton
         onClick={toggleTheme}
         sx={{
-          '&.MuiButtonBase-root:hover': {
+          '&.MuiButtonBase-root': {
             bgcolor: 'white',
           },
         }}
-        className="bg-white"
       >
         <Palette color="primary" />
       </IconButton>
