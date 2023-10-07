@@ -42,7 +42,7 @@ export default function Home() {
                   border: '3px solid',
                   borderColor: theme.palette.primary.dark,
                 }}
-                className="w-full h-full max-w-[240px] max-h-60 mx-auto my-6 sm:max-w-max sm:max-h-max sm:mx-0 sm:my-0 sm:absolute sm:-right-16 sm:top-[30%] lg:top-[25%] sm:w-72 sm:h-72 lg:w-96 lg:h-96 z-10 drop-shadow-lg rounded-full"
+                className="w-auto h-auto mx-auto mt-4 mb-10 sm:max-w-max sm:max-h-max sm:mx-0 sm:my-0 sm:absolute sm:-right-16 sm:top-[30%] lg:top-[25%] sm:w-72 sm:h-72 lg:w-96 lg:h-96 z-10 drop-shadow-lg rounded-full"
                 src={profileData.avatar_url}
                 width={576}
                 height={576}
@@ -59,7 +59,7 @@ export default function Home() {
               }}
               className="opacity-90 h-full w-full bg-fixed"
             />
-            <Box className="top-10- left-0 absolute backdrop-grayscale w-full pl-4 sm:pl-32 py-6 bg-black/75">
+            <Box className="sm:top-[30%] lg:top-[25%] left-0 absolute backdrop-grayscale w-full pl-4 sm:pl-32 py-6 bg-black/75">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={imgCodeUrl} alt="Typing SVG" />
             </Box>
