@@ -12,28 +12,24 @@ import ListItemText from '@mui/material/ListItemText'
 import Close from 'mdi-material-ui/Close'
 import Logo from '../Logo'
 import NavItem from '@/types/layout/NavItem'
+import { useRouter } from 'next/navigation'
 
 interface MobileDrawerProps {
   mobileOpen: boolean
   handleDrawerToggle: () => void
-  container?: Element
-  window?: () => Window
   navItems: NavItem[]
 }
 
 const MobileDrawer = ({
   handleDrawerToggle,
   mobileOpen,
-  window,
   navItems,
 }: MobileDrawerProps) => {
-  const container =
-    window !== undefined ? () => window().document.body : undefined
+  const router = useRouter()
 
   return (
     <nav>
       <Drawer
-        container={container}
         variant="temporary"
         open={mobileOpen}
         onClose={handleDrawerToggle}
@@ -60,7 +56,10 @@ const MobileDrawer = ({
           <List>
             {navItems.map((item) => (
               <ListItem key={item.url} disablePadding>
-                <ListItemButton sx={{ textAlign: 'center' }}>
+                <ListItemButton
+                  sx={{ textAlign: 'center' }}
+                  onClick={() => router.push(item.url)}
+                >
                   <ListItemText primary={item.name} />
                 </ListItemButton>
               </ListItem>

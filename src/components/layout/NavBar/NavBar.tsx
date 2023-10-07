@@ -6,10 +6,6 @@ import MobileDrawer from './MobileDrawer'
 import NavItem from '@/types/layout/NavItem'
 import AppBar from './AppBar'
 
-interface Props {
-  window?: () => Window
-}
-
 const navItems: NavItem[] = [
   {
     name: 'Home',
@@ -21,8 +17,7 @@ const navItems: NavItem[] = [
   },
 ]
 
-const NavBar = (props: Props) => {
-  const { window } = props
+const NavBar = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false)
 
   const handleDrawerToggle = () => {
@@ -35,7 +30,6 @@ const NavBar = (props: Props) => {
       <MobileDrawer
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}
-        window={window}
         navItems={navItems}
       />
     </Box>
