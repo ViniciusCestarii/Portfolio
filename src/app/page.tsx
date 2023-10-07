@@ -42,7 +42,7 @@ export default function Home() {
                   border: '3px solid',
                   borderColor: theme.palette.primary.dark,
                 }}
-                className="mx-auto my-4 sm:max-w-max sm:max-h-max sm:mx-0 sm:my-0 sm:absolute sm:-right-16 sm:top-[30%] lg:top-[25%] w-72 h-72 lg:w-96 lg:h-96 drop-shadow-lg rounded-full z-20 relative"
+                className="mx-auto my-4 w-auto h-full sm:max-w-max sm:max-h-max sm:mx-0 sm:my-0 sm:absolute sm:-right-16 sm:top-[30%] lg:top-[25%] sm:w-72 sm:h-72 lg:w-96 lg:h-96 drop-shadow-lg rounded-full z-20 relative"
                 src={profileData.avatar_url}
                 width={576}
                 height={576}
@@ -63,12 +63,12 @@ export default function Home() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={imgCodeUrl} alt="Typing SVG" />
             </Box>
-            <ChevronDown
-              fontSize="large"
-              color="primary"
+            <Box
               sx={{ transform: 'translate(-50%, -50%)' }}
-              className="absolute left-1/2 bottom-7 z-10 animate-bounce rounded-full bg-black/75"
-            />
+              className="absolute bottom-4 sm:bottom-7 z-10 animate-bounce rounded-full bg-black/75"
+            >
+              <ChevronDown fontSize="large" color="primary" />
+            </Box>
           </Box>
         </Box>
       </Box>
