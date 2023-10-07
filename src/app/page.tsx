@@ -42,7 +42,7 @@ export default function Home() {
                   border: '3px solid',
                   borderColor: theme.palette.primary.dark,
                 }}
-                className="w-auto h-auto mx-auto max-w-[240px] max-h- mt-4 mb-10 sm:max-w-max sm:max-h-max sm:mx-0 sm:my-0 sm:absolute sm:-right-16 sm:top-[30%] lg:top-[25%] sm:w-72 sm:h-72 lg:w-96 lg:h-96 z-10 drop-shadow-lg rounded-full"
+                className="mx-auto my-4 sm:max-w-max sm:max-h-max sm:mx-0 sm:my-0 sm:absolute sm:-right-16 sm:top-[30%] lg:top-[25%] w-72 h-72 lg:w-96 lg:h-96 drop-shadow-lg rounded-full z-20 relative"
                 src={profileData.avatar_url}
                 width={576}
                 height={576}
