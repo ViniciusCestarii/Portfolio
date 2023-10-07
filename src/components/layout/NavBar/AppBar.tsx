@@ -1,13 +1,13 @@
 import MuiAppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
-import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
-import Menu from 'mdi-material-ui/Menu'
 import Logo from '../Logo'
 import NavItem from '@/types/layout/NavItem'
 import RouterButton from '@/components/RouterButton'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 import { ReactElement, cloneElement } from 'react'
+import ToggleColorButton from './ToggleColorButton'
+import MenuButton from './MenuButton'
 
 interface MobileDrawerProps {
   handleDrawerToggle: () => void
@@ -44,6 +44,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
         }}
       >
         <Toolbar
+          color="primary"
           sx={{
             position: 'relative',
             py: 2,
@@ -52,13 +53,14 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
             width: '100%',
           }}
         >
-          <IconButton
-            color="inherit"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, position: 'absolute' }}
+          <Box sx={{ display: { sm: 'none' }, position: 'absolute' }}>
+            <MenuButton handleDrawerToggle={handleDrawerToggle} />
+          </Box>
+          <Box
+            sx={{ display: { sm: 'none' }, position: 'absolute', right: 16 }}
           >
-            <Menu />
-          </IconButton>
+            <ToggleColorButton />
+          </Box>
           <Box
             sx={{
               display: 'flex',
@@ -68,7 +70,10 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
           >
             <Logo />
           </Box>
-          <Box sx={{ display: { xs: 'none', sm: 'block' }, ml: 'auto' }}>
+          <Box
+            sx={{ display: { xs: 'none', sm: 'block' }, ml: 'auto' }}
+            className="space-x-2"
+          >
             {navItems.map((item) => (
               <RouterButton
                 key={item.url}
@@ -77,6 +82,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
                 contrastText
               />
             ))}
+            <ToggleColorButton />
           </Box>
         </Toolbar>
       </MuiAppBar>
