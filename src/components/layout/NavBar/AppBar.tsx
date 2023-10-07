@@ -53,11 +53,21 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
             width: '100%',
           }}
         >
-          <Box sx={{ display: { sm: 'none' }, position: 'absolute' }}>
+          <Box
+            sx={{
+              display: { sm: 'none' },
+              position: 'absolute',
+            }}
+          >
             <MenuButton handleDrawerToggle={handleDrawerToggle} />
           </Box>
           <Box
-            sx={{ display: { sm: 'none' }, position: 'absolute', right: 16 }}
+            sx={{
+              display: { sm: 'none' },
+              position: 'absolute',
+              right: 0,
+              transform: 'translate(-50%, -0%)',
+            }}
           >
             <ToggleColorButton />
           </Box>

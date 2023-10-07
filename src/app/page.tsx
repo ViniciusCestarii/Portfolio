@@ -66,6 +66,7 @@ export default function Home() {
             <ChevronDown
               fontSize="large"
               color="primary"
+              sx={{ transform: 'translate(-50%, -50%)' }}
               className="absolute left-1/2 bottom-7 z-10 animate-bounce rounded-full bg-black/75"
             />
           </Box>
