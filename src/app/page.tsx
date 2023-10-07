@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import Avatar from '@mui/material/Avatar'
 import useTheme from '@mui/material/styles/useTheme'
 import useGitHubProfile from '@/hooks/useGithubProfile'
+import ChevronDown from 'mdi-material-ui/ChevronDown'
 
 const username = 'ViniciusCestarii'
 
@@ -11,9 +12,9 @@ export default function Home() {
   const theme = useTheme()
   const { profileData, loading, error } = useGitHubProfile(username)
 
-  const imgCodeUrl = `https://readme-typing-svg.demolab.com?font=Fira+Code&duration=400&pause=0&color=${theme.palette.primary.main.substring(
+  const imgCodeUrl = `https://readme-typing-svg.demolab.com?font=Source+Code+Pro&duration=400&pause=0&color=${theme.palette.primary.main.substring(
     1,
-  )}&width=600&size=30&weight=500&height=400&repeat=false&multiline=true&lines=<p>Hello World!</p>;<p>I'm a Full Stack Developer</p>; ;<h1>@ViniciusCestarii</h1>; ;<p>Welcome to my portfolio!</p>`
+  )}&width=800&size=32&weight=500&height=500&repeat=false&multiline=true&lines=<p>Hello World!</p>;<p>I'm a Full Stack Developer</p>; ;<h1>@ViniciusCestarii</h1>; ;<p>Welcome to my portfolio!</p>; ; ; ; ;<footer>Scroll down for more!</footer>`
 
   return (
     <main>
@@ -22,7 +23,7 @@ export default function Home() {
           height: 'Calc(100vh - 80px)',
         }}
       >
-        <Box className="grid grid-cols-3 h-full">
+        <Box className="grid grid-cols-1 sm:grid-cols-3 h-full">
           <Box
             className="bgInfiniteScroll relative"
             sx={{
@@ -36,7 +37,7 @@ export default function Home() {
                   border: '3px solid',
                   borderColor: theme.palette.primary.dark,
                 }}
-                className="absolute -right-16 top-[25%] w-96 h-96 z-10"
+                className="absolute right-1/2 sm:-right-16 top-[25%] md:w-96 md:h-96 z-10 drop-shadow-lg"
                 src={profileData.avatar_url}
               ></Avatar>
             )}
@@ -52,6 +53,11 @@ export default function Home() {
             <Box className="top-10- left-0 absolute backdrop-grayscale w-full pl-32 py-6 bg-black/75">
               <img src={imgCodeUrl} alt="Typing SVG" />
             </Box>
+            <ChevronDown
+              fontSize="large"
+              color="primary"
+              className="absolute left-1/2 bottom-7 z-10 animate-bounce rounded-full bg-black/50"
+            />
           </Box>
         </Box>
       </Box>

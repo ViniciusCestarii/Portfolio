@@ -7,10 +7,10 @@
     background-position: 0px 0px, 0px 0px;
   }
   100% {
-    background-position: 2000px 2000px, 0px 0px;
+    background-position: 1500px 2000px, 0px 0px;
   }
 }
 
 .bgInfiniteScroll {
-  animation: background-scroll 60s linear infinite;
+  animation: background-scroll 90s linear infinite;
 }
