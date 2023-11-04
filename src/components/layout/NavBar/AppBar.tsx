@@ -8,6 +8,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger'
 import { ReactElement, cloneElement } from 'react'
 import ToggleColorButton from './ToggleColorButton'
 import MenuButton from './MenuButton'
+import { useTheme } from '@mui/material'
 
 interface MobileDrawerProps {
   handleDrawerToggle: () => void
@@ -18,85 +19,87 @@ interface ElevationScrollProps {
   children: ReactElement
 }
 
-const ElevationScroll = ({ children }: ElevationScrollProps) => {
-  const trigger = useScrollTrigger({
+const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
+  const theme = useTheme()
+
+  const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
   })
 
-  return cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-    style: !trigger && { opacity: 0.9 },
-  })
-}
-
-const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
   return (
-    <ElevationScroll>
-      <MuiAppBar
-        component="nav"
+    <MuiAppBar
+      component="nav"
+      color={scrollTrigger ? 'primary' : 'transparent'}
+      elevation={scrollTrigger ? 4 : 0}
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        transitionProperty: 'background-color, box-shadow',
+        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        transitionDuration: '400ms',
+      }}
+    >
+      <Toolbar
+        color="primary"
+        style={{
+          paddingLeft: scrollTrigger ? 30 : 0,
+          paddingRight: scrollTrigger ? 30 : 0,
+        }}
         sx={{
-          display: 'flex',
-          alignItems: 'center',
-          transitionProperty: 'all',
+          position: 'relative',
+          py: 2,
+          height: 80,
+          maxWidth: '1280px',
+          width: '100%',
+          transitionProperty: 'padding',
           transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-          transitionDuration: '400ms',
+          transitionDuration: '500ms',
         }}
       >
-        <Toolbar
-          color="primary"
+        <Box
           sx={{
-            position: 'relative',
-            py: 2,
-            height: 80,
-            maxWidth: '1280px',
-            width: '100%',
+            display: { sm: 'none' },
+            position: 'absolute',
           }}
         >
-          <Box
-            sx={{
-              display: { sm: 'none' },
-              position: 'absolute',
-            }}
-          >
-            <MenuButton handleDrawerToggle={handleDrawerToggle} />
-          </Box>
-          <Box
-            sx={{
-              display: { sm: 'none' },
-              position: 'absolute',
-              right: 0,
-              transform: 'translate(-50%, -0%)',
-            }}
-          >
-            <ToggleColorButton />
-          </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              width: { xs: '100%', sm: 'auto' },
-            }}
-          >
-            <Logo />
-          </Box>
-          <Box
-            sx={{ display: { xs: 'none', sm: 'block' }, ml: 'auto' }}
-            className="space-x-2"
-          >
-            {navItems.map((item) => (
-              <RouterButton
-                key={item.url}
-                name={item.name}
-                url={item.url}
-                contrastText
-              />
-            ))}
-            <ToggleColorButton />
-          </Box>
-        </Toolbar>
-      </MuiAppBar>
-    </ElevationScroll>
+          <MenuButton handleDrawerToggle={handleDrawerToggle} />
+        </Box>
+        <Box
+          sx={{
+            display: { sm: 'none' },
+            position: 'absolute',
+            right: 0,
+            transform: 'translate(-50%, -0%)',
+          }}
+        >
+          <ToggleColorButton />
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            width: { xs: '100%', sm: 'auto' },
+          }}
+        >
+          <Logo black={!scrollTrigger} />
+        </Box>
+        <Box
+          sx={{ display: { xs: 'none', sm: 'block' }, ml: 'auto' }}
+          className="space-x-2"
+        >
+          {navItems.map((item) => (
+            <RouterButton
+              key={item.url}
+              name={item.name}
+              url={item.url}
+              contrastText
+            />
+          ))}
+          <ToggleColorButton />
+        </Box>
+      </Toolbar>
+    </MuiAppBar>
   )
 }
 

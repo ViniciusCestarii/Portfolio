@@ -3,12 +3,14 @@ import Link from 'next/link'
 
 interface LogoProps {
   link?: boolean
+  black?: boolean
 }
 
-const Logo = ({ link }: LogoProps) => {
+const Logo = ({ link, black }: LogoProps) => {
+  const style = black ? '' : 'invert'
   return link ? (
     <Image
-      className="invert"
+      className={style}
       src={'/logo.svg'}
       height={48}
       width={48}
@@ -18,7 +20,7 @@ const Logo = ({ link }: LogoProps) => {
   ) : (
     <Link href="/">
       <Image
-        className="invert cursor-pointer"
+        className={style + ' cursor-pointer'}
         src={'/logo.svg'}
         height={48}
         width={48}
