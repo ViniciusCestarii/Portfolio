@@ -19,7 +19,7 @@ export default function Home() {
           sx={{
             position: 'relative',
             py: 4,
-            px: 8,
+            px: { xs: 4, sm: 8 },
             display: 'flex',
             flexDirection: 'column',
             flex: 1,
@@ -69,7 +69,7 @@ export default function Home() {
         component="div"
         sx={{
           position: 'absolute',
-          display: 'flex',
+          display: { xs: 'none', sm: 'flex' },
           flexDirection: 'column',
           right: '5%',
           top: '50%',
@@ -82,10 +82,10 @@ export default function Home() {
           color="black"
           variant="h2"
           sx={{
-            fontSize: { xs: '64px', xl: '96px' },
+            fontSize: { sm: '64px', xl: '96px' },
             fontStyle: 'italic',
             fontWeight: 'bold',
-            textAlign: { xs: 'end', sm: 'start' },
+            textAlign: { sm: 'end', sm: 'start' },
           }}
         >
           {'"Let the'}
@@ -94,10 +94,10 @@ export default function Home() {
           color="black"
           variant="h2"
           sx={{
-            fontSize: { xs: '64px', xl: '96px' },
+            fontSize: { sm: '64px', xl: '96px' },
             fontStyle: 'italic',
             fontWeight: 'bold',
-            textAlign: { xs: 'end', sm: 'start' },
+            textAlign: { sm: 'end', sm: 'start' },
           }}
         >
           {'colors flow"'}
