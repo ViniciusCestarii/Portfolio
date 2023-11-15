@@ -45,7 +45,7 @@ export default function Home() {
               <Typography
                 color="textPrimary"
                 variant="h1"
-                sx={{ fontSize: { xs: '64px', md: '96px' } }}
+                sx={{ fontSize: { xs: '64px', md: '96px' }, fontWeight: 500 }}
               >
                 Vinicius Cestari,
               </Typography>
@@ -54,7 +54,10 @@ export default function Home() {
               <Typography
                 color="textPrimary"
                 variant="h1"
-                sx={{ fontSize: { xs: '64px', xl: '96px' } }}
+                sx={{
+                  fontSize: { xs: '64px', xl: '96px' },
+                  fontWeight: 500,
+                }}
               >
                 Full-Stack Developer
               </Typography>
@@ -85,7 +88,7 @@ export default function Home() {
             fontSize: { sm: '64px', xl: '96px' },
             fontStyle: 'italic',
             fontWeight: 'bold',
-            textAlign: { sm: 'end', sm: 'start' },
+            textAlign: { sm: 'end', md: 'start' },
           }}
         >
           {'"Let the'}
@@ -97,7 +100,7 @@ export default function Home() {
             fontSize: { sm: '64px', xl: '96px' },
             fontStyle: 'italic',
             fontWeight: 'bold',
-            textAlign: { sm: 'end', sm: 'start' },
+            textAlign: { sm: 'end', md: 'start' },
           }}
         >
           {'colors flow"'}
