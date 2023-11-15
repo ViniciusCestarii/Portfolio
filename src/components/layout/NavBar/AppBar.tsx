@@ -5,23 +5,15 @@ import Logo from '../Logo'
 import NavItem from '@/types/layout/NavItem'
 import RouterButton from '@/components/RouterButton'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
-import { ReactElement, cloneElement } from 'react'
 import ToggleColorButton from './ToggleColorButton'
 import MenuButton from './MenuButton'
-import { useTheme } from '@mui/material'
 
 interface MobileDrawerProps {
   handleDrawerToggle: () => void
   navItems: NavItem[]
 }
 
-interface ElevationScrollProps {
-  children: ReactElement
-}
-
 const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
-  const theme = useTheme()
-
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -52,9 +44,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
           height: 80,
           maxWidth: '1280px',
           width: '100%',
-          transitionProperty: 'padding',
-          transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-          transitionDuration: '500ms',
+          transition: 'padding 500ms cubic-bezier(0.4, 0, 0.2, 1)',
         }}
       >
         <Box
@@ -69,8 +59,8 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
           sx={{
             display: { sm: 'none' },
             position: 'absolute',
-            right: 0,
-            transform: 'translate(-50%, -0%)',
+            right: scrollTrigger ? 30 : 0,
+            transition: 'right 500ms cubic-bezier(0.4, 0, 0.2, 1)',
           }}
         >
           <ToggleColorButton />
