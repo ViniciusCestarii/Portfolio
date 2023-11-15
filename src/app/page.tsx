@@ -47,7 +47,7 @@ export default function Home() {
                 variant="h1"
                 sx={{ fontSize: { xs: '64px', md: '96px' }, fontWeight: 500 }}
               >
-                Vinicius Cestari,
+                Vinicius Cestari
               </Typography>
             </Box>
             <Box component="div">
