@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Rainbow } from './Rainbow'
@@ -17,6 +18,14 @@ export default RainbowScene
 
 function Scene() {
   const ref = useRef()
-  useFrame((state, delta) => (ref.current.rotation.z += delta / 5))
-  return <Rainbow ref={ref} startRadius={0.2} endRadius={0.65} fade={0} />
+  useFrame(() => (ref.current.rotation.z = 0))
+  return (
+    <Rainbow
+      ref={ref}
+      startRadius={0.1}
+      endRadius={0.35}
+      fade={0.4}
+      position={[-8, 0, 0]}
+    />
+  )
 }

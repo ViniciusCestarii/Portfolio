@@ -2,7 +2,7 @@ import NavBar from '@/components/layout/NavBar/NavBar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { ThemeProvider } from '@/context/themeContext'
+import { ThemeProvider } from '@/context/ThemeContext'
 import dynamic from 'next/dynamic'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} style={{ backgroundColor: 'black' }}>
         <ThemeProvider>
           <MuiTheme>
             <NavBar />

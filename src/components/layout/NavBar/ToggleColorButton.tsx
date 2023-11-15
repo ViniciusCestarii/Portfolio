@@ -1,4 +1,4 @@
-import { useTheme } from '@/context/themeContext'
+import { useTheme } from '@/context/ThemeContext'
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 import Palette from 'mdi-material-ui/Palette'

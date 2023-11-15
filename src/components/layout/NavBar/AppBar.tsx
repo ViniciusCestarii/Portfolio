@@ -21,6 +21,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
 
   return (
     <MuiAppBar
+      enableColorOnDark
       component="nav"
       color={scrollTrigger ? 'primary' : 'transparent'}
       elevation={scrollTrigger ? 4 : 0}
@@ -35,8 +36,8 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
       <Toolbar
         color="primary"
         style={{
-          paddingLeft: scrollTrigger ? 30 : 0,
-          paddingRight: scrollTrigger ? 30 : 0,
+          paddingLeft: scrollTrigger ? 30 : 10,
+          paddingRight: scrollTrigger ? 30 : 10,
         }}
         sx={{
           position: 'relative',
@@ -48,33 +49,38 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
         }}
       >
         <Box
+          component="div"
           sx={{
             display: { sm: 'none' },
             position: 'absolute',
+            px: '0.5rem',
           }}
         >
           <MenuButton handleDrawerToggle={handleDrawerToggle} />
         </Box>
         <Box
+          component="div"
           sx={{
             display: { sm: 'none' },
             position: 'absolute',
-            right: scrollTrigger ? 30 : 0,
+            right: scrollTrigger ? 30 : '0.5rem',
             transition: 'right 500ms cubic-bezier(0.4, 0, 0.2, 1)',
           }}
         >
           <ToggleColorButton />
         </Box>
         <Box
+          component="div"
           sx={{
             display: 'flex',
             justifyContent: 'center',
             width: { xs: '100%', sm: 'auto' },
           }}
         >
-          <Logo black={!scrollTrigger} />
+          <Logo />
         </Box>
         <Box
+          component="div"
           sx={{ display: { xs: 'none', sm: 'block' }, ml: 'auto' }}
           className="space-x-2"
         >
@@ -83,7 +89,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
               key={item.url}
               name={item.name}
               url={item.url}
-              contrastText
+              style={{ color: 'white' }}
             />
           ))}
           <ToggleColorButton />

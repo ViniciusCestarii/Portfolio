@@ -1,15 +1,18 @@
-import Button from '@mui/material/Button'
+import Button, { ButtonProps } from '@mui/material/Button'
 import Link from 'next/link'
 
-interface RouterButtonProps {
+interface RouterButtonProps extends ButtonProps {
   url: string
   name: string
-  contrastText?: boolean
 }
 
-const RouterButton = ({ url, name, contrastText }: RouterButtonProps) => {
+const RouterButton: React.FC<RouterButtonProps> = ({
+  url,
+  name,
+  ...props
+}: RouterButtonProps) => {
   return (
-    <Button color={contrastText ? 'inherit' : 'primary'}>
+    <Button {...props}>
       <Link href={url}>{name}</Link>
     </Button>
   )

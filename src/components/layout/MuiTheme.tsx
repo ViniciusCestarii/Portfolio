@@ -1,5 +1,5 @@
 'use client'
-import { useTheme } from '@/context/themeContext'
+import { useTheme } from '@/context/ThemeContext'
 import { ThemeProvider } from '@emotion/react'
 import createTheme from '@mui/material/styles/createTheme'
 import { ReactNode } from 'react'
@@ -13,6 +13,7 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
 
   const theme = createTheme({
     palette: {
+      mode: 'dark',
       contrastThreshold: 4.5,
       primary: {
         main: themeColor.hex,

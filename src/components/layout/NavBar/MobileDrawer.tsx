@@ -41,12 +41,19 @@ const MobileDrawer = ({
           '& .MuiDrawer-paper': {
             width: '100%',
             backdropFilter: 'blur(8px)',
-            backgroundColor: 'rgba(255,255,255,0.6)',
+            backgroundColor: 'rgba(0,0,0,0.4)',
           },
         }}
       >
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-          <Box sx={{ py: 2, display: 'flex', justifyContent: 'center' }}>
+        <Box
+          component="div"
+          onClick={handleDrawerToggle}
+          sx={{ textAlign: 'center' }}
+        >
+          <Box
+            component="div"
+            sx={{ py: 2, display: 'flex', justifyContent: 'center' }}
+          >
             <Logo />
             <IconButton sx={{ position: 'absolute', right: 6, top: 10 }}>
               <Close />
