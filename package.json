@@ -12,11 +12,15 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.11",
+    "@react-three/drei": "^9.88.14",
+    "@react-three/fiber": "^8.15.11",
+    "@types/three": "^0.158.2",
     "axios": "^1.5.1",
     "mdi-material-ui": "^7.7.0",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "three": "^0.158.0"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",

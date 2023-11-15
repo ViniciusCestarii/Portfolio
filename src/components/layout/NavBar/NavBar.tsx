@@ -25,7 +25,7 @@ const NavBar = () => {
   }
 
   return (
-    <Box sx={{ mt: '80px' }}>
+    <Box>
       <AppBar handleDrawerToggle={handleDrawerToggle} navItems={navItems} />
       <MobileDrawer
         handleDrawerToggle={handleDrawerToggle}
