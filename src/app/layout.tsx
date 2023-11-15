@@ -2,7 +2,7 @@ import NavBar from '@/components/layout/NavBar/NavBar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { ThemeProvider } from '@/context/ThemeContext'
+import { ThemeProvider } from '@/context/themeContext'
 import dynamic from 'next/dynamic'
 
 const inter = Inter({ subsets: ['latin'] })
