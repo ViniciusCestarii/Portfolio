@@ -1,5 +1,5 @@
 'use client'
-import { useTheme } from '@/context/ThemeContext'
+import { useMyTheme } from '@/context/ThemeContext'
 import { ThemeProvider } from '@emotion/react'
 import createTheme from '@mui/material/styles/createTheme'
 import { ReactNode } from 'react'
@@ -9,7 +9,7 @@ interface MuiThemeProps {
 }
 
 const MuiTheme = ({ children }: MuiThemeProps) => {
-  const { themeColor } = useTheme()
+  const { themeColor } = useMyTheme()
 
   const theme = createTheme({
     palette: {

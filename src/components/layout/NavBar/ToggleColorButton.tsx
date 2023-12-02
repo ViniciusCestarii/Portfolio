@@ -1,10 +1,10 @@
 import ColorsIcon from '@/components/animatedIcons/ColorsIcon'
-import { useTheme } from '@/context/ThemeContext'
+import { useMyTheme } from '@/context/ThemeContext'
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 
 const ToggleColorButton = () => {
-  const { toggleTheme, themeColor } = useTheme()
+  const { toggleTheme, themeColor } = useMyTheme()
 
   return (
     <Tooltip title={`Change to next theme color`}>
