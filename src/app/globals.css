@@ -11,6 +11,10 @@
   }
 }
 
+* {
+  transition: color 0.3s ease-in-out;
+}
+
 .bgInfiniteScroll {
   animation: background-scroll 90s linear infinite;
 }

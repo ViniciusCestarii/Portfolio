@@ -1,10 +1,10 @@
-import { useTheme } from '@/context/themeContext'
+import ColorsIcon from '@/components/animatedIcons/ColorsIcon'
+import { useTheme } from '@/context/ThemeContext'
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
-import Palette from 'mdi-material-ui/Palette'
 
 const ToggleColorButton = () => {
-  const { toggleTheme } = useTheme()
+  const { toggleTheme, themeColor } = useTheme()
 
   return (
     <Tooltip title={`Change to next theme color`}>
@@ -16,7 +16,7 @@ const ToggleColorButton = () => {
           },
         }}
       >
-        <Palette color="primary" />
+        <ColorsIcon colorize={themeColor.hex} trigger={themeColor} />
       </IconButton>
     </Tooltip>
   )

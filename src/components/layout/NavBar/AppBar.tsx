@@ -81,7 +81,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
         </Box>
         <Box
           component="div"
-          sx={{ display: { xs: 'none', sm: 'block' }, ml: 'auto' }}
+          sx={{ display: { xs: 'none', sm: 'flex' }, ml: 'auto' }}
           className="space-x-2"
         >
           {navItems.map((item) => (
