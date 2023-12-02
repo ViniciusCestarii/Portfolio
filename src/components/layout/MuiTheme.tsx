@@ -1,5 +1,5 @@
 'use client'
-import { useMyTheme } from '@/context/ThemeContext'
+import { useMyTheme } from '@/context/themeContext'
 import { ThemeProvider } from '@emotion/react'
 import createTheme from '@mui/material/styles/createTheme'
 import { ReactNode } from 'react'

@@ -1,5 +1,5 @@
 import ColorsIcon from '@/components/animatedIcons/ColorsIcon'
-import { useMyTheme } from '@/context/ThemeContext'
+import { useMyTheme } from '@/context/themeContext'
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 
