@@ -3,6 +3,8 @@
 
 Hello there! 👋 I'm thrilled to have you visit my web portfolio, where I'm showcasing my skills, projects, and a bit about myself. While it's still a work in progress, feel free to explore what's available and get to know more about me.
 
+Check it out: [click here to open my portfolio! 🤗](https://portfolio-viniciuscestarii.vercel.app/)
+
 ## 🌐 About Me
 I'm passionate about technology, and my journey in the world of development has been nothing short of exciting. This portfolio serves as a snapshot of my professional journey, featuring both the projects I've worked on and the skills I've honed along the way.
 
