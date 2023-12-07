@@ -1,15 +1,16 @@
+import { scrollToElement } from '@/utils/router/router'
 import Image from 'next/image'
-import Link from 'next/link'
 
 interface LogoProps {
-  link?: boolean
+  router?: boolean
   black?: boolean
 }
 
-const Logo = ({ link, black }: LogoProps) => {
+const Logo = ({ router, black }: LogoProps) => {
   const style = black ? '' : 'invert'
-  return link ? (
+  return (
     <Image
+      onClick={router ? () => scrollToElement('home') : () => null}
       className={style}
       src={'/logo.svg'}
       height={48}
@@ -17,17 +18,6 @@ const Logo = ({ link, black }: LogoProps) => {
       priority
       alt="Vinicius Cestarii logo"
     />
-  ) : (
-    <Link href="/">
-      <Image
-        className={style + ' cursor-pointer'}
-        src={'/logo.svg'}
-        height={48}
-        width={48}
-        priority
-        alt="Vinicius Cestarii logo"
-      />
-    </Link>
   )
 }
 

@@ -22,8 +22,13 @@ export default function RootLayout({
   })
 
   return (
-    <html lang="en">
-      <body className={inter.className} style={{ backgroundColor: 'black' }}>
+    <html lang="en" id="home">
+      <body
+        className={inter.className}
+        style={{
+          backgroundColor: 'black',
+        }}
+      >
         <ThemeProvider>
           <MuiTheme>
             <NavBar />

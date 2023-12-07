@@ -1,111 +1,23 @@
-'use client'
+import Home from '@/components/page/home'
 import { Box, Typography } from '@mui/material'
-import RainbowScene from '@/components/canva/RainbowScene'
 
-export default function Home() {
+export default function MainPage() {
   return (
-    <main>
-      <Box
-        component="div"
-        sx={{
-          minHeight: 'calc(100vh - 80px)',
-          display: 'flex',
-          flexDirection: 'column',
-        }}
+    <Box
+      component="main"
+      sx={{ maxWidth: '1280px', margin: '0 auto', px: { xs: 4, sm: 8 } }}
+    >
+      <Home />
+      <Typography color="textPrimary" variant="h2" id="contact">
+        Contact
+      </Typography>
+      <Typography
+        color="textPrimary"
+        variant="h4"
+        sx={{ textAlign: 'center', py: 8 }}
       >
-        <RainbowScene />
-        <Box
-          component="div"
-          sx={{
-            position: 'relative',
-            py: 4,
-            px: { xs: 4, sm: 8 },
-            display: 'flex',
-            flexDirection: 'column',
-            flex: 1,
-          }}
-        >
-          <Box
-            component="div"
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              flex: 1,
-            }}
-          >
-            <Box component="div">
-              <Typography
-                color="primary.light"
-                variant="h3"
-                sx={{ fontSize: { xs: '32px', md: '48px' } }}
-              >
-                Hi, {"I'm"}
-              </Typography>
-              <Typography
-                color="textPrimary"
-                variant="h1"
-                sx={{ fontSize: { xs: '64px', md: '96px' }, fontWeight: 500 }}
-              >
-                Vinicius Cestari
-              </Typography>
-            </Box>
-            <Box component="div">
-              <Typography
-                color="textPrimary"
-                variant="h1"
-                sx={{
-                  fontSize: { xs: '64px', xl: '96px' },
-                  fontWeight: 500,
-                }}
-              >
-                Full-Stack Developer
-              </Typography>
-              <Typography color="primary.light" variant="subtitle1">
-                @ViniciusCestarii
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        component="div"
-        sx={{
-          position: 'absolute',
-          display: { xs: 'none', sm: 'flex' },
-          flexDirection: 'column',
-          right: '5%',
-          top: '50%',
-          opacity: 0.9,
-          transform: 'translateY(-50%)',
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
-        }}
-      >
-        <Typography
-          color="black"
-          variant="h2"
-          sx={{
-            fontSize: { sm: '64px', xl: '96px' },
-            fontStyle: 'italic',
-            fontWeight: 'bold',
-            textAlign: { sm: 'end', md: 'start' },
-          }}
-        >
-          {'"Let the'}
-        </Typography>
-        <Typography
-          color="black"
-          variant="h2"
-          sx={{
-            fontSize: { sm: '64px', xl: '96px' },
-            fontStyle: 'italic',
-            fontWeight: 'bold',
-            textAlign: { sm: 'end', md: 'start' },
-          }}
-        >
-          {'colors flow"'}
-        </Typography>
-      </Box>
-    </main>
+        🚧 In construction 🚧
+      </Typography>
+    </Box>
   )
 }

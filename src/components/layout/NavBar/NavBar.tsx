@@ -9,11 +9,11 @@ import AppBar from './AppBar'
 const navItems: NavItem[] = [
   {
     name: 'Home',
-    url: '/',
+    elementId: 'home',
   },
   {
     name: 'Contact',
-    url: '/contact',
+    elementId: 'contact',
   },
 ]
 

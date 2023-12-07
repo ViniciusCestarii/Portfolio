@@ -12,7 +12,7 @@ import ListItemText from '@mui/material/ListItemText'
 import Close from 'mdi-material-ui/Close'
 import Logo from '../Logo'
 import NavItem from '@/types/layout/NavItem'
-import { useRouter } from 'next/navigation'
+import { scrollToElement } from '@/utils/router/router'
 
 interface MobileDrawerProps {
   mobileOpen: boolean
@@ -25,8 +25,6 @@ const MobileDrawer = ({
   mobileOpen,
   navItems,
 }: MobileDrawerProps) => {
-  const router = useRouter()
-
   return (
     <nav>
       <Drawer
@@ -62,10 +60,10 @@ const MobileDrawer = ({
           <Divider />
           <List>
             {navItems.map((item) => (
-              <ListItem key={item.url} disablePadding>
+              <ListItem key={item.elementId} disablePadding>
                 <ListItemButton
                   sx={{ textAlign: 'center' }}
-                  onClick={() => router.push(item.url)}
+                  onClick={() => scrollToElement(item.elementId)}
                 >
                   <ListItemText primary={item.name} />
                 </ListItemButton>

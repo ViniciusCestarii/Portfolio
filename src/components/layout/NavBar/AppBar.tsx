@@ -28,9 +28,8 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        transitionProperty: 'background-color, box-shadow',
-        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-        transitionDuration: '400ms',
+        transition: 'background-color 400ms cubic-bezier(0.4, 0, 0.2, 1)',
+        backdropFilter: scrollTrigger ? 'blur(10px) opacity(0.8)' : 'none',
       }}
     >
       <Toolbar
@@ -63,7 +62,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
           sx={{
             display: { sm: 'none' },
             position: 'absolute',
-            right: scrollTrigger ? 30 : '0.5rem',
+            right: scrollTrigger ? 40 : 20,
             transition: 'right 500ms cubic-bezier(0.4, 0, 0.2, 1)',
           }}
         >
@@ -77,7 +76,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
             width: { xs: '100%', sm: 'auto' },
           }}
         >
-          <Logo />
+          <Logo router />
         </Box>
         <Box
           component="div"
@@ -86,9 +85,8 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
         >
           {navItems.map((item) => (
             <RouterButton
-              key={item.url}
-              name={item.name}
-              url={item.url}
+              key={item.elementId}
+              {...item}
               style={{ color: 'white' }}
             />
           ))}

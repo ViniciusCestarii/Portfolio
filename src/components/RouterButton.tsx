@@ -2,16 +2,17 @@ import Button, { ButtonProps } from '@mui/material/Button'
 import Link from 'next/link'
 import HomeIcon from './animatedIcons/HomeIcon'
 import { useTheme } from '@mui/material'
-import { FC, useState } from 'react'
+import { FC, useCallback, useState } from 'react'
 import ContactIcon from './animatedIcons/ContactIcon'
+import { scrollToElement } from '@/utils/router/router'
 
 interface RouterButtonProps extends ButtonProps {
-  url: string
+  elementId: string
   name: string
 }
 
 const RouterButton: FC<RouterButtonProps> = ({
-  url,
+  elementId,
   name,
   ...props
 }: RouterButtonProps) => {
@@ -30,20 +31,20 @@ const RouterButton: FC<RouterButtonProps> = ({
   }
 
   return (
-    <Button {...props} onMouseEnter={() => setTrigger(!trigger)}>
-      <Link
-        style={{ display: 'flex', alignItems: 'center', gap: 4 }}
-        href={url}
-      >
-        {Icon && (
-          <Icon
-            trigger={trigger}
-            colorize={theme.palette.primary.main}
-            size={28}
-          />
-        )}
-        {name}
-      </Link>
+    <Button
+      {...props}
+      onMouseEnter={() => setTrigger(!trigger)}
+      sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+      onClick={() => scrollToElement(elementId)}
+    >
+      {Icon && (
+        <Icon
+          trigger={trigger}
+          colorize={theme.palette.primary.contrastText}
+          size={28}
+        />
+      )}
+      {name}
     </Button>
   )
 }
