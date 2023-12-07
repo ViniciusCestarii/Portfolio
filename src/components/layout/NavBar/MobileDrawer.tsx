@@ -60,11 +60,12 @@ const MobileDrawer = ({
           <Divider />
           <List>
             {navItems.map((item) => (
-              <ListItem key={item.elementId} disablePadding>
-                <ListItemButton
-                  sx={{ textAlign: 'center' }}
-                  onClick={() => scrollToElement(item.elementId)}
-                >
+              <ListItem
+                key={item.elementId}
+                onClick={() => scrollToElement(item.elementId)}
+                disablePadding
+              >
+                <ListItemButton sx={{ textAlign: 'center' }}>
                   <ListItemText primary={item.name} />
                 </ListItemButton>
               </ListItem>
