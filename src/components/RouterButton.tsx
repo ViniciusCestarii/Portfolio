@@ -1,9 +1,9 @@
 import Button, { ButtonProps } from '@mui/material/Button'
 import Link from 'next/link'
-import HomeIcon from './animated-icons/HomeIcon'
+import HomeIcon from './icons/animated-icons/HomeIcon'
 import { useTheme } from '@mui/material'
 import { FC, useCallback, useState } from 'react'
-import ContactIcon from './animated-icons/ContactIcon'
+import ContactIcon from './icons/animated-icons/ContactIcon'
 import { scrollToElement } from '@/utils/router/router'
 
 interface RouterButtonProps extends ButtonProps {

@@ -19,6 +19,10 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
         main: themeColor.hex,
         contrastText: '#fff',
       },
+      text: {
+        primary: '#fff',
+        secondary: '#c4c4cc',
+      },
     },
   })
 

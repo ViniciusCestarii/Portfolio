@@ -17,6 +17,9 @@ export default function MainPage() {
       >
         🚧 In construction 🚧
       </Typography>
+      <Typography variant="subtitle1" color="textPrimary">
+        <a href="https://lordicon.com/">Icons by Lordicon.com 👑</a>
+      </Typography>
     </Box>
   )
 }
