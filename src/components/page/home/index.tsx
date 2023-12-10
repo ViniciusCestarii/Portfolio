@@ -1,5 +1,6 @@
 import RainbowScene from '@/components/canva/RainbowScene'
 import { Box, Typography } from '@mui/material'
+import Link from 'next/link'
 
 const Home = () => {
   return (
@@ -59,8 +60,14 @@ const Home = () => {
               >
                 Full-Stack Developer
               </Typography>
-              <Typography color="primary.light" variant="subtitle1">
-                @ViniciusCestarii
+              <Typography
+                color="primary.light"
+                variant="subtitle1"
+                sx={{ textDecoration: 'underline' }}
+              >
+                <Link href="https://github.com/ViniciusCestarii">
+                  @ViniciusCestarii
+                </Link>
               </Typography>
             </Box>
           </Box>

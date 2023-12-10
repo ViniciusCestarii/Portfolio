@@ -1,4 +1,4 @@
-import ColorsIcon from '@/components/animatedIcons/ColorsIcon'
+import ColorsIcon from '@/components/animated-icons/ColorsIcon'
 import { useMyTheme } from '@/context/themeContext'
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'

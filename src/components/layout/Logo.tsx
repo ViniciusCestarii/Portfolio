@@ -7,7 +7,8 @@ interface LogoProps {
 }
 
 const Logo = ({ router, black }: LogoProps) => {
-  const style = black ? '' : 'invert'
+  let style = black ? '' : 'invert'
+  style += router ? ' cursor-pointer' : ''
   return (
     <Image
       onClick={router ? () => scrollToElement('home') : () => null}

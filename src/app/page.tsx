@@ -1,3 +1,4 @@
+import Contact from '@/components/page/contact'
 import Home from '@/components/page/home'
 import { Box, Typography } from '@mui/material'
 
@@ -8,9 +9,7 @@ export default function MainPage() {
       sx={{ maxWidth: '1280px', margin: '0 auto', px: { xs: 4, sm: 8 } }}
     >
       <Home />
-      <Typography color="textPrimary" variant="h2" id="contact">
-        Contact
-      </Typography>
+      <Contact />
       <Typography
         color="textPrimary"
         variant="h4"
