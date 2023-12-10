@@ -28,7 +28,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        transition: 'background-color 400ms cubic-bezier(0.4, 0, 0.2, 1)',
+        transition: 'background-color 0.5s ease-in-out',
         backdropFilter: scrollTrigger ? 'blur(10px) opacity(0.8)' : 'none',
       }}
     >
