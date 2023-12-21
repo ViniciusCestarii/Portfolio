@@ -30,7 +30,9 @@ const ContactItem = ({
             src={imgSrc}
             width={20}
             height={20}
-            style={{ filter: 'invert()' }}
+            style={{
+              filter: 'invert()',
+            }}
           />
         )}
         {caption}

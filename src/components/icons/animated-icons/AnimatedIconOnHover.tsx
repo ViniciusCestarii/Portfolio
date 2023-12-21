@@ -65,7 +65,7 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
 
   const playerRef = useRef<Player>(null)
   const [state, setState] = useState(inAnimation)
-  const [invertXIcon, setInvertXIcon] = useState(false)
+  const [invertXIcon, setInvertXIcon] = useState(!invertXTrigger)
 
   useEffect(() => {
     if (!playerRef.current?.isPlaying) {

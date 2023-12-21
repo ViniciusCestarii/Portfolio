@@ -13,16 +13,12 @@
     "@emotion/styled": "^11.11.0",
     "@lordicon/react": "^1.4.1",
     "@mui/material": "^5.14.18",
-    "@react-three/drei": "^9.88.14",
-    "@react-three/fiber": "^8.15.11",
-    "@types/three": "^0.158.2",
     "axios": "^1.5.1",
     "lottie-web": "^5.12.2",
     "mdi-material-ui": "^7.7.0",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "three": "^0.158.0"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
