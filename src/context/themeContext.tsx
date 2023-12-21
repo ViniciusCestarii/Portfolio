@@ -31,6 +31,7 @@ const themeColors: ThemeColor[] = [
 interface ThemeContextType {
   themeColor: ThemeColor
   toggleTheme: () => void
+  themeColorIndex: number
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
@@ -52,7 +53,13 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   }, [themeColor, setThemeColor])
 
   const contextValue = useMemo(
-    () => ({ themeColor, toggleTheme }),
+    () => ({
+      themeColor,
+      toggleTheme,
+      themeColorIndex: themeColors.findIndex(
+        (color) => color.name === themeColor.name,
+      ),
+    }),
     [themeColor, toggleTheme],
   )
 

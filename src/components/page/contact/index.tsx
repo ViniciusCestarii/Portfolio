@@ -1,10 +1,11 @@
 'use client'
-import ConversationIcon from '@/components/icons/animated-icons/Conversation'
+import ConversationIcon from '@/components/icons/animated-icons/icons/Conversation'
 import Subtitle from '@/components/layout/Subtitle'
 import { Box, Typography, useTheme } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import ContactItem from './ContactItem'
 
 const Contact = () => {
   const theme = useTheme()
@@ -12,13 +13,30 @@ const Contact = () => {
   return (
     <Box
       component="div"
+      id="contact"
       sx={{
-        gap: { xs: 2, sm: 0 },
+        position: 'relative',
+        '::before': {
+          content: '""',
+          display: { xs: 'none', md: 'block' },
+          position: 'absolute',
+          maxWidth: '100%',
+          overflow: 'hidden',
+          width: '100%',
+          height: '4px',
+          backgroundColor: 'primary.dark',
+          transform: 'translate(-50%, -50%)',
+          left: '50%',
+          top: -30,
+          opacity: '0.3',
+          transition: 'all 1s ease-in-out',
+        },
+        gap: 2,
         display: 'flex',
         flexDirection: 'column',
       }}
     >
-      <Subtitle id="contact">Contact</Subtitle>
+      <Subtitle>Contact</Subtitle>
       <Box
         component="div"
         sx={{ display: 'flex', flexDirection: 'column' }}
@@ -30,94 +48,58 @@ const Contact = () => {
           sx={{
             display: 'flex',
             flexDirection: { xs: 'column', sm: 'row' },
-            alignItems: 'center',
-            justifyContent: 'center',
           }}
         >
-          <Typography
-            variant="body1"
-            color="textSecondary"
-            sx={{ maxWidth: 640 }}
-          >
+          <Typography variant="h6" color="textSecondary">
             {
               "Hey there, don't hesitate to reach out! I'm always open to connecting with fellow enthusiasts, collaborators, or anyone who shares a passion for technology."
             }
           </Typography>
-          <ConversationIcon
-            trigger={trigger}
-            colorize={theme.palette.primary.light}
-            size={168}
-          />
+          <Box
+            sx={{
+              height: '100%',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <ConversationIcon
+              trigger={trigger}
+              colorize={theme.palette.primary.light}
+              size={168}
+            />
+          </Box>
         </Box>
         <Box
           component="div"
-          sx={{ gap: 0.5, display: 'flex', flexDirection: 'column' }}
+          sx={{
+            gap: 0.5,
+            display: 'flex',
+            flexDirection: 'column',
+            mt: { xs: 0, md: -2 },
+          }}
         >
-          <Typography
-            variant="body1"
-            color="textPrimary"
-            sx={{ display: 'flex', gap: 1 }}
-          >
-            📧 Email:
-            <Typography
-              variant="body1"
-              color="primary.light"
-              sx={{ textDecoration: 'underline' }}
-            >
-              <Link href="mailto:viniciuscestari01@gmail.com">
-                viniciuscestari01@gmail.com
-              </Link>
-            </Typography>
-          </Typography>
-          <Typography
-            variant="body1"
-            color="textPrimary"
-            sx={{ display: 'flex', gap: 1 }}
-          >
-            <Image
-              alt="Github Icon"
-              src={'assets/githubLogo.svg'}
-              width={20}
-              height={20}
-              style={{ filter: 'invert()' }}
-            />
-            Github:
-            <Typography
-              variant="body1"
-              color="primary.light"
-              sx={{ textDecoration: 'underline' }}
-            >
-              <Link target="_blank" href="https://github.com/ViniciusCestarii">
-                ViniciusCestarii
-              </Link>
-            </Typography>
-          </Typography>
-          <Typography
-            variant="body1"
-            color="textPrimary"
-            sx={{ display: 'flex', gap: 1 }}
-          >
-            <Image
-              alt="Linkdin Icon"
-              src={'assets/linkdinLogo.svg'}
-              width={20}
-              height={20}
-              style={{ filter: 'invert()' }}
-            />
-            Linkdin:
-            <Typography
-              variant="body1"
-              color="primary.light"
-              sx={{ textDecoration: 'underline' }}
-            >
-              <Link
-                target="_blank"
-                href="https://www.linkedin.com/in/-vinicius-cestari/"
-              >
-                Vinicius Cestari
-              </Link>
-            </Typography>
-          </Typography>
+          <ContactItem
+            link="mailto:viniciuscestari01@gmail.com"
+            linkText="viniciuscestari01@gmail.com"
+            imgAlt="Email Icon"
+            imgSrc="assets/email.svg"
+            caption="Email:"
+          />
+          <ContactItem
+            link="https://github.com/ViniciusCestarii"
+            linkText="ViniciusCestarii"
+            imgAlt="Github Icon"
+            imgSrc="assets/githubLogo.svg"
+            caption="Github:"
+          />
+          <ContactItem
+            link="https://www.linkedin.com/in/-vinicius-cestari/"
+            linkText="Vinicius Cestari"
+            imgAlt="Linkdin Icon"
+            imgSrc="assets/linkdinLogo.svg"
+            caption="Linkdin:"
+          />
         </Box>
       </Box>
     </Box>

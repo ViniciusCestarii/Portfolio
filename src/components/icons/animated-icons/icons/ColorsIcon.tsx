@@ -1,5 +1,5 @@
 import ICON from '@/json/colors.json'
-import AnimatedIconInHover from './AnimatedIconInHover'
+import AnimatedIconInHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
 import { BaseAnimatedIconProps } from '@/types/layout/AnimatedIcon'
 
 const ColorsIcon = (props: BaseAnimatedIconProps) => {

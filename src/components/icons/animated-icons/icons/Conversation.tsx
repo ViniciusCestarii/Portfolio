@@ -1,5 +1,5 @@
 import ICON from '@/json/conversation.json'
-import AnimatedIconInHover from './AnimatedIconInHover'
+import AnimatedIconInHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
 import { BaseAnimatedIconProps } from '@/types/layout/AnimatedIcon'
 
 const ConversationIcon = (props: BaseAnimatedIconProps) => {

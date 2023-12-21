@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" id="home">
       <body
         className={`${inter.className}`}
-        style={{ backgroundColor: 'rgb(14, 14, 14)' }}
+        style={{ backgroundColor: 'rgb(14, 14, 20)' }}
       >
         <ThemeProvider>
           <MuiTheme>

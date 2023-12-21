@@ -1,117 +1,67 @@
-import RainbowScene from '@/components/canva/RainbowScene'
 import { Box, Typography } from '@mui/material'
-import Link from 'next/link'
+import Hero from './hero/Hero'
 
 const Home = () => {
   return (
-    <>
-      <Box
-        component="div"
-        sx={{
-          minHeight: 'calc(100vh - 80px)',
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <RainbowScene />
-        <Box
-          component="div"
-          sx={{
-            position: 'relative',
-            py: 4,
-            display: 'flex',
-            flexDirection: 'column',
-            flex: 1,
-          }}
-        >
-          <Box
-            component="div"
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              flex: 1,
-            }}
-          >
-            <Box component="div">
-              <Typography
-                color="primary.light"
-                variant="h3"
-                sx={{ fontSize: { xs: '32px', md: '48px' } }}
-              >
-                Hi, {"I'm"}
-              </Typography>
-              <Typography
-                color="textPrimary"
-                variant="h1"
-                sx={{ fontSize: { xs: '64px', md: '96px' }, fontWeight: 500 }}
-              >
-                Vinicius Cestari
-              </Typography>
-            </Box>
-            <Box component="div">
-              <Typography
-                color="textPrimary"
-                variant="h1"
-                sx={{
-                  fontSize: { xs: '64px', xl: '96px' },
-                  fontWeight: 500,
-                }}
-              >
-                Full-Stack Developer
-              </Typography>
-              <Typography
-                color="primary.light"
-                variant="subtitle1"
-                sx={{ textDecoration: 'underline' }}
-              >
-                <Link href="https://github.com/ViniciusCestarii">
-                  @ViniciusCestarii
-                </Link>
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        component="div"
-        sx={{
+    <Box
+      component="div"
+      sx={{
+        minHeight: 'calc(100vh)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        mt: '-80px',
+        alignItems: 'center',
+        position: 'relative',
+        overflow: 'hidden',
+        '::before': {
+          content: '""',
+          display: { xs: 'none', md: 'block' },
           position: 'absolute',
-          display: { xs: 'none', sm: 'flex' },
-          flexDirection: 'column',
-          right: '5%',
-          top: '50%',
-          opacity: 0.9,
-          transform: 'translateY(-50%)',
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
-        }}
-      >
+          maxWidth: '100%',
+          overflow: 'hidden',
+          width: '90%',
+          height: '100px',
+          borderRadius: '100% 100% 0 0',
+          backgroundColor: 'primary.dark',
+          filter: 'blur(60px) hue-rotate(10deg)',
+          transform: 'translate(-50%, -50%)',
+          left: '50%',
+          bottom: -100,
+          transition: 'all 1s ease-in-out',
+        },
+        '::after': {
+          content: '""',
+          display: { xs: 'none', md: 'block' },
+          position: 'absolute',
+          maxWidth: '100%',
+          overflow: 'hidden',
+          width: '100%',
+          height: '100px',
+          borderRadius: '100% 100% 0 0',
+          backgroundColor: 'primary.dark',
+          filter: 'blur(60px) hue-rotate(20deg)',
+          transform: 'translate(-50%, -50%)',
+          left: '50%',
+          bottom: -100,
+          transition: 'all 1s ease-in-out',
+        },
+      }}
+    >
+      <Box>
+        <Hero />
         <Typography
-          color="black"
+          color="textPrimary"
           variant="h2"
+          textAlign={'center'}
           sx={{
-            fontSize: { sm: '64px', xl: '96px' },
-            fontStyle: 'italic',
-            fontWeight: 'bold',
-            textAlign: { sm: 'end', md: 'start' },
+            fontSize: { xs: '32px', xl: '46px' },
           }}
         >
-          {'"Let the'}
-        </Typography>
-        <Typography
-          color="black"
-          variant="h2"
-          sx={{
-            fontSize: { sm: '64px', xl: '96px' },
-            fontStyle: 'italic',
-            fontWeight: 'bold',
-            textAlign: { sm: 'end', md: 'start' },
-          }}
-        >
-          {'colors flow"'}
+          Full-Stack Developer
         </Typography>
       </Box>
-    </>
+    </Box>
   )
 }
 

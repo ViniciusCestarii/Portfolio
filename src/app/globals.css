@@ -12,9 +12,9 @@
 }
 
 * {
-  transition: color 0.5s ease-in-out, background-color 1.5s ease-in-out;
+  transition: color 0.5s ease-in-out, background 1.5s ease-in-out;
 }
 
-.bgInfiniteScroll {
-  animation: background-scroll 90s linear infinite;
+a {
+  text-decoration: underline;
 }
