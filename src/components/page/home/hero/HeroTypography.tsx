@@ -21,7 +21,7 @@ const HeroTypography = ({ children, ...props }: HeroTypographyProps) => {
           height: '22px',
           borderRadius: '100%',
           backgroundColor: 'primary.dark',
-          filter: 'blur(50px) hue-rotate(10deg)',
+          filter: 'blur(40px) hue-rotate(10deg)',
           transform: 'translate(-50%, -50%)',
           left: '50%',
           bottom: 0,
