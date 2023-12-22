@@ -21,7 +21,7 @@ const Hero = () => {
         colorize={myTheme.themeColor.hex}
         size={184}
       />
-      <HeroTypography sx={{ mt: '-32px' }}>Vincius Cestari</HeroTypography>
+      <HeroTypography sx={{ mt: '-32px' }}>Vinicius Cestari</HeroTypography>
     </Box>
   )
 }
