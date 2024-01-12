@@ -2,8 +2,6 @@
 import ConversationIcon from '@/components/icons/animated-icons/icons/Conversation'
 import Subtitle from '@/components/layout/Subtitle'
 import { Box, Typography, useTheme } from '@mui/material'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useState } from 'react'
 import ContactItem from './ContactItem'
 
@@ -22,15 +20,16 @@ const Contact = () => {
           position: 'absolute',
           maxWidth: '100%',
           overflow: 'hidden',
-          width: '100%',
+          width: '140%',
           height: '4px',
           backgroundColor: 'primary.dark',
           transform: 'translate(-50%, -50%)',
           left: '50%',
-          top: -30,
+          top: -2,
           opacity: '0.3',
           transition: 'all 1s ease-in-out',
         },
+        pt: '1rem',
         gap: 2,
         display: 'flex',
         flexDirection: 'column',

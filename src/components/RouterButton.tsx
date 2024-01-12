@@ -1,6 +1,5 @@
 import Button, { ButtonProps } from '@mui/material/Button'
 import HomeIcon from './icons/animated-icons/icons/HomeIcon'
-import { useTheme } from '@mui/material'
 import { FC, useState } from 'react'
 import ContactIcon from './icons/animated-icons/icons/ContactIcon'
 import { scrollToElement } from '@/utils/router/router'
@@ -15,7 +14,6 @@ const RouterButton: FC<RouterButtonProps> = ({
   name,
   ...props
 }: RouterButtonProps) => {
-  const theme = useTheme()
   const [trigger, setTrigger] = useState(false)
   let Icon
   switch (name) {
@@ -31,18 +29,12 @@ const RouterButton: FC<RouterButtonProps> = ({
 
   return (
     <Button
-      {...props}
       onMouseEnter={() => setTrigger(!trigger)}
       sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
       onClick={() => scrollToElement(elementId)}
+      {...props}
     >
-      {Icon && (
-        <Icon
-          trigger={trigger}
-          colorize={theme.palette.primary.contrastText}
-          size={28}
-        />
-      )}
+      {Icon && <Icon trigger={trigger} colorize={'white'} size={28} />}
       {name}
     </Button>
   )
