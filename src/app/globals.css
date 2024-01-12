@@ -15,6 +15,10 @@
   transition: color 0.5s ease-in-out, background 1.5s ease-in-out;
 }
 
+body {
+  transition: none;
+}
+
 a {
   text-decoration: underline;
 }

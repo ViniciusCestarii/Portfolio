@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import dynamic from 'next/dynamic'
 import { ThemeProvider } from '@/context/themeContext'
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter' // improves mui for nextjs
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,12 +28,14 @@ export default function RootLayout({
         className={`${inter.className}`}
         style={{ backgroundColor: 'rgb(14, 14, 20)' }}
       >
-        <ThemeProvider>
-          <MuiTheme>
-            <NavBar />
-            {children}
-          </MuiTheme>
-        </ThemeProvider>
+        <AppRouterCacheProvider>
+          <ThemeProvider>
+            <MuiTheme>
+              <NavBar />
+              {children}
+            </MuiTheme>
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   )
