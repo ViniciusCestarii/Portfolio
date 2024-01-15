@@ -14,7 +14,6 @@ const RouterButton: FC<RouterButtonProps> = ({
   name,
   ...props
 }: RouterButtonProps) => {
-  const [trigger, setTrigger] = useState(false)
   let Icon
   switch (name) {
     case 'Home':
@@ -29,12 +28,11 @@ const RouterButton: FC<RouterButtonProps> = ({
 
   return (
     <Button
-      onMouseEnter={() => setTrigger(!trigger)}
       sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
       onClick={() => scrollToElement(elementId)}
       {...props}
     >
-      {Icon && <Icon trigger={trigger} colorize={'white'} size={28} />}
+      {Icon && <Icon colorize={'white'} size={28} />}
       {name}
     </Button>
   )

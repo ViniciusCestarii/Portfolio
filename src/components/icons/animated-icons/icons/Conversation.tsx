@@ -1,10 +1,10 @@
 import ICON from '@/json/conversation.json'
-import AnimatedIconInHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
+import DynamicAnimatedIcon from '@/components/icons/animated-icons/icons/DynamicAnimatedIcon'
 import { BaseAnimatedIconProps } from '@/types/layout/AnimatedIcon'
 
 const ConversationIcon = (props: BaseAnimatedIconProps) => {
   return (
-    <AnimatedIconInHover
+    <DynamicAnimatedIcon
       {...props}
       jsonIcon={ICON}
       inAnimation="in-reveal"

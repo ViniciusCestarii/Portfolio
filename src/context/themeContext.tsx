@@ -1,5 +1,5 @@
 'use client'
-import useLocalStorage from '@/hooks/useLocalStorage'
+
 import { ThemeColor } from '@/types/layout/Theme'
 import React, {
   createContext,
@@ -7,6 +7,7 @@ import React, {
   ReactNode,
   useMemo,
   useCallback,
+  useState,
 } from 'react'
 
 const themeColors: ThemeColor[] = [
@@ -41,7 +42,7 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [themeColor, setThemeColor] = useLocalStorage('color', themeColors[0])
+  const [themeColor, setThemeColor] = useState<ThemeColor>(themeColors[0])
 
   const toggleTheme = useCallback(() => {
     const currentIndex = themeColors.findIndex(

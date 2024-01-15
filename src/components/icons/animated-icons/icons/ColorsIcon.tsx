@@ -1,10 +1,10 @@
 import ICON from '@/json/colors.json'
-import AnimatedIconInHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
+import DynamicAnimatedIcon from '@/components/icons/animated-icons/icons/DynamicAnimatedIcon'
 import { BaseAnimatedIconProps } from '@/types/layout/AnimatedIcon'
 
 const ColorsIcon = (props: BaseAnimatedIconProps) => {
   return (
-    <AnimatedIconInHover
+    <DynamicAnimatedIcon
       {...props}
       jsonIcon={ICON}
       hoverAnimation="hover-category"

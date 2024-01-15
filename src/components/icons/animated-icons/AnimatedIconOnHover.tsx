@@ -1,4 +1,5 @@
 'use client'
+
 import { BaseAnimatedIconProps } from '@/types/layout/AnimatedIcon'
 import { Player } from '@lordicon/react'
 import { Box } from '@mui/material'

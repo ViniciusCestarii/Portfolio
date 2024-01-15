@@ -16,7 +16,7 @@ const ToggleColorButton = () => {
           },
         }}
       >
-        <ColorsIcon colorize={themeColor.hex} trigger={themeColor} />
+        <ColorsIcon colorize={themeColor.hex} trigger={themeColor} size={34} />
       </IconButton>
     </Tooltip>
   )
