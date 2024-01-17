@@ -1,6 +1,7 @@
 import PageContainer from '@/components/layout/PageContainer'
 import Contact from '@/components/page/contact'
 import Home from '@/components/page/home'
+import Projects from '@/components/page/projects'
 import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
 
@@ -10,6 +11,7 @@ export default function MainPage() {
       <Home />
       <PageContainer>
         <>
+          <Projects />
           <Contact />
           <Typography
             color="textPrimary"

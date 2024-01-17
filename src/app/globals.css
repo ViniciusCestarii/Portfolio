@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes background-scroll {
-  0% {
-    background-position: 0px 0px, 0px 0px;
-  }
-  100% {
-    background-position: 1500px 2000px, 0px 0px;
-  }
-}
-
 * {
   transition: color 0.5s ease-in-out, background 1.5s ease-in-out;
 }
@@ -21,4 +12,15 @@ body {
 
 a {
   text-decoration: underline;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

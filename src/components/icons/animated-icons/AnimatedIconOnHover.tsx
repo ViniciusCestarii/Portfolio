@@ -1,15 +1,8 @@
 'use client'
-import { BaseAnimatedIconProps } from '@/types/layout/AnimatedIcon'
+import { AnimatedIconOnHoverProps } from '@/types/layout/AnimatedIcon'
 import { Player } from '@lordicon/react'
 import { Box } from '@mui/material'
 import { useRef, useEffect, useState, RefObject } from 'react'
-
-interface AnimatedIconOnHoverProps extends BaseAnimatedIconProps {
-  inAnimation: string
-  hoverAnimation: string
-  triggerAnimation?: string
-  jsonIcon: any
-}
 
 interface AnimateIcon {
   playerRef: RefObject<Player>
@@ -61,11 +54,14 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
     inAnimation,
     jsonIcon,
     invertXTrigger,
+    direction,
   } = props
 
   const playerRef = useRef<Player>(null)
   const [state, setState] = useState(inAnimation)
   const [invertXIcon, setInvertXIcon] = useState(!invertXTrigger)
+
+  console.log(direction, state)
 
   useEffect(() => {
     if (!playerRef.current?.isPlaying) {
@@ -86,7 +82,8 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
       hoverAnimation,
       triggerAnimation,
     })
-  }, [trigger, state, hoverAnimation, triggerAnimation])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [trigger, state, triggerAnimation, direction])
 
   return (
     <Box
@@ -111,6 +108,7 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
         state={state}
         colorize={colorize}
         size={size}
+        direction={direction ?? 1}
       />
     </Box>
   )

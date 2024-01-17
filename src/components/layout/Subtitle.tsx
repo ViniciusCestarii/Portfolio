@@ -43,6 +43,7 @@ const Subtitle = ({ id, children }: SubtitleProps) => {
           left: '8%',
           filter: 'blur(2px)',
           borderRadius: '100%',
+          zIndex: -2,
           opacity: 0.8,
         }}
       />

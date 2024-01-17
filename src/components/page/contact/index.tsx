@@ -14,21 +14,6 @@ const Contact = () => {
       id="contact"
       sx={{
         position: 'relative',
-        '::before': {
-          content: '""',
-          display: { xs: 'none', md: 'block' },
-          position: 'absolute',
-          maxWidth: '100%',
-          overflow: 'hidden',
-          width: '140%',
-          height: '4px',
-          backgroundColor: 'primary.dark',
-          transform: 'translate(-50%, -50%)',
-          left: '50%',
-          top: -2,
-          opacity: '0.3',
-          transition: 'all 1s ease-in-out',
-        },
         pt: '1rem',
         gap: 2,
         display: 'flex',
