@@ -11,20 +11,24 @@ import React, {
 
 const themeColors: ThemeColor[] = [
   {
-    hex: '#2e995e',
+    hex: '#2E995E',
     name: 'green',
   },
   {
-    hex: '#2c76c6',
+    hex: '#2C76C6',
     name: 'blue',
   },
   {
-    hex: '#7a63d2',
+    hex: '#7A63D2',
     name: 'purple',
   },
   {
-    hex: '#db2316',
+    hex: '#DB2316',
     name: 'red',
+  },
+  {
+    hex: '#F5A92A',
+    name: 'yellow',
   },
 ]
 
