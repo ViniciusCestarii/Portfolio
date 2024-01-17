@@ -55,13 +55,12 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
     jsonIcon,
     invertXTrigger,
     direction,
+    noIconHover,
   } = props
 
   const playerRef = useRef<Player>(null)
   const [state, setState] = useState(inAnimation)
   const [invertXIcon, setInvertXIcon] = useState(!invertXTrigger)
-
-  console.log(direction, state)
 
   useEffect(() => {
     if (!playerRef.current?.isPlaying) {
@@ -94,6 +93,7 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
         ...props.sx,
       }}
       onMouseEnter={() =>
+        !noIconHover &&
         animateIconOnHover({
           playerRef,
           state,

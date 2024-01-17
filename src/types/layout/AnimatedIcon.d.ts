@@ -7,6 +7,7 @@ export interface BaseAnimatedIconProps extends BoxProps {
   invertXTrigger?: boolean
   size?: number
   direction?: AnimationDirection
+  noIconHover?: boolean
 }
 
 export interface AnimatedIconOnHoverProps extends BaseAnimatedIconProps {

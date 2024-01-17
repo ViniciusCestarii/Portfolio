@@ -1,7 +1,7 @@
 'use client'
 import Subtitle from '@/components/layout/Subtitle'
 import { Box, useTheme } from '@mui/material'
-import ProjectItem from './ProjectItem'
+import ProjectItem from '@/components/page/projects/ProjectItem'
 import CHURCHICON from '@/json/church.json'
 import GIFTICON from '@/json/gift.json'
 import CATICON from '@/json/cat.json'
@@ -16,6 +16,7 @@ const Projects = () => {
       title: 'Projeto Top',
       link: 'fdsafsd',
       animatedIconProps: {
+        noIconHover: true,
         colorize: theme.palette.primary.main,
         inAnimation: 'hover-pinch',
         hoverAnimation: 'hover-roll',
@@ -29,6 +30,7 @@ const Projects = () => {
       title: 'Projeto Top',
       link: 'fdsafsd',
       animatedIconProps: {
+        noIconHover: true,
         colorize: theme.palette.primary.main,
         inAnimation: 'hover-pinch',
         hoverAnimation: 'hover-pinch',
@@ -42,6 +44,7 @@ const Projects = () => {
       title: 'Projeto Top',
       link: 'fdsafsd',
       animatedIconProps: {
+        noIconHover: true,
         colorize: theme.palette.primary.main,
         inAnimation: 'in-reveal',
         hoverAnimation: 'morph-open',
@@ -56,6 +59,7 @@ const Projects = () => {
       title: 'Projeto Top',
       link: 'fdsafsd',
       animatedIconProps: {
+        noIconHover: true,
         colorize: theme.palette.primary.main,
         inAnimation: 'hover-pinch',
         hoverAnimation: 'hover-pinch',
