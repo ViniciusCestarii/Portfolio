@@ -28,7 +28,7 @@ const Home = () => {
           transform: 'translate(-50%, -50%)',
           left: '50%',
           bottom: -120,
-          transition: 'all 1s ease-in-out',
+          transition: 'all 0.75s ease-in-out',
         },
         '::after': {
           content: '""',
@@ -44,7 +44,7 @@ const Home = () => {
           transform: 'translate(-50%, -50%)',
           left: '50%',
           bottom: -100,
-          transition: 'all 1s ease-in-out',
+          transition: 'all 0.75s ease-in-out',
         },
       }}
     >

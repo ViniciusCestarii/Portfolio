@@ -25,7 +25,7 @@ const HeroTypography = ({ children, ...props }: HeroTypographyProps) => {
           transform: 'translate(-50%, -50%)',
           left: '50%',
           bottom: 0,
-          transition: 'all 1s ease-in-out',
+          transition: 'all 0.75s ease-in-out',
         },
         ...props.sx,
       }}

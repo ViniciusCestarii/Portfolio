@@ -56,6 +56,7 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
     invertXTrigger,
     direction,
     noIconHover,
+    noIconClick,
   } = props
 
   const playerRef = useRef<Player>(null)
@@ -94,6 +95,15 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
       }}
       onMouseEnter={() =>
         !noIconHover &&
+        animateIconOnHover({
+          playerRef,
+          state,
+          setState,
+          hoverAnimation,
+        })
+      }
+      onMouseDown={() =>
+        !noIconClick &&
         animateIconOnHover({
           playerRef,
           state,

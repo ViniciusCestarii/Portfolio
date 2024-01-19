@@ -1,17 +1,16 @@
-import ICON from '@/json/colors.json'
+import ICON from '@/json/share.json'
 import AnimatedIconInHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
 import { BaseAnimatedIconProps } from '@/types/layout/AnimatedIcon'
 
-const ColorsIcon = (props: BaseAnimatedIconProps) => {
+const ShareIcon = (props: BaseAnimatedIconProps) => {
   return (
     <AnimatedIconInHover
       {...props}
       jsonIcon={ICON}
-      hoverAnimation="hover-category"
-      inAnimation="in-category"
-      noIconHover
+      hoverAnimation="hover-slide"
+      inAnimation="in-reveal"
     />
   )
 }
 
-export default ColorsIcon
+export default ShareIcon

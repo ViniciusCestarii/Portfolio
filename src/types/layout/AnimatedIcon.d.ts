@@ -8,6 +8,7 @@ export interface BaseAnimatedIconProps extends BoxProps {
   size?: number
   direction?: AnimationDirection
   noIconHover?: boolean
+  noIconClick?: boolean
 }
 
 export interface AnimatedIconOnHoverProps extends BaseAnimatedIconProps {

@@ -1,13 +1,20 @@
-import { Box, Typography, useTheme } from '@mui/material'
+import { Box, Tooltip, Typography, useTheme } from '@mui/material'
 import AnimatedIconOnHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
 import { useState } from 'react'
 import { AnimationDirection } from 'lottie-web'
 import { ProjectItemProps } from '@/types/layout/Project'
+import Image from 'next/image'
+import Link from 'next/link'
+import ShareIcon from '@/components/icons/animated-icons/icons/ShareIcon'
+import { Lock, LockOutline } from 'mdi-material-ui'
 
 const ProjectItem = ({
   title,
   description,
   animatedIconProps,
+  projectLink,
+  applicationLink,
+  privateProject,
 }: ProjectItemProps) => {
   const theme = useTheme()
   const [direction, setDirection] = useState<AnimationDirection | undefined>()
@@ -17,6 +24,7 @@ const ProjectItem = ({
       onMouseLeave={() => setDirection(-1)}
       sx={{
         width: '100%',
+        minHeight: 400,
         maxWidth: 340,
         position: 'relative',
         padding: '0.5rem',
@@ -41,7 +49,7 @@ const ProjectItem = ({
           width: '400% ',
           scale: '10',
           zIndex: -1,
-          transition: 'all 1s ease-in-out',
+          transition: 'all 0.75s ease-in-out',
         },
       }}
     >
@@ -59,7 +67,7 @@ const ProjectItem = ({
         <Box
           sx={{
             width: '100%',
-            minHeight: 160,
+            height: 160,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'end',
@@ -70,9 +78,61 @@ const ProjectItem = ({
         <Typography variant="h5" color="textPrimary">
           {title}
         </Typography>
-        <Typography variant="body1" color="textSecondary">
+        <Typography
+          variant="body1"
+          color="textSecondary"
+          sx={{ height: '100%' }}
+        >
           {description}
         </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'end',
+            mt: '0.25rem',
+            gap: '0.5rem',
+            alignItems: 'center',
+          }}
+        >
+          {privateProject && (
+            <Tooltip title="Private Project">
+              <LockOutline color="primary" sx={{ width: 26, height: 26 }} />
+            </Tooltip>
+          )}
+          {projectLink && (
+            <Link
+              target="_blank"
+              href={projectLink}
+              style={{
+                display: 'flex',
+                gap: '0.5rem',
+                color: theme.palette.primary.main,
+              }}
+            >
+              <Typography variant="body2" color="primary">
+                know more
+              </Typography>
+              <Tooltip title="Open Project">
+                <Image
+                  alt={'Github Icon'}
+                  src={'/assets/githubLogo.svg'}
+                  width={20}
+                  height={20}
+                  style={{
+                    filter: 'invert()',
+                  }}
+                />
+              </Tooltip>
+            </Link>
+          )}
+          {applicationLink && (
+            <Tooltip title="Open Application">
+              <Link target="_blank" href={applicationLink}>
+                <ShareIcon colorize={theme.palette.primary.main} size={24} />
+              </Link>
+            </Tooltip>
+          )}
+        </Box>
       </Box>
     </Box>
   )

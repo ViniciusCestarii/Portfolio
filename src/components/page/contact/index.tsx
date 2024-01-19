@@ -34,7 +34,7 @@ const Contact = () => {
             flexDirection: { xs: 'column', sm: 'row' },
           }}
         >
-          <Typography variant="h6" color="textSecondary">
+          <Typography variant="body1" color="textSecondary">
             {
               "Hey there, don't hesitate to reach out! I'm always open to connecting with fellow enthusiasts, collaborators, or anyone who shares a passion for technology."
             }

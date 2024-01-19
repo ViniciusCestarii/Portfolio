@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -17,6 +17,7 @@ const ContactItem = ({
   imgAlt,
   imgSrc,
 }: ContactItemProps) => {
+  const theme = useTheme()
   return (
     <Box sx={{ display: 'flex', gap: 1 }}>
       <Typography
@@ -37,12 +38,12 @@ const ContactItem = ({
         )}
         {caption}
       </Typography>
-      <Typography
-        variant="body1"
-        color="primary.light"
-        sx={{ textDecoration: 'underline' }}
-      >
-        <Link target="_blank" href={link}>
+      <Typography variant="body1">
+        <Link
+          target="_blank"
+          href={link}
+          style={{ color: theme.palette.primary.light }}
+        >
           {linkText}
         </Link>
       </Typography>
