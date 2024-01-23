@@ -15,12 +15,12 @@ export default function MainPage() {
           <Contact />
           <Typography
             color="textPrimary"
-            variant="h4"
-            sx={{ textAlign: 'center', py: 8 }}
+            variant="caption"
+            sx={{ textAlign: 'center', py: 8, fontSize: '1.5rem' }}
           >
             🚧 In construction 🚧
           </Typography>
-          <Typography variant="subtitle1" color="textPrimary">
+          <Typography variant="overline" color="textPrimary">
             <Link href="https://lordicon.com/" target="_blank">
               Icons by Lordicon.com 👑
             </Link>

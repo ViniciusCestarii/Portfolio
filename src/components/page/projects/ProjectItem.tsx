@@ -75,7 +75,11 @@ const ProjectItem = ({
         >
           <AnimatedIconOnHover {...animatedIconProps} direction={direction} />
         </Box>
-        <Typography variant="h5" color="textPrimary">
+        <Typography
+          variant="h3"
+          color="textPrimary"
+          sx={{ fontSize: '1.5rem' }}
+        >
           {title}
         </Typography>
         <Typography

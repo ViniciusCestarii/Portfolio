@@ -48,6 +48,22 @@ const Home = () => {
         },
       }}
     >
+      <Box
+        sx={{
+          display: { xs: 'none', md: 'block' },
+          position: 'absolute',
+          maxWidth: '100%',
+          overflow: 'hidden',
+          width: '50%',
+          height: '4px',
+          backgroundColor: 'primary.dark',
+          transform: 'translate(-50%, -50%)',
+          left: '50%',
+          bottom: -2,
+          opacity: '0.3',
+          transition: 'all 0.75s ease-in-out',
+        }}
+      />
       <Box>
         <Hero />
         <Typography
