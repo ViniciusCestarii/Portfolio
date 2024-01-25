@@ -2,6 +2,7 @@ import PageContainer from '@/components/layout/PageContainer'
 import Footer from '@/components/page/Footer'
 import Contact from '@/components/page/contact'
 import Home from '@/components/page/home'
+import Knowledge from '@/components/page/knowledge'
 import Projects from '@/components/page/projects'
 import { Box, Typography } from '@mui/material'
 
@@ -13,6 +14,7 @@ export default function MainPage() {
         <>
           <Projects />
           <Contact />
+          <Knowledge />
           <Typography
             color="textPrimary"
             variant="caption"
