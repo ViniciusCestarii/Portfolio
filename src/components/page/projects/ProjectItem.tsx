@@ -6,7 +6,7 @@ import { ProjectItemProps } from '@/types/layout/Project'
 import Image from 'next/image'
 import Link from 'next/link'
 import ShareIcon from '@/components/icons/animated-icons/icons/ShareIcon'
-import { Lock, LockOutline } from 'mdi-material-ui'
+import LockIcon from '@/components/icons/animated-icons/icons/LockIcon'
 
 const ProjectItem = ({
   title,
@@ -100,7 +100,9 @@ const ProjectItem = ({
         >
           {privateProject && (
             <Tooltip title="Private Project">
-              <LockOutline color="primary" sx={{ width: 26, height: 26 }} />
+              <Box>
+                <LockIcon colorize={theme.palette.primary.main} size={26} />
+              </Box>
             </Tooltip>
           )}
           {projectLink && (
