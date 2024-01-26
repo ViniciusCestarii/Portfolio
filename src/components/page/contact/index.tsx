@@ -49,7 +49,7 @@ const Contact = () => {
           >
             <ConversationIcon
               trigger={trigger}
-              colorize={theme.palette.primary.light}
+              colorize={theme.palette.primary.main}
               size={168}
             />
           </Box>
