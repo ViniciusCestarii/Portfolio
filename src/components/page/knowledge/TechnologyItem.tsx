@@ -1,5 +1,5 @@
 'use client'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import * as icons from '@icons-pack/react-simple-icons'
 import { TechnologyItemProps } from '@/types/layout/Knowledge'
 import { Alert } from 'mdi-material-ui'
@@ -10,6 +10,7 @@ const TechnologyItem = ({
   technologieLink,
   title,
 }: TechnologyItemProps) => {
+  const theme = useTheme()
   const Icon = (icons as any)[iconName] ?? Alert
   return (
     <Box
@@ -19,8 +20,11 @@ const TechnologyItem = ({
         maxWidth: '300px',
         p: '1.5rem',
         gap: '1rem',
+        my: '0.5rem',
         display: 'flex',
         alignItems: 'center',
+        transition: 'box-shadow 1s linear !important',
+        boxShadow: `${theme.palette.primary.main} 0px 4px 8px -4px`,
       }}
     >
       <Box>
