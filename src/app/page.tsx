@@ -13,8 +13,8 @@ export default function MainPage() {
       <PageContainer>
         <>
           <Projects />
-          <Contact />
           <Knowledge />
+          <Contact />
           <Typography
             color="textPrimary"
             variant="caption"

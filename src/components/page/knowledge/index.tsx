@@ -4,6 +4,7 @@ import Subtitle from '@/components/layout/Subtitle'
 import { TechnologyItemProps } from '@/types/layout/Knowledge'
 import { Box, useTheme } from '@mui/material'
 import TechnologyItem from './TechnologyItem'
+import CodeForkIcon from '@/components/icons/animated-icons/icons/CodeForkIcon'
 
 const technologies: TechnologyItemProps[] = [
   {
@@ -57,6 +58,7 @@ const Knowledge = () => {
     <Box
       component="div"
       sx={{
+        position: 'relative',
         pt: '1rem',
         gap: 2,
         display: 'flex',
@@ -78,6 +80,16 @@ const Knowledge = () => {
           <TechnologyItem key={technology.title} {...technology} />
         ))}
       </Box>
+      <CodeForkIcon
+        sx={{
+          position: 'absolute',
+          right: -56,
+          top: '50%',
+          transform: 'translate(-50%, -50%)',
+        }}
+        colorize={theme.palette.primary.dark}
+        size={80}
+      />
     </Box>
   )
 }

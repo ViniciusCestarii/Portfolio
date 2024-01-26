@@ -9,7 +9,6 @@ const CodeForkIcon = (props: BaseAnimatedIconProps) => {
       jsonIcon={ICON}
       hoverAnimation="hover-pinch"
       inAnimation="in-reveal"
-      noIconHover
     />
   )
 }

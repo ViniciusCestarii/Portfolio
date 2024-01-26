@@ -3,7 +3,6 @@ import { Box, Typography, useTheme } from '@mui/material'
 import * as icons from '@icons-pack/react-simple-icons'
 import { TechnologyItemProps } from '@/types/layout/Knowledge'
 import { Alert } from 'mdi-material-ui'
-import PolylineIcon from '@/components/icons/animated-icons/icons/PolylineIcon'
 import { useState } from 'react'
 
 const TechnologyItem = ({
@@ -21,7 +20,6 @@ const TechnologyItem = ({
       onMouseEnter={() => setTrigger(true)}
       onMouseLeave={() => setTrigger(false)}
       sx={{
-        position: 'relative',
         borderRadius: '14px',
         maxWidth: '300px',
         p: '1.5rem',
@@ -41,27 +39,6 @@ const TechnologyItem = ({
           {description}
         </Typography>
       </Box>
-      <PolylineIcon
-        sx={{
-          position: 'absolute',
-          left: 2,
-          bottom: 2,
-        }}
-        colorize={theme.palette.primary.light}
-        size={46}
-        trigger={trigger}
-      />
-      <PolylineIcon
-        sx={{
-          position: 'absolute',
-          right: -8,
-          top: 2,
-          transform: 'rotate(180deg)',
-        }}
-        colorize={theme.palette.primary.light}
-        size={46}
-        trigger={trigger}
-      />
     </Box>
   )
 }
