@@ -22,10 +22,73 @@ const technologies: TechnologyItemProps[] = [
     technologieLink: 'https://www.google.com',
   },
   {
+    title: 'MUI',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiMui',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'Tailwind CSS',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiTailwindcss',
+    technologieLink: 'https://www.google.com',
+  },
+  {
     title: 'Typescript',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     iconName: 'SiTypescript',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'Express.js',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiExpress',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'Fastify',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiFastify',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'Prisma',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiPrisma',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'Drizzle',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiDrizzle',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: '.NET',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiDotnet',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'C#',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiCsharp',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'Docker',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiDocker',
     technologieLink: 'https://www.google.com',
   },
   {
@@ -47,6 +110,48 @@ const technologies: TechnologyItemProps[] = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     iconName: 'SiNodedotjs',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'AWS',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiAmazonaws',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'Firebase',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiFirebase',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'Vercel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiVercel',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'Git',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiGit',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'GitHub',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiGithub',
+    technologieLink: 'https://www.google.com',
+  },
+  {
+    title: 'GitLab',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    iconName: 'SiGitlab',
     technologieLink: 'https://www.google.com',
   },
 ]
