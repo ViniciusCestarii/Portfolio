@@ -1,9 +1,7 @@
 'use client'
 import { Box, Typography, useTheme } from '@mui/material'
-import * as icons from '@icons-pack/react-simple-icons'
+import { Icon } from '@iconify/react'
 import { TechnologyItemProps } from '@/types/layout/Knowledge'
-import { Alert } from 'mdi-material-ui'
-import { useState } from 'react'
 
 const TechnologyItem = ({
   description,
@@ -12,24 +10,22 @@ const TechnologyItem = ({
   title,
 }: TechnologyItemProps) => {
   const theme = useTheme()
-  const [trigger, setTrigger] = useState(false)
-
-  const Icon = (icons as any)[iconName] ?? Alert
   return (
     <Box
-      onMouseEnter={() => setTrigger(true)}
-      onMouseLeave={() => setTrigger(false)}
       sx={{
+        position: 'relative',
         borderRadius: '14px',
-        maxWidth: '300px',
+        maxWidth: '284px',
         p: '1.5rem',
         gap: '1rem',
+        my: '0.5rem',
         display: 'flex',
         alignItems: 'center',
+        boxShadow: `${theme.palette.primary.main} 0px 4px 8px -4px`,
       }}
     >
       <Box>
-        <Icon color="#FFF" width={32} height={32} />
+        <Icon icon={iconName} color="#FFF" width={32} height={32} />
       </Box>
       <Box sx={{ gap: '0.25rem', display: 'flex', flexDirection: 'column' }}>
         <Typography variant="h5" color="textPrimary">
