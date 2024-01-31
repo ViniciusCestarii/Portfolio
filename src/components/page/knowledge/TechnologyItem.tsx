@@ -15,13 +15,12 @@ const TechnologyItem = ({
       sx={{
         position: 'relative',
         borderRadius: '14px',
-        maxWidth: '300px',
+        maxWidth: '284px',
         p: '1.5rem',
         gap: '1rem',
         my: '0.5rem',
         display: 'flex',
         alignItems: 'center',
-        transition: 'box-shadow 1s linear !important',
         boxShadow: `${theme.palette.primary.main} 0px 4px 8px -4px`,
       }}
     >

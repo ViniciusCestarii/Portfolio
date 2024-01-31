@@ -1,10 +1,13 @@
 'use client'
 
+import ApiIcon from '@/components/icons/animated-icons/icons/ApiIcon'
+import CodeForkIcon from '@/components/icons/animated-icons/icons/CodeForkIcon'
+import CommandIcon from '@/components/icons/animated-icons/icons/CommandIcon'
+import ServerIcon from '@/components/icons/animated-icons/icons/ServerIcon'
 import Subtitle from '@/components/layout/Subtitle'
 import { TechnologyItemProps } from '@/types/layout/Knowledge'
 import { Box, useTheme } from '@mui/material'
 import TechnologyItem from './TechnologyItem'
-import CodeForkIcon from '@/components/icons/animated-icons/icons/CodeForkIcon'
 
 const technologies: TechnologyItemProps[] = [
   {
@@ -178,18 +181,49 @@ const Knowledge = () => {
           display: 'flex',
           justifyContent: { xs: 'center', md: 'space-around' },
           flexWrap: 'wrap',
-          gap: '0.5rem',
+          position: 'relative',
+          gap: '2rem',
         }}
       >
         {technologies.map((technology) => (
           <TechnologyItem key={technology.title} {...technology} />
         ))}
       </Box>
+      <CommandIcon
+        sx={{
+          position: 'absolute',
+          left: -8,
+          top: '24%',
+          transform: 'translate(-50%, -50%)',
+        }}
+        colorize={theme.palette.primary.dark}
+        size={80}
+      />
+      <ApiIcon
+        sx={{
+          position: 'absolute',
+          right: -58,
+          top: '34%',
+          transform: 'translate(-50%, -50%)',
+        }}
+        colorize={theme.palette.primary.dark}
+        size={80}
+      />
+      <ServerIcon
+        sx={{
+          position: 'absolute',
+          left: 4,
+          top: '64%',
+          transform: 'translate(-50%, -50%)',
+        }}
+        colorize={theme.palette.primary.dark}
+        size={80}
+      />
       <CodeForkIcon
         sx={{
           position: 'absolute',
-          right: -56,
-          top: '50%',
+          right: -60,
+          top: '90%',
           transform: 'translate(-50%, -50%)',
         }}
         colorize={theme.palette.primary.dark}
