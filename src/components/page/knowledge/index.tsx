@@ -182,7 +182,7 @@ const Knowledge = () => {
           justifyContent: { xs: 'center', md: 'space-around' },
           flexWrap: 'wrap',
           position: 'relative',
-          gap: '2rem',
+          gap: { xs: '1.5rem', sm: '2rem' },
         }}
       >
         {technologies.map((technology) => (
@@ -193,7 +193,7 @@ const Knowledge = () => {
         sx={{
           position: 'absolute',
           left: 4,
-          top: '23%',
+          top: '20%',
           transform: 'translate(-50%, -50%)',
         }}
         colorize={theme.palette.primary.dark}

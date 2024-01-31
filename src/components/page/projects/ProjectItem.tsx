@@ -49,6 +49,7 @@ const ProjectItem = ({
           width: '400% ',
           scale: '10',
           zIndex: -1,
+          transition: 'all 0.75s ease-in-out',
         },
       }}
     >
