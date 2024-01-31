@@ -1,10 +1,10 @@
 'use client'
 
-import * as React from 'react'
-import Box from '@mui/material/Box'
-import MobileDrawer from './MobileDrawer'
 import NavItem from '@/types/layout/NavItem'
+import Box from '@mui/material/Box'
+import * as React from 'react'
 import AppBar from './AppBar'
+import MobileDrawer from './MobileDrawer'
 
 const navItems: NavItem[] = [
   {
@@ -25,7 +25,7 @@ const NavBar = () => {
   }
 
   return (
-    <Box component="div" sx={{ mt: '80px' }}>
+    <Box component="div" sx={{ mt: '80px' }} className="color-transition">
       <AppBar handleDrawerToggle={handleDrawerToggle} navItems={navItems} />
       <MobileDrawer
         handleDrawerToggle={handleDrawerToggle}

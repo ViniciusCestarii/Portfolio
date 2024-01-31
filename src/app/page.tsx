@@ -8,7 +8,7 @@ import { Box, Typography } from '@mui/material'
 
 export default function MainPage() {
   return (
-    <Box component="main">
+    <Box component="main" className="color-transition">
       <Home />
       <PageContainer>
         <>
