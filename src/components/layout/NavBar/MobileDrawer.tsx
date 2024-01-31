@@ -52,7 +52,7 @@ const MobileDrawer = ({
             sx={{ py: 2, display: 'flex', justifyContent: 'center' }}
           >
             <Logo />
-            <IconButton sx={{ position: 'absolute', right: 40, top: 20 }}>
+            <IconButton sx={{ position: 'absolute', right: 42, top: 20 }}>
               <Close />
             </IconButton>
           </Box>
