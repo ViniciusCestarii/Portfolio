@@ -17,7 +17,10 @@ const MenuButton = ({ handleDrawerToggle }: MenuButtonProps) => {
           },
         }}
       >
-        <Menu color="primary" />
+        <Menu
+          color="primary"
+          sx={{ transition: 'all 0s ease-in-out !important' }}
+        />
       </IconButton>
     </Tooltip>
   )

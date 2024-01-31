@@ -1,12 +1,12 @@
+import RouterButton from '@/components/RouterButton'
+import NavItem from '@/types/layout/NavItem'
 import MuiAppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
-import Logo from '../Logo'
-import NavItem from '@/types/layout/NavItem'
-import RouterButton from '@/components/RouterButton'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
-import ToggleColorButton from './ToggleColorButton'
+import Logo from '../Logo'
 import MenuButton from './MenuButton'
+import ToggleColorButton from './ToggleColorButton'
 
 interface MobileDrawerProps {
   handleDrawerToggle: () => void
@@ -28,7 +28,6 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        transition: 'background-color 0.75s ease-in-out',
         backdropFilter: scrollTrigger ? 'blur(10px) opacity(0.8)' : 'none',
       }}
     >
@@ -44,7 +43,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
           height: { xs: 80, md: 66 },
           maxWidth: '1280px',
           width: '100%',
-          transition: 'padding 500ms cubic-bezier(0.4, 0, 0.2, 1)',
+          transition: 'padding 500ms cubic-bezier(0.4, 0, 0.2, 1) !important',
         }}
       >
         <Box
@@ -63,7 +62,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
             display: { sm: 'none' },
             position: 'absolute',
             right: scrollTrigger ? 40 : 20,
-            transition: 'right 500ms cubic-bezier(0.4, 0, 0.2, 1)',
+            transition: 'right 500ms cubic-bezier(0.4, 0, 0.2, 1) !important',
           }}
         >
           <ToggleColorButton />
