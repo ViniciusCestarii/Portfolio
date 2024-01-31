@@ -192,8 +192,8 @@ const Knowledge = () => {
       <CommandIcon
         sx={{
           position: 'absolute',
-          left: -8,
-          top: '24%',
+          left: 4,
+          top: '23%',
           transform: 'translate(-50%, -50%)',
         }}
         colorize={theme.palette.primary.dark}

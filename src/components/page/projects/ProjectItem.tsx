@@ -1,12 +1,12 @@
-import { Box, Tooltip, Typography, useTheme } from '@mui/material'
 import AnimatedIconOnHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
-import { useState } from 'react'
-import { AnimationDirection } from 'lottie-web'
+import LockIcon from '@/components/icons/animated-icons/icons/LockIcon'
+import ShareIcon from '@/components/icons/animated-icons/icons/ShareIcon'
 import { ProjectItemProps } from '@/types/layout/Project'
+import { Box, Tooltip, Typography, useTheme } from '@mui/material'
+import { AnimationDirection } from 'lottie-web'
 import Image from 'next/image'
 import Link from 'next/link'
-import ShareIcon from '@/components/icons/animated-icons/icons/ShareIcon'
-import LockIcon from '@/components/icons/animated-icons/icons/LockIcon'
+import { useState } from 'react'
 
 const ProjectItem = ({
   title,
@@ -49,7 +49,6 @@ const ProjectItem = ({
           width: '400% ',
           scale: '10',
           zIndex: -1,
-          transition: 'all 0.75s ease-in-out',
         },
       }}
     >

@@ -1,6 +1,7 @@
 'use client'
 
-import * as React from 'react'
+import NavItem from '@/types/layout/NavItem'
+import { scrollToElement } from '@/utils/router/router'
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import Drawer from '@mui/material/Drawer'
@@ -11,8 +12,6 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import Close from 'mdi-material-ui/Close'
 import Logo from '../Logo'
-import NavItem from '@/types/layout/NavItem'
-import { scrollToElement } from '@/utils/router/router'
 
 interface MobileDrawerProps {
   mobileOpen: boolean
@@ -53,7 +52,7 @@ const MobileDrawer = ({
             sx={{ py: 2, display: 'flex', justifyContent: 'center' }}
           >
             <Logo />
-            <IconButton sx={{ position: 'absolute', right: 6, top: 10 }}>
+            <IconButton sx={{ position: 'absolute', right: 40, top: 20 }}>
               <Close />
             </IconButton>
           </Box>
