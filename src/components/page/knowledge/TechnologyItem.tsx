@@ -1,7 +1,7 @@
 'use client'
-import { Box, Typography, useTheme } from '@mui/material'
-import { Icon } from '@iconify/react'
 import { TechnologyItemProps } from '@/types/layout/Knowledge'
+import { Icon } from '@iconify/react'
+import { Box, Typography, useTheme } from '@mui/material'
 
 const TechnologyItem = ({
   description,
@@ -21,6 +21,7 @@ const TechnologyItem = ({
         my: '0.5rem',
         display: 'flex',
         alignItems: 'center',
+        zIndex: 2,
         boxShadow: `${theme.palette.primary.main} 0px 4px 8px -4px`,
       }}
     >
