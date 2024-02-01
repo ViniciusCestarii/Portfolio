@@ -28,7 +28,6 @@ const Home = () => {
           transform: 'translate(-50%, -50%)',
           left: '50%',
           bottom: -120,
-          transition: 'all 0.75s ease-in-out',
         },
         '::after': {
           content: '""',
@@ -44,7 +43,6 @@ const Home = () => {
           transform: 'translate(-50%, -50%)',
           left: '50%',
           bottom: -100,
-          transition: 'all 0.75s ease-in-out',
         },
       }}
     >
@@ -61,7 +59,6 @@ const Home = () => {
           left: '50%',
           bottom: -2,
           opacity: '0.3',
-          transition: 'all 0.75s ease-in-out',
         }}
       />
       <Box>
