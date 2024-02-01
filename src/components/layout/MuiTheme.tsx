@@ -21,7 +21,7 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
       },
       text: {
         primary: '#DDDDFF',
-        secondary: '#c4c4cc',
+        secondary: '#C4C4CC',
       },
     },
   })

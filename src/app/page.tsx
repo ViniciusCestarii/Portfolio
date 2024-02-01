@@ -20,11 +20,11 @@ export default function MainPage() {
             variant="caption"
             sx={{ textAlign: 'center', py: 8, fontSize: '1.5rem' }}
           >
-            🚧 In construction 🚧
+            🚧 Under construction 🚧
           </Typography>
-          <Footer />
         </>
       </PageContainer>
+      <Footer />
     </Box>
   )
 }
