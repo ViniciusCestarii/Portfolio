@@ -27,11 +27,12 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
       },
       typography: {
         h1: {
-          letterSpacing: '-4px',
+          letterSpacing: '-3px',
           fontWeight: 400,
         },
         h2: {
           letterSpacing: '-1px',
+          fontWeight: 400,
         },
         fontFamily: [
           'var(--font-inter)',
