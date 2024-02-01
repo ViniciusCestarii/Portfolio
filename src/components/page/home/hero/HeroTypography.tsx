@@ -13,7 +13,6 @@ const HeroTypography = ({ children, ...props }: HeroTypographyProps) => {
       sx={{
         position: 'relative',
         textAlign: 'center',
-        fontSize: { xs: '72px', md: '92px', lg: '108px', xl: '124px' },
         '::before': {
           content: '""',
           position: 'absolute',

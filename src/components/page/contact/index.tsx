@@ -80,9 +80,9 @@ const Contact = () => {
           <ContactItem
             link="https://www.linkedin.com/in/-vinicius-cestari/"
             linkText="Vinicius Cestari"
-            imgAlt="Linkdin Icon"
-            imgSrc="assets/linkdinLogo.svg"
-            caption="Linkdin:"
+            imgAlt="Linkedin Icon"
+            imgSrc="assets/linkedinLogo.svg"
+            caption="Linkedin:"
           />
         </Box>
       </Box>

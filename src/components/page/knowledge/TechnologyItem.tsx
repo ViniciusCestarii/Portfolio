@@ -6,7 +6,7 @@ import { Box, Typography, useTheme } from '@mui/material'
 const TechnologyItem = ({
   description,
   iconName,
-  technologieLink,
+  technologyLink,
   title,
 }: TechnologyItemProps) => {
   const theme = useTheme()

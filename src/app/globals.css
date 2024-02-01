@@ -8,6 +8,10 @@
   transition: color 0.75s ease-in-out, background 0.75s ease-in-out, box-shadow 0.75s ease-in-out, fill 0.75s ease-in-out, opacity 0.75s ease-in-out  !important;
 }
 
+.color-transition path {
+  transition: none !important;
+}
+
 body {
   transition: none;
 }
