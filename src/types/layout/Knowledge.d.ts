@@ -1,6 +1,6 @@
 export interface TechnologyItemProps {
   title: string
   description: string
-  technologieLink: string
+  technologyLink: string
   iconName: string
 }

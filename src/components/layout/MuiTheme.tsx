@@ -1,7 +1,7 @@
 'use client'
 import { useMyTheme } from '@/context/themeContext'
 import { ThemeProvider } from '@emotion/react'
-import createTheme from '@mui/material/styles/createTheme'
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { ReactNode } from 'react'
 
 interface MuiThemeProps {
@@ -11,20 +11,45 @@ interface MuiThemeProps {
 const MuiTheme = ({ children }: MuiThemeProps) => {
   const { themeColor } = useMyTheme()
 
-  const theme = createTheme({
-    palette: {
-      mode: 'dark',
-      contrastThreshold: 4.5,
-      primary: {
-        main: themeColor.hex,
-        contrastText: '#DDDDFF',
+  const theme = responsiveFontSizes(
+    createTheme({
+      palette: {
+        mode: 'dark',
+        contrastThreshold: 4.5,
+        primary: {
+          main: themeColor.hex,
+          contrastText: '#DDDDFF',
+        },
+        text: {
+          primary: '#DDDDFF',
+          secondary: '#C4C4CC',
+        },
       },
-      text: {
-        primary: '#DDDDFF',
-        secondary: '#C4C4CC',
+      typography: {
+        h1: {
+          letterSpacing: '-3px',
+          fontWeight: 400,
+        },
+        h2: {
+          letterSpacing: '-1px',
+          fontWeight: 400,
+        },
+        fontFamily: [
+          'var(--font-inter)',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(','),
       },
-    },
-  })
+    }),
+  )
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }

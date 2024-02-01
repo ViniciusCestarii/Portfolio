@@ -2,20 +2,20 @@
 import { Box, Typography, useTheme, rgbToHex } from '@mui/material'
 import Link from 'next/link'
 import Logo from '../layout/Logo'
+import LinkIcon from '../icons/LinkIcon'
 
 const Footer = () => {
   const theme = useTheme()
   return (
     <Box
       component="footer"
-      className="color-transition"
       sx={{
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
         minHeight: 80,
-        backgroundColor: rgbToHex(theme.palette.primary.main) + '40',
+        backgroundColor: rgbToHex(theme.palette.primary.main) + '10',
         ':before': {
           content: '""',
           position: 'absolute',
@@ -23,7 +23,7 @@ const Footer = () => {
           left: 0,
           height: 2,
           width: '100%',
-          backgroundColor: rgbToHex(theme.palette.primary.main) + '40',
+          backgroundColor: rgbToHex(theme.palette.primary.main) + '60',
         },
       }}
     >
@@ -59,6 +59,35 @@ const Footer = () => {
             <Typography variant="body1" color="textPrimary">
               Full Stack Developer
             </Typography>
+            <Box
+              sx={{
+                display: 'flex',
+                gap: '0.5rem',
+                mt: 1,
+              }}
+            >
+              <LinkIcon
+                link="https://www.linkedin.com/in/-vinicius-cestari/"
+                icon="simple-icons:linkedin"
+                color={theme.palette.primary.light}
+                width={20}
+                height={20}
+              />
+              <LinkIcon
+                link="https://github.com/ViniciusCestarii"
+                icon="simple-icons:github"
+                color={theme.palette.primary.light}
+                width={20}
+                height={20}
+              />
+              <LinkIcon
+                link="mailto:viniciuscestari01@gmail.com"
+                icon="simple-icons:gmail"
+                color={theme.palette.primary.light}
+                width={20}
+                height={20}
+              />
+            </Box>
           </Box>
           <Box
             sx={{

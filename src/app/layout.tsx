@@ -5,6 +5,14 @@ import dynamic from 'next/dynamic'
 import { ThemeProvider } from '@/context/themeContext'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter' // improves mui for nextjs
 import { Analytics } from '@vercel/analytics/react'
+import { Inter } from 'next/font/google'
+
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Vinicius Cestarii',
@@ -21,7 +29,7 @@ export default function RootLayout({
   })
 
   return (
-    <html lang="en" id="home">
+    <html lang="en" id="home" className={`${inter.variable}`}>
       <body style={{ backgroundColor: 'rgb(14, 14, 20)' }}>
         <Analytics />
         <AppRouterCacheProvider>
