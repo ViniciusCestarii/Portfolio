@@ -34,6 +34,9 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
           letterSpacing: '-1px',
           fontWeight: 400,
         },
+        caption: {
+          fontSize: '0.75rem',
+        },
         fontFamily: [
           'var(--font-inter)',
           '-apple-system',

@@ -15,13 +15,6 @@ export default function MainPage() {
           <Projects />
           <Knowledge />
           <Contact />
-          <Typography
-            color="textPrimary"
-            variant="caption"
-            sx={{ textAlign: 'center', py: 8, fontSize: '1.5rem' }}
-          >
-            🚧 Under construction 🚧
-          </Typography>
         </>
       </PageContainer>
       <Footer />

@@ -61,19 +61,7 @@ const Home = () => {
           opacity: '0.3',
         }}
       />
-      <Box>
-        <Hero />
-        <Typography
-          color="textPrimary"
-          variant="h2"
-          textAlign={'center'}
-          sx={{
-            fontSize: { xs: '32px', xl: '46px' },
-          }}
-        >
-          Full-Stack Developer
-        </Typography>
-      </Box>
+      <Hero />
     </Box>
   )
 }
