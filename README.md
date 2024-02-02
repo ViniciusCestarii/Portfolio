@@ -24,6 +24,6 @@ While you explore, don't hesitate to reach out! I'm always open to connecting wi
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/-vinicius-cestari/)
 
 ## 📆 What's Next?
-I'm actively working on enhancing this portfolio, so stay tuned for more updates! Your feedback is valuable to me, so if you have any thoughts or suggestions, feel free to drop me a message.
+I'm actively working on enhancing this portfolio and other projects, so stay tuned for more updates! Your feedback is valuable to me, so if you have any thoughts or suggestions, feel free to drop me a message.
 
 Thank you for stopping by, and I look forward to sharing more with you soon! 🌟
