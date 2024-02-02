@@ -1,7 +1,11 @@
 'use client'
 import { useMyTheme } from '@/context/themeContext'
 import { ThemeProvider } from '@emotion/react'
-import { createTheme, responsiveFontSizes } from '@mui/material/styles'
+import {
+  createTheme,
+  responsiveFontSizes,
+  rgbToHex,
+} from '@mui/material/styles'
 import { ReactNode } from 'react'
 
 interface MuiThemeProps {
@@ -53,6 +57,22 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
       },
     }),
   )
+
+  theme.components = {
+    ...theme.components,
+    MuiTypography: {
+      ...theme.components?.MuiTypography,
+      styleOverrides: {
+        ...theme.components?.MuiTypography?.styleOverrides,
+        root: {
+          '::selection': {
+            color: theme.palette.text.primary,
+            backgroundColor: rgbToHex(theme.palette.primary.main) + 'CC',
+          },
+        },
+      },
+    },
+  }
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
