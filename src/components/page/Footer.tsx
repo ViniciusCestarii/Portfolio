@@ -3,6 +3,7 @@ import { Box, Typography, useTheme, rgbToHex } from '@mui/material'
 import Link from 'next/link'
 import Logo from '../layout/Logo'
 import LinkIcon from '../icons/LinkIcon'
+import BalanceIcon from '../icons/animated-icons/icons/BalanceIcon'
 
 const Footer = () => {
   const theme = useTheme()
@@ -100,8 +101,13 @@ const Footer = () => {
               © {new Date().getFullYear()} Vinicius Cestari. All rights
               reserved.
             </Typography>
-            <Typography variant="body2" color="textSecondary">
-              Released under the MIT License.
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              sx={{ display: 'flex', gap: '0.25rem' }}
+            >
+              Released under the MIT License{' '}
+              <BalanceIcon colorize={theme.palette.text.secondary} size={20} />.
             </Typography>
           </Box>
           <Box sx={{ width: '100%' }}>
