@@ -18,10 +18,10 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
         contrastThreshold: 4.5,
         primary: {
           main: themeColor.hex,
-          contrastText: '#DDDDFF',
+          contrastText: '#EDEDED',
         },
         text: {
-          primary: '#DDDDFF',
+          primary: '#EDEDED',
           secondary: '#C4C4CC',
         },
       },
