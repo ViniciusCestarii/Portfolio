@@ -26,7 +26,7 @@ const Hero = () => {
         color="textPrimary"
         variant="h2"
         sx={{
-          fontSize: { xs: '32px', sm: '46px' },
+          fontSize: { xs: '32px', sm: '40px' },
         }}
       >
         Full-Stack Developer

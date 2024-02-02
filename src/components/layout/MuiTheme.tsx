@@ -35,7 +35,7 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
           fontWeight: 400,
         },
         caption: {
-          fontSize: '0.75rem',
+          fontSize: '0.8rem',
         },
         fontFamily: [
           'var(--font-inter)',
