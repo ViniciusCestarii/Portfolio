@@ -1,7 +1,7 @@
 'use client'
 import EyeIcon from '@/components/icons/animated-icons/icons/EyeIcon'
 import { useMyTheme } from '@/context/themeContext'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import HeroTypography from './HeroTypography'
 
 const Hero = () => {
@@ -22,6 +22,15 @@ const Hero = () => {
         size={184}
       />
       <HeroTypography sx={{ mt: '-32px' }}>Vinicius Cestari</HeroTypography>
+      <Typography
+        color="textPrimary"
+        variant="h2"
+        sx={{
+          fontSize: { xs: '32px', sm: '40px' },
+        }}
+      >
+        Full-Stack Developer
+      </Typography>
     </Box>
   )
 }

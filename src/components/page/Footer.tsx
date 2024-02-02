@@ -11,6 +11,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
+        mt: 6,
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
@@ -97,21 +98,33 @@ const Footer = () => {
               alignItems: 'center',
             }}
           >
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant="caption" color="textSecondary">
               © {new Date().getFullYear()} Vinicius Cestari. All rights
-              reserved.
+              reserved
             </Typography>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              sx={{ display: 'flex', gap: '0.25rem' }}
-            >
-              Released under the MIT License{' '}
-              <BalanceIcon colorize={theme.palette.text.secondary} size={20} />.
-            </Typography>
+            <Box sx={{ display: 'flex', gap: '0.25rem' }}>
+              <Typography
+                variant="caption"
+                color="textSecondary"
+                sx={{ display: 'flex', gap: '0.25rem' }}
+              >
+                Released under the{' '}
+                <Link
+                  target="_blank"
+                  href="https://github.com/ViniciusCestarii/Portfolio/blob/main/LICENSE"
+                >
+                  {' '}
+                  MIT License
+                </Link>
+                <BalanceIcon
+                  colorize={theme.palette.text.secondary}
+                  size={20}
+                />
+              </Typography>
+            </Box>
           </Box>
           <Box sx={{ width: '100%' }}>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant="caption" color="textSecondary">
               <Link href="https://lordicon.com/" target="_blank">
                 Icons by Lordicon.com 👑
               </Link>

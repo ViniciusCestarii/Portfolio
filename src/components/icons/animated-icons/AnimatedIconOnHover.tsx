@@ -118,7 +118,11 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
         state={state}
         colorize={colorize}
         size={size}
-        direction={direction ?? 1}
+        direction={
+          playerRef.current?.currentState.name === inAnimation
+            ? 1
+            : direction ?? 1
+        }
       />
     </Box>
   )
