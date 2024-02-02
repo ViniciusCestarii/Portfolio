@@ -1,5 +1,5 @@
 import SearchIcon from '@/components/icons/animated-icons/icons/SearchIcon'
-import { Typography, useTheme, Link as MuiLink, Box } from '@mui/material'
+import { Typography, useTheme, Box } from '@mui/material'
 import Link from 'next/link'
 import { useState } from 'react'
 

@@ -15,8 +15,25 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://viniciuscestarii-portfolio.vercel.app/'),
   title: 'Vinicius Cestarii',
   description: 'Vinicius Cestarii - Full Stack Developer',
+  keywords: ['Vinicius Cestarii', 'Full Stack Developer'],
+  icons: '/icon.svg',
+  twitter: {
+    creator: 'vinicius-cestari',
+    creatorId: 'vinicius-cestari',
+    images: '/cover.png',
+    title: 'Vinicius Cestarii',
+    description: 'Vinicius Cestarii - Full Stack Developer',
+  },
+  openGraph: {
+    url: 'https://viniciuscestarii-portfolio.vercel.app/',
+    images: '/cover.png',
+    title: 'Vinicius Cestarii',
+    description: 'Vinicius Cestarii - Full Stack Developer',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({

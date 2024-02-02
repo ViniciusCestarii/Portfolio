@@ -4,7 +4,7 @@ import Contact from '@/components/page/contact'
 import Home from '@/components/page/home'
 import Knowledge from '@/components/page/knowledge'
 import Projects from '@/components/page/projects'
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 
 export default function MainPage() {
   return (
