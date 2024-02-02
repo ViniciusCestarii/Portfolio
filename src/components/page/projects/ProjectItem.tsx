@@ -81,7 +81,9 @@ const ProjectItem = ({
         <Typography
           variant="body1"
           color="textSecondary"
-          sx={{ height: '100%' }}
+          sx={{
+            height: '100%',
+          }}
         >
           {description}
         </Typography>
