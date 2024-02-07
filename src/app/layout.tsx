@@ -5,9 +5,9 @@ import dynamic from 'next/dynamic'
 import { ThemeProvider } from '@/context/themeContext'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter' // improves mui for nextjs
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Inter } from 'next/font/google'
 
-// If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -49,6 +49,7 @@ export default function RootLayout({
     <html lang="en" id="home" className={`${inter.variable}`}>
       <body style={{ backgroundColor: 'rgb(14, 14, 20)' }}>
         <Analytics />
+        <SpeedInsights />
         <AppRouterCacheProvider>
           <ThemeProvider>
             <MuiTheme>
