@@ -16,6 +16,7 @@ const PageContainer = ({ children }: PageContainerProps) => {
         margin: '0 auto',
         px: { xs: 4, sm: 8 },
         gap: 4,
+        overflow: { md: 'hidden', lg: 'visible' },
       }}
     >
       {children}

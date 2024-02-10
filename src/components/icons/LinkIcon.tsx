@@ -9,11 +9,7 @@ interface LinkIconProps extends IconProps {
 const LinkIcon = ({ icon, link, ...props }: LinkIconProps) => {
   return (
     <Link href={link} target="_blank">
-      <Icon
-        icon={icon}
-        {...props}
-        style={{ transition: 'all 0s ease-in-out !important' }}
-      />
+      <Icon icon={icon} {...props} style={{ transition: 'none !important' }} />
     </Link>
   )
 }

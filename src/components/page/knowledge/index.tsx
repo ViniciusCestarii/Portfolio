@@ -8,157 +8,144 @@ import Subtitle from '@/components/layout/Subtitle'
 import { TechnologyItemProps } from '@/types/layout/Knowledge'
 import { Box, useTheme } from '@mui/material'
 import TechnologyItem from './TechnologyItem'
+import SmileVercel from '../SmileVercel'
 
 const technologies: TechnologyItemProps[] = [
   {
     title: 'Next.js',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'React framework for server-side rendering and static sites.',
     iconName: 'simple-icons:nextdotjs',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://nextjs.org/',
   },
   {
     title: 'React',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'JavaScript library for building user interfaces.',
     iconName: 'simple-icons:react',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://reactjs.org/',
   },
   {
     title: 'MUI',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: "React UI framework based on Google's Material Design.",
     iconName: 'simple-icons:mui',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://mui.com/',
   },
   {
     title: 'Tailwind CSS',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'Utility-first CSS framework for rapid development.',
     iconName: 'simple-icons:tailwindcss',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://tailwindcss.com/',
   },
   {
-    title: 'Typescript',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    title: 'TypeScript',
+    description: 'Statically typed superset of JavaScript.',
     iconName: 'simple-icons:typescript',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://www.typescriptlang.org/',
   },
   {
     title: 'Express.js',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'Minimal Node.js web framework for building web applications.',
     iconName: 'simple-icons:express',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://expressjs.com/',
   },
   {
     title: 'Fastify',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'Fast and low overhead web framework for Node.js.',
     iconName: 'simple-icons:fastify',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://www.fastify.io/',
   },
   {
     title: 'Prisma',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'Open-source database toolkit for TypeScript and Node.js.',
     iconName: 'simple-icons:prisma',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://www.prisma.io/',
   },
   {
     title: 'Drizzle',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'Lightweight and performant TypeScript ORM',
     iconName: 'simple-icons:drizzle',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://orm.drizzle.team/',
   },
   {
     title: '.NET',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+      'Cross-platform developer platform for building various applications.',
     iconName: 'simple-icons:dotnet',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://dotnet.microsoft.com/',
   },
   {
     title: 'C#',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+      'Modern, object-oriented programming language developed by Microsoft.',
     iconName: 'simple-icons:csharp',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
   },
   {
     title: 'Docker',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+      'Platform for developinga and shipping applications inside containers.',
     iconName: 'simple-icons:docker',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://www.docker.com/',
   },
   {
     title: 'PostgreSQL',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'Powerful open-source relational database management system.',
     iconName: 'simple-icons:postgresql',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://www.postgresql.org/',
   },
   {
     title: 'Bun',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'JavaScript ORM for Node.js and TypeScript.',
     iconName: 'simple-icons:bun',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://bunjs.org/',
   },
   {
     title: 'Node.js',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+      'Runtime environment for executing JavaScript code outside the browser.',
     iconName: 'simple-icons:nodedotjs',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://nodejs.org/',
   },
   {
     title: 'AWS',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'Comprehensive cloud computing platform provided by Amazon.',
     iconName: 'simple-icons:amazonaws',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://aws.amazon.com/',
   },
   {
     title: 'Firebase',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+      'App development platform with real-time database and hosting.',
     iconName: 'simple-icons:firebase',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://firebase.google.com/',
   },
   {
     title: 'Vercel',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+      'Cloud platform for static sites and serverless functions deployment.',
     iconName: 'simple-icons:vercel',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://vercel.com/',
   },
   {
     title: 'Git',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+      'Distributed version control system for tracking changes in source code.',
     iconName: 'simple-icons:git',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://git-scm.com/',
   },
   {
     title: 'GitHub',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description: 'Web-based platform for version control using Git.',
     iconName: 'simple-icons:github',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://github.com/',
   },
   {
     title: 'GitLab',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+      'Web-based DevOps lifecycle tool with Git repository management.',
     iconName: 'simple-icons:gitlab',
-    technologyLink: 'https://www.google.com',
+    technologyLink: 'https://about.gitlab.com/',
   },
 ]
-// ver v0 para pegar inspiração
 
 const Knowledge = () => {
   const theme = useTheme()
@@ -222,12 +209,21 @@ const Knowledge = () => {
       <CodeForkIcon
         sx={{
           position: 'absolute',
-          right: -60,
-          top: '90%',
+          left: 0,
+          top: '95%',
           transform: 'translate(-50%, -50%)',
         }}
         colorize={theme.palette.primary.dark}
         size={80}
+      />
+      <SmileVercel
+        boxProps={{
+          sx: {
+            position: 'absolute',
+            right: { xs: -32, sm: -60, md: -80, lg: -108 },
+            top: { xs: '80%', sm: '70%' },
+          },
+        }}
       />
     </Box>
   )
