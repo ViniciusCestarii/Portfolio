@@ -5,7 +5,7 @@
 .color-transition *,
 .color-transition *::before,
 .color-transition *::after {
-  transition: color 0.75s ease-in-out, background 0.75s ease-in-out, box-shadow 0.75s ease-in-out, fill 0.75s ease-in-out, opacity 0.75s ease-in-out  !important;
+  transition: color 0.75s ease-in-out, background 0.75s ease-in-out, box-shadow 0.75s ease-in-out, fill 0.75s ease-in-out, opacity 0.75s ease-in-out, border 0.75s ease-in-out  !important;
 }
 
 .color-transition path {
