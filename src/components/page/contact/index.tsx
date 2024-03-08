@@ -4,6 +4,7 @@ import Subtitle from '@/components/layout/Subtitle'
 import { Box, Typography, useTheme } from '@mui/material'
 import { useState } from 'react'
 import ContactItem from './ContactItem'
+import Curriculum from './Curriculum'
 
 const Contact = () => {
   const theme = useTheme()
@@ -85,6 +86,10 @@ const Contact = () => {
             caption="Linkedin:"
           />
         </Box>
+      </Box>
+      <Box sx={{ display: 'flex', justifyContent: 'space-around' }}>
+        <Curriculum lang="en" />
+        <Curriculum lang="pt" />
       </Box>
     </Box>
   )
