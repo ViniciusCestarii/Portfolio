@@ -87,7 +87,14 @@ const Contact = () => {
           />
         </Box>
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'space-around' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          gap: 2,
+          flexDirection: { xs: 'column', sm: 'row' },
+        }}
+      >
         <Curriculum lang="en" />
         <Curriculum lang="pt" />
       </Box>
