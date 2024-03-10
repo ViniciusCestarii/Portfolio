@@ -87,7 +87,7 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
 
   return (
     <Box
-      component="div"
+      component={'div'}
       sx={{
         width: 'fit-content',
         transform: invertXIcon ? 'scaleX(-1)' : '',

@@ -19,7 +19,7 @@ const ContactItem = ({
 }: ContactItemProps) => {
   const theme = useTheme()
   return (
-    <Box component="div" sx={{ display: 'flex', gap: 1 }}>
+    <Box sx={{ display: 'flex', gap: 1 }}>
       <Typography
         variant="body1"
         color="textPrimary"
