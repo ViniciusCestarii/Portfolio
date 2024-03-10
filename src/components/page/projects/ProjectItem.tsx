@@ -20,6 +20,7 @@ const ProjectItem = ({
   const [direction, setDirection] = useState<AnimationDirection | undefined>()
   return (
     <Box
+      component="div"
       onMouseEnter={() => setDirection(1)}
       onMouseLeave={() => setDirection(-1)}
       sx={{
@@ -54,6 +55,7 @@ const ProjectItem = ({
       }}
     >
       <Box
+        component="div"
         sx={{
           width: '100%',
           height: '100%',
@@ -65,6 +67,7 @@ const ProjectItem = ({
         }}
       >
         <Box
+          component="div"
           sx={{
             width: '100%',
             height: 160,
@@ -88,6 +91,7 @@ const ProjectItem = ({
           {description}
         </Typography>
         <Box
+          component="div"
           sx={{
             display: 'flex',
             justifyContent: 'end',
@@ -98,7 +102,7 @@ const ProjectItem = ({
         >
           {privateProject && (
             <Tooltip title="Private Project">
-              <Box>
+              <Box component="div">
                 <LockIcon colorize={theme.palette.primary.main} size={26} />
               </Box>
             </Tooltip>

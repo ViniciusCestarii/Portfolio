@@ -30,6 +30,7 @@ const Footer = () => {
       }}
     >
       <Box
+        component="div"
         sx={{
           display: 'flex',
           maxWidth: 900,
@@ -39,6 +40,7 @@ const Footer = () => {
         }}
       >
         <Box
+          component="div"
           sx={{
             display: 'flex',
             flexDirection: 'column',
@@ -48,6 +50,7 @@ const Footer = () => {
           }}
         >
           <Box
+            component="div"
             sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -62,6 +65,7 @@ const Footer = () => {
               Full Stack Developer
             </Typography>
             <Box
+              component="div"
               sx={{
                 display: 'flex',
                 gap: '0.5rem',
@@ -92,6 +96,7 @@ const Footer = () => {
             </Box>
           </Box>
           <Box
+            component="div"
             sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -102,7 +107,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Vinicius Cestari. All rights
               reserved
             </Typography>
-            <Box sx={{ display: 'flex', gap: '0.25rem' }}>
+            <Box component="div" sx={{ display: 'flex', gap: '0.25rem' }}>
               <Typography
                 variant="caption"
                 color="textSecondary"
@@ -123,7 +128,7 @@ const Footer = () => {
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ width: '100%' }}>
+          <Box component="div" sx={{ width: '100%' }}>
             <Typography variant="caption" color="textSecondary">
               <Link href="https://lordicon.com/" target="_blank">
                 Icons by Lordicon.com 👑

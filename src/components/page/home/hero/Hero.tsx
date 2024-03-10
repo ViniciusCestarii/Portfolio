@@ -9,6 +9,7 @@ const Hero = () => {
 
   return (
     <Box
+      component="div"
       sx={{
         display: 'flex',
         flexDirection: 'column',

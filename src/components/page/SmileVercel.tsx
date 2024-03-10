@@ -14,6 +14,7 @@ const SmileVercel = ({ boxProps }: SmileVercelProps) => {
   return (
     <Box
       {...boxProps}
+      component="div"
       onMouseEnter={() => setTrigger(!trigger)}
       onMouseLeave={() => setTrigger(!trigger)}
       sx={{
