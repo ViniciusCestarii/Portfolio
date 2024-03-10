@@ -9,6 +9,7 @@ interface PageContainerProps {
 const PageContainer = ({ children }: PageContainerProps) => {
   return (
     <Box
+      component="div"
       sx={{
         maxWidth: '1080px',
         display: 'flex',

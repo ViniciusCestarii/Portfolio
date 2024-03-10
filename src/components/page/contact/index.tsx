@@ -41,6 +41,7 @@ const Contact = () => {
             }
           </Typography>
           <Box
+            component="div"
             sx={{
               height: '100%',
               width: '100%',
@@ -88,6 +89,7 @@ const Contact = () => {
         </Box>
       </Box>
       <Box
+        component="div"
         sx={{
           display: 'flex',
           justifyContent: 'space-around',

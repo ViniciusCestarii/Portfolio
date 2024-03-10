@@ -47,6 +47,7 @@ const Home = () => {
       }}
     >
       <Box
+        component="div"
         sx={{
           display: { xs: 'none', md: 'block' },
           position: 'absolute',
