@@ -8,7 +8,6 @@ const SeeAllProjects = () => {
   const [trigger, setTrigger] = useState(false)
   return (
     <Box
-      component="div"
       sx={{
         display: 'flex',
         justifyContent: { xs: 'center', md: 'end' },

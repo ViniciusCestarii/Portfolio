@@ -13,7 +13,6 @@ const TechnologyItem = ({
   const theme = useTheme()
   return (
     <Box
-      component="div"
       sx={{
         position: 'relative',
         borderRadius: '14px',
@@ -30,10 +29,7 @@ const TechnologyItem = ({
       <Link href={technologyLink} target="_blank">
         <Icon icon={iconName} color="#FFF" width={32} height={32} />
       </Link>
-      <Box
-        component="div"
-        sx={{ gap: '0.25rem', display: 'flex', flexDirection: 'column' }}
-      >
+      <Box sx={{ gap: '0.25rem', display: 'flex', flexDirection: 'column' }}>
         <Typography variant="h5" color="textPrimary">
           {title}
         </Typography>
