@@ -1,7 +1,7 @@
 'use client'
 import { TechnologyItemProps } from '@/types/layout/Knowledge'
 import { Icon } from '@iconify/react'
-import { Box, Typography, useTheme } from '@mui/material'
+import { Box, IconButton, Typography, useTheme } from '@mui/material'
 import Link from 'next/link'
 
 const TechnologyItem = ({
@@ -27,7 +27,9 @@ const TechnologyItem = ({
       }}
     >
       <Link href={technologyLink} target="_blank">
-        <Icon icon={iconName} color="#FFF" width={32} height={32} />
+        <IconButton color="primary">
+          <Icon icon={iconName} color="#FFF" width={32} height={32} />
+        </IconButton>
       </Link>
       <Box sx={{ gap: '0.25rem', display: 'flex', flexDirection: 'column' }}>
         <Typography variant="h5" color="textPrimary">
