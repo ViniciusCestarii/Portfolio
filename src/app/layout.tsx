@@ -45,11 +45,16 @@ export default function RootLayout({
     ssr: false,
   })
 
+  const CrispChat = dynamic(() => import('@/components/chat/Crisp'), {
+    ssr: false,
+  })
+
   return (
     <html lang="en" id="home" className={`${inter.variable}`}>
       <body style={{ backgroundColor: 'rgb(14, 14, 20)' }}>
         <Analytics />
         <SpeedInsights />
+        <CrispChat />
         <AppRouterCacheProvider>
           <ThemeProvider>
             <MuiTheme>
