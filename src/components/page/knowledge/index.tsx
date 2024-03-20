@@ -94,7 +94,8 @@ const technologies: TechnologyItemProps[] = [
   },
   {
     title: 'Bun',
-    description: 'JavaScript ORM for Node.js and TypeScript.',
+    description:
+      'Toolkit specifically designed for JavaScript and TypeScript projects.',
     iconName: 'simple-icons:bun',
     technologyLink: 'https://bunjs.org/',
   },
