@@ -1,5 +1,4 @@
 # 🚀 Welcome to My Portfolio!
-🚧 Currently Under Development
 
 Hello there! 👋 I'm thrilled to have you visit my web portfolio, where I'm showcasing my skills, projects, and a bit about myself. While it's still a work in progress, feel free to explore what's available and get to know more about me.
 
