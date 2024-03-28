@@ -65,10 +65,21 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
       styleOverrides: {
         ...theme.components?.MuiTypography?.styleOverrides,
         root: {
+          transition: 'color 0.75s ease-in-out',
           '::selection': {
             color: theme.palette.text.primary,
             backgroundColor: rgbToHex(theme.palette.primary.main) + 'CC',
           },
+        },
+      },
+    },
+    ...theme.components,
+    MuiButton: {
+      ...theme.components?.MuiButton,
+      styleOverrides: {
+        ...theme.components?.MuiButton?.styleOverrides,
+        root: {
+          transition: 'all 0.75s ease-in-out',
         },
       },
     },
