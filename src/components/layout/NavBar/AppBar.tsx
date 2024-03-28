@@ -29,6 +29,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
         display: 'flex',
         alignItems: 'center',
         backdropFilter: scrollTrigger ? 'blur(10px) opacity(0.8)' : 'none',
+        transition: 'background 0.75s ease-in-out',
       }}
     >
       <Toolbar

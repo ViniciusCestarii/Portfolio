@@ -2,22 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-.color-transition *,
-.color-transition *::before,
-.color-transition *::after {
+.MuiBox-root,
+.MuiBox-root *::before,
+.MuiBox-root *::after {
   transition: color 0.75s ease-in-out, background 0.75s ease-in-out, box-shadow 0.75s ease-in-out, fill 0.75s ease-in-out, opacity 0.75s ease-in-out, border 0.75s ease-in-out  !important;
 }
 
-.color-transition path {
-  transition: none !important;
+.colorize {
+  transition: color 0.75s ease-in-out;
 }
 
-body {
-  transition: none;
+svg {
+  transition: all 0.75s ease-in-out;
 }
 
 a {
   text-decoration: underline;
+  transition: color 0.75s ease-in-out;
 }
 
 
