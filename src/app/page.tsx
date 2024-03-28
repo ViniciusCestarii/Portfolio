@@ -1,3 +1,4 @@
+import TechnologiesGraph from '@/components/chart/TechnologiesGraph'
 import PageContainer from '@/components/layout/PageContainer'
 import Footer from '@/components/page/Footer'
 import Contact from '@/components/page/contact'
@@ -8,7 +9,8 @@ import { Box } from '@mui/material'
 
 export default function MainPage() {
   return (
-    <Box component="main" className="color-transition">
+    <Box component="main">
+      <TechnologiesGraph />
       <Home />
       <PageContainer>
         <>

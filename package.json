@@ -19,6 +19,7 @@
     "@vercel/speed-insights": "^1.0.9",
     "axios": "^1.5.1",
     "crisp-sdk-web": "^1.0.22",
+    "echarts": "^5.5.0",
     "lottie-web": "^5.12.2",
     "mdi-material-ui": "^7.7.0",
     "next": "latest",

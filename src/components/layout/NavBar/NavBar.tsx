@@ -25,7 +25,7 @@ const NavBar = () => {
   }
 
   return (
-    <Box component="div" sx={{ mt: '80px' }} className="color-transition">
+    <Box component="div" sx={{ mt: '80px' }}>
       <AppBar handleDrawerToggle={handleDrawerToggle} navItems={navItems} />
       <MobileDrawer
         handleDrawerToggle={handleDrawerToggle}
