@@ -10,12 +10,12 @@ import { Box } from '@mui/material'
 export default function MainPage() {
   return (
     <Box component="main">
-      <TechnologiesGraph />
       <Home />
       <PageContainer>
         <>
           <Projects />
           <Knowledge />
+          <TechnologiesGraph />
           <Contact />
         </>
       </PageContainer>
