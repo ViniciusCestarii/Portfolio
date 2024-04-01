@@ -1,6 +1,8 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
 import * as echarts from 'echarts'
+import { useTheme } from '@mui/material'
+import hexToRgba from '@/utils/theme/hexToRgba'
 
 const app =
   'path://M16.74 14.284L19.51 4 8 18.27h6.262l-3.502 9.317 12.666-13.303H16.74zM16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16z'
@@ -433,16 +435,29 @@ const option: echarts.EChartsCoreOption = {
 
 const TechnologiesGraph = () => {
   const chartRef = useRef(null)
+  const echartRef = useRef<echarts.ECharts>()
+  const theme = useTheme()
 
   useEffect(() => {
     const myChart = echarts.init(chartRef.current, 'dark')
 
     myChart.setOption(option)
 
+    echartRef.current = myChart
+
     return () => {
       myChart.dispose()
     }
   }, [])
+
+  useEffect(() => {
+    if (!echartRef.current) return
+
+    const primaryColor = hexToRgba(theme.palette.primary.main, 0.1)
+
+    const newOption = { ...option, backgroundColor: primaryColor }
+    echartRef.current.setOption(newOption)
+  }, [theme])
 
   return <div ref={chartRef} style={{ height: '600px', width: '100%' }} />
 }
