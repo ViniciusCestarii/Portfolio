@@ -382,6 +382,9 @@ const option: echarts.EChartsCoreOption = {
   tooltip: {
     formatter: '{b}',
   },
+  aria: {
+    show: true, // auto generate aria description
+  },
   title: {
     text: 'Technologies Graph',
     subtext: 'Technologies I used in projects (more to come 🚀)',
