@@ -1,6 +1,5 @@
 import DocumentIcon from '@/components/icons/animated-icons/icons/DocumentIcon'
 import { Button, useTheme } from '@mui/material'
-import Link from 'next/link'
 import React, { useState } from 'react'
 
 interface CurriculumLinkProps {
@@ -12,24 +11,26 @@ const CurriculumLink = ({ href, name }: CurriculumLinkProps) => {
   const [trigger, setTrigger] = useState(false)
   const theme = useTheme()
   return (
-    <Link
+    <Button
+      variant="outlined"
+      component="a"
       target="_blank"
       href={href}
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 1,
+        textDecoration: 'none',
+      }}
       onMouseEnter={() => setTrigger((prev) => !prev)}
-      style={{ textDecoration: 'none' }}
     >
-      <Button
-        variant="outlined"
-        sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
-      >
-        {name}{' '}
-        <DocumentIcon
-          colorize={theme.palette.primary.dark}
-          size={32}
-          trigger={trigger}
-        />{' '}
-      </Button>
-    </Link>
+      {name}{' '}
+      <DocumentIcon
+        colorize={theme.palette.primary.dark}
+        size={32}
+        trigger={trigger}
+      />{' '}
+    </Button>
   )
 }
 
