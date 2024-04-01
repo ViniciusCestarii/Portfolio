@@ -9,6 +9,7 @@ import { TechnologyItemProps } from '@/types/layout/Knowledge'
 import { Box, useTheme } from '@mui/material'
 import TechnologyItem from './TechnologyItem'
 import SmileVercel from '../SmileVercel'
+import TechnologiesGraph from '@/components/chart/TechnologiesGraph'
 
 const technologies: TechnologyItemProps[] = [
   {
@@ -151,82 +152,85 @@ const technologies: TechnologyItemProps[] = [
 const Knowledge = () => {
   const theme = useTheme()
   return (
-    <Box
-      component="div"
-      sx={{
-        position: 'relative',
-        pt: '1rem',
-        gap: 2,
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <Subtitle>Knowledge</Subtitle>
-
+    <>
       <Box
         component="div"
         sx={{
-          display: 'flex',
-          justifyContent: { xs: 'center', md: 'space-around' },
-          flexWrap: 'wrap',
           position: 'relative',
-          gap: { xs: '1.5rem', sm: '2rem' },
+          pt: '1rem',
+          gap: 2,
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
-        {technologies.map((technology) => (
-          <TechnologyItem key={technology.title} {...technology} />
-        ))}
-      </Box>
-      <CommandIcon
-        sx={{
-          position: 'absolute',
-          left: 4,
-          top: '20%',
-          transform: 'translate(-50%, -50%)',
-        }}
-        colorize={theme.palette.primary.dark}
-        size={80}
-      />
-      <ApiIcon
-        sx={{
-          position: 'absolute',
-          right: -58,
-          top: '34%',
-          transform: 'translate(-50%, -50%)',
-        }}
-        colorize={theme.palette.primary.dark}
-        size={80}
-      />
-      <ServerIcon
-        sx={{
-          position: 'absolute',
-          left: 4,
-          top: '64%',
-          transform: 'translate(-50%, -50%)',
-        }}
-        colorize={theme.palette.primary.dark}
-        size={80}
-      />
-      <CodeForkIcon
-        sx={{
-          position: 'absolute',
-          left: 0,
-          top: '95%',
-          transform: 'translate(-50%, -50%)',
-        }}
-        colorize={theme.palette.primary.dark}
-        size={80}
-      />
-      <SmileVercel
-        boxProps={{
-          sx: {
+        <Subtitle>Knowledge</Subtitle>
+
+        <Box
+          component="div"
+          sx={{
+            display: 'flex',
+            justifyContent: { xs: 'center', md: 'space-around' },
+            flexWrap: 'wrap',
+            position: 'relative',
+            gap: { xs: '1.5rem', sm: '2rem' },
+          }}
+        >
+          {technologies.map((technology) => (
+            <TechnologyItem key={technology.title} {...technology} />
+          ))}
+        </Box>
+        <CommandIcon
+          sx={{
             position: 'absolute',
-            right: { xs: -32, sm: -60, md: -80, lg: -108 },
-            top: { xs: '80%', sm: '70%' },
-          },
-        }}
-      />
-    </Box>
+            left: 4,
+            top: '20%',
+            transform: 'translate(-50%, -50%)',
+          }}
+          colorize={theme.palette.primary.dark}
+          size={80}
+        />
+        <ApiIcon
+          sx={{
+            position: 'absolute',
+            right: -58,
+            top: '34%',
+            transform: 'translate(-50%, -50%)',
+          }}
+          colorize={theme.palette.primary.dark}
+          size={80}
+        />
+        <ServerIcon
+          sx={{
+            position: 'absolute',
+            left: 4,
+            top: '64%',
+            transform: 'translate(-50%, -50%)',
+          }}
+          colorize={theme.palette.primary.dark}
+          size={80}
+        />
+        <CodeForkIcon
+          sx={{
+            position: 'absolute',
+            left: 0,
+            top: '95%',
+            transform: 'translate(-50%, -50%)',
+          }}
+          colorize={theme.palette.primary.dark}
+          size={80}
+        />
+        <SmileVercel
+          boxProps={{
+            sx: {
+              position: 'absolute',
+              right: { xs: -32, sm: -60, md: -80, lg: -108 },
+              top: { xs: '80%', sm: '70%' },
+            },
+          }}
+        />
+      </Box>
+      <TechnologiesGraph />
+    </>
   )
 }
 

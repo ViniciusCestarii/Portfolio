@@ -1,4 +1,3 @@
-import TechnologiesGraph from '@/components/chart/TechnologiesGraph'
 import PageContainer from '@/components/layout/PageContainer'
 import Footer from '@/components/page/Footer'
 import Contact from '@/components/page/contact'
@@ -12,12 +11,9 @@ export default function MainPage() {
     <Box component="main">
       <Home />
       <PageContainer>
-        <>
-          <Projects />
-          <Knowledge />
-          <TechnologiesGraph />
-          <Contact />
-        </>
+        <Projects />
+        <Knowledge />
+        <Contact />
       </PageContainer>
       <Footer />
     </Box>
