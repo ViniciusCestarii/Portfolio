@@ -3,12 +3,13 @@ import Link from 'next/link'
 
 interface LinkIconProps extends IconProps {
   link: string
+  linkAriaLabel?: string
   icon: string
 }
 
-const LinkIcon = ({ icon, link, ...props }: LinkIconProps) => {
+const LinkIcon = ({ icon, link, linkAriaLabel, ...props }: LinkIconProps) => {
   return (
-    <Link href={link} target="_blank">
+    <Link href={link} target="_blank" aria-label={linkAriaLabel}>
       <Icon icon={icon} {...props} style={{ transition: 'none !important' }} />
     </Link>
   )
