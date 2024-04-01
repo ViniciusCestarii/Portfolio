@@ -391,6 +391,18 @@ const option: echarts.EChartsCoreOption = {
     right: 10,
     top: 'center',
   },
+  media: [
+    {
+      query: {
+        maxWidth: 600,
+      },
+      option: {
+        legend: {
+          show: false,
+        },
+      },
+    },
+  ],
   series: [
     {
       ...graph,
