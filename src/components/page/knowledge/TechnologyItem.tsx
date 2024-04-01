@@ -2,7 +2,6 @@
 import { TechnologyItemProps } from '@/types/layout/Knowledge'
 import { Icon } from '@iconify/react'
 import { Box, IconButton, Typography, useTheme } from '@mui/material'
-import Link from 'next/link'
 
 const TechnologyItem = ({
   description,
@@ -26,11 +25,15 @@ const TechnologyItem = ({
         boxShadow: `${theme.palette.primary.main} 0px 4px 8px -4px`,
       }}
     >
-      <Link href={technologyLink} target="_blank">
-        <IconButton color="primary">
-          <Icon icon={iconName} color="#FFF" width={32} height={32} />
-        </IconButton>
-      </Link>
+      <IconButton
+        component="a"
+        href={technologyLink}
+        aria-label={`Read more about ${title}`}
+        target="_blank"
+        color="primary"
+      >
+        <Icon icon={iconName} color="#FFF" width={32} height={32} />
+      </IconButton>
       <Box sx={{ gap: '0.25rem', display: 'flex', flexDirection: 'column' }}>
         <Typography variant="h5" color="textPrimary">
           {title}
