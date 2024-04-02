@@ -37,6 +37,7 @@
     "eslint-config-next": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.3",
+    "@types/bun": "latest"
   }
 }
