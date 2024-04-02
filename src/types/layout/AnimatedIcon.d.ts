@@ -3,7 +3,7 @@ import { AnimationDirection } from 'lottie-web'
 
 export interface BaseAnimatedIconProps extends BoxProps {
   colorize?: string
-  trigger?: any
+  trigger?: unknown
   invertXTrigger?: boolean
   size?: number
   direction?: AnimationDirection
@@ -15,5 +15,5 @@ export interface AnimatedIconOnHoverProps extends BaseAnimatedIconProps {
   inAnimation: string
   hoverAnimation: string
   triggerAnimation?: string
-  jsonIcon: any
+  jsonIcon: unknown
 }
