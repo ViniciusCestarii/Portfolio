@@ -166,6 +166,12 @@ const data = [
     value: 4,
   },
   {
+    category: TechnologyCategory.Other,
+    name: 'Bun',
+    symbol: hearth,
+    value: 4,
+  },
+  {
     category: TechnologyCategory.Database,
     name: 'MySQL',
     value: 2,
@@ -246,6 +252,7 @@ const links = [
   { source: 'JavaScript', target: 'Next.js Server Side' },
   { source: 'JavaScript', target: 'Nest.js' },
   { source: 'JavaScript', target: 'Node.js' },
+  { source: 'JavaScript', target: 'Bun' },
   { source: 'JavaScript', target: 'Express.js' },
   { source: 'JavaScript', target: 'Fastify' },
   { source: 'JavaScript', target: 'Prisma' },
@@ -257,6 +264,7 @@ const links = [
   { source: 'Typescript', target: 'Next.js Server Side' },
   { source: 'Typescript', target: 'Nest.js' },
   { source: 'Typescript', target: 'Node.js' },
+  { source: 'Typescript', target: 'Bun' },
   { source: 'Typescript', target: 'Express.js' },
   { source: 'Typescript', target: 'Fastify' },
   { source: 'Typescript', target: 'Prisma' },
@@ -290,6 +298,9 @@ const links = [
   { source: 'Node.js', target: 'AWS' },
   { source: 'Node.js', target: 'API' },
   { source: 'Node.js', target: 'Tauri' },
+  { source: 'Bun', target: 'Vercel' },
+  { source: 'Bun', target: 'AWS' },
+  { source: 'Bun', target: 'API' },
   { source: 'Fastify', target: 'Vercel' },
   { source: 'Fastify', target: 'AWS' },
   { source: 'Fastify', target: 'API' },
@@ -313,6 +324,8 @@ const links = [
   { source: 'Drizzle', target: 'Nest.js' },
   { source: 'Prisma', target: 'Node.js' },
   { source: 'Drizzle', target: 'Node.js' },
+  { source: 'Prisma', target: 'Bun' },
+  { source: 'Drizzle', target: 'Bun' },
   { source: 'Gorm', target: 'Gin' },
   { source: 'Entity Framework Core', target: '.NET Core' },
   { source: 'Vercel', target: 'Next.js' },
@@ -399,7 +412,7 @@ const option: echarts.EChartsCoreOption = {
       emphasis: {
         focus: 'adjacency',
         lineStyle: {
-          width: 6,
+          width: 5,
         },
       },
       scaleLimit: {
