@@ -212,7 +212,8 @@ const Knowledge = () => {
         <CodeForkIcon
           sx={{
             position: 'absolute',
-            left: 0,
+            left: { xs: 'auto', sm: 0 },
+            right: { xs: -56, sm: 'auto' },
             top: '95%',
             transform: 'translate(-50%, -50%)',
           }}
