@@ -154,7 +154,7 @@ const Knowledge = () => {
   return (
     <>
       <Box
-        component="div"
+        component="section"
         sx={{
           position: 'relative',
           pt: '1rem',
