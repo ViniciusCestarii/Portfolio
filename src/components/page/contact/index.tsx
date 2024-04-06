@@ -11,7 +11,7 @@ const Contact = () => {
   const [trigger, setTrigger] = useState(false)
   return (
     <Box
-      component="div"
+      component="section"
       id="contact"
       sx={{
         position: 'relative',
@@ -56,7 +56,7 @@ const Contact = () => {
           </Box>
         </Box>
         <Box
-          component="div"
+          component="address"
           sx={{
             gap: 0.5,
             display: 'flex',
