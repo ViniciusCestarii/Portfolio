@@ -17,7 +17,7 @@ const SmileVercel = ({ boxProps }: SmileVercelProps) => {
       onMouseEnter={() => setTrigger(!trigger)}
       onMouseLeave={() => setTrigger(!trigger)}
       sx={{
-        display: 'flex',
+        display: { xs: 'none', sm: 'flex' },
         justifyContent: 'center',
         flexDirection: 'column',
         alignItems: 'center',
