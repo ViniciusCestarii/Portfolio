@@ -11,9 +11,9 @@ export default function MainPage() {
     <Box component="main">
       <Home />
       <PageContainer>
+        <Contact />
         <Projects />
         <Knowledge />
-        <Contact />
       </PageContainer>
       <Footer />
     </Box>

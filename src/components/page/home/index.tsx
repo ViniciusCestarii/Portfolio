@@ -4,7 +4,7 @@ import Hero from './hero/Hero'
 const Home = () => {
   return (
     <Box
-      component="div"
+      component="section"
       sx={{
         minHeight: 'calc(100vh)',
         display: 'flex',

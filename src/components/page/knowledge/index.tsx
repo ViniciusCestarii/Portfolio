@@ -154,7 +154,7 @@ const Knowledge = () => {
   return (
     <>
       <Box
-        component="div"
+        component="section"
         sx={{
           position: 'relative',
           pt: '1rem',
@@ -182,8 +182,9 @@ const Knowledge = () => {
         <CommandIcon
           sx={{
             position: 'absolute',
-            left: 4,
+            left: { xs: -2, md: 4 },
             top: '20%',
+            scale: { xs: '0.8', sm: '1' },
             transform: 'translate(-50%, -50%)',
           }}
           colorize={theme.palette.primary.dark}
@@ -192,8 +193,9 @@ const Knowledge = () => {
         <ApiIcon
           sx={{
             position: 'absolute',
-            right: -58,
+            right: -68,
             top: '34%',
+            scale: { xs: '0.8', sm: '1' },
             transform: 'translate(-50%, -50%)',
           }}
           colorize={theme.palette.primary.dark}
@@ -202,8 +204,9 @@ const Knowledge = () => {
         <ServerIcon
           sx={{
             position: 'absolute',
-            left: 4,
+            left: { xs: -4, md: 4 },
             top: '64%',
+            scale: { xs: '0.8', sm: '1' },
             transform: 'translate(-50%, -50%)',
           }}
           colorize={theme.palette.primary.dark}
@@ -212,8 +215,10 @@ const Knowledge = () => {
         <CodeForkIcon
           sx={{
             position: 'absolute',
-            left: 0,
+            left: { xs: 'auto', sm: 0 },
+            right: { xs: -56, sm: 'auto' },
             top: '95%',
+            scale: { xs: '0.8', sm: '1' },
             transform: 'translate(-50%, -50%)',
           }}
           colorize={theme.palette.primary.dark}

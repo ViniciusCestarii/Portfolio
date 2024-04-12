@@ -77,7 +77,7 @@ const Projects = () => {
 
   return (
     <Box
-      component="div"
+      component="section"
       sx={{
         pt: '1rem',
         gap: 2,
