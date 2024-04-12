@@ -62,6 +62,7 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
   const playerRef = useRef<Player>(null)
   const [state, setState] = useState(inAnimation)
   const [invertXIcon, setInvertXIcon] = useState(!invertXTrigger)
+  const [triggerHover, setTriggerHover] = useState(false)
 
   useEffect(() => {
     if (!playerRef.current?.isPlaying) {
@@ -73,6 +74,16 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
   useEffect(() => {
     playerRef.current?.playFromBeginning()
   }, [])
+
+  useEffect(() => {
+    animateIconOnHover({
+      playerRef,
+      state,
+      setState,
+      hoverAnimation,
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [triggerHover])
 
   useEffect(() => {
     animateIconOnTrigger({
@@ -93,15 +104,7 @@ const AnimatedIconOnHover = (props: AnimatedIconOnHoverProps) => {
         transform: invertXIcon ? 'scaleX(-1)' : '',
         ...props.sx,
       }}
-      onMouseEnter={() =>
-        !noIconHover &&
-        animateIconOnHover({
-          playerRef,
-          state,
-          setState,
-          hoverAnimation,
-        })
-      }
+      onMouseEnter={() => !noIconHover && setTriggerHover(!triggerHover)}
       onMouseDown={() =>
         !noIconClick &&
         animateIconOnHover({
