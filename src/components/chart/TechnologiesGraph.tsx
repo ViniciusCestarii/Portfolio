@@ -270,6 +270,7 @@ const links = [
   { source: 'Typescript', target: 'Prisma' },
   { source: 'Typescript', target: 'Drizzle' },
   { source: 'Go', target: 'Gorm' },
+  { source: 'Go', target: 'Gin' },
   { source: 'Rust', target: 'Tauri' },
   { source: 'C#', target: '.NET Core' },
   { source: 'C#', target: 'Entity Framework Core' },
