@@ -2,11 +2,11 @@ import NavBar from '@/components/layout/NavBar/NavBar'
 import './globals.css'
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-import { ThemeProvider } from '@/context/themeContext'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter' // improves mui for nextjs
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Inter } from 'next/font/google'
+import MuiTheme from '@/components/layout/MuiTheme'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -41,7 +41,7 @@ export default function RootLayout({
 }: {
   readonly children: React.ReactNode
 }) {
-  const MuiTheme = dynamic(() => import('@/components/layout/MuiTheme'), {
+  const ThemeProvider = dynamic(() => import('@/context/themeContext'), {
     ssr: false,
   })
 
