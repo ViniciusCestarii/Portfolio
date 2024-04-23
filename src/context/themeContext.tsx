@@ -44,7 +44,7 @@ interface ThemeProviderProps {
   children: ReactNode
 }
 
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [themeColor, setThemeColor] = useLocalStorage('color', themeColors[0])
 
   const toggleTheme = useCallback(() => {
@@ -81,3 +81,5 @@ export const useMyTheme = () => {
   }
   return context
 }
+
+export default ThemeProvider
