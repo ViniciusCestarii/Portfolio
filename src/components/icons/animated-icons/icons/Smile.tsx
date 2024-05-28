@@ -1,10 +1,10 @@
 import ICON from '@/json/smile.json'
-import AnimatedIconInHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
 import { BaseAnimatedIconProps } from '@/types/layout/AnimatedIcon'
+import DynamicAnimatedIconOnHover from '../DynamicAnimatedIconInHover'
 
 const SmileIcon = (props: BaseAnimatedIconProps) => {
   return (
-    <AnimatedIconInHover
+    <DynamicAnimatedIconOnHover
       {...props}
       jsonIcon={ICON}
       hoverAnimation="hover-smile"

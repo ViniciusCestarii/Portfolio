@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Inter } from 'next/font/google'
 import MuiTheme from '@/components/layout/MuiTheme'
+import ThemeProvider from '@/context/themeContext'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -41,10 +42,6 @@ export default function RootLayout({
 }: {
   readonly children: React.ReactNode
 }) {
-  const ThemeProvider = dynamic(() => import('@/context/themeContext'), {
-    ssr: false,
-  })
-
   const CrispChat = dynamic(() => import('@/components/chat/Crisp'), {
     ssr: false,
   })

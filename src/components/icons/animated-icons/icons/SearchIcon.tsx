@@ -1,10 +1,10 @@
 import ICON from '@/json/search.json'
-import AnimatedIconInHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
 import { BaseAnimatedIconProps } from '@/types/layout/AnimatedIcon'
+import DynamicAnimatedIconOnHover from '../DynamicAnimatedIconInHover'
 
 const SearchIcon = (props: BaseAnimatedIconProps) => {
   return (
-    <AnimatedIconInHover
+    <DynamicAnimatedIconOnHover
       {...props}
       jsonIcon={ICON}
       hoverAnimation="hover-spin"
