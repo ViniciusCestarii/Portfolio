@@ -51,7 +51,7 @@ export default function RootLayout({
       <body style={{ backgroundColor: 'rgb(14, 14, 20)' }}>
         <Analytics />
         <SpeedInsights />
-        <CrispChat />
+        <CrispChat CRISP_WEBSITE_ID={process.env.CRISP_WEBSITE_ID!} />
         <AppRouterCacheProvider>
           <ThemeProvider>
             <MuiTheme>
