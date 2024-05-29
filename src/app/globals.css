@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background-color: rgb(14, 14, 20);
+}
+
 .MuiBox-root,
 .MuiBox-root *::before,
 .MuiBox-root *::after {

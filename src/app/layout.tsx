@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Inter } from 'next/font/google'
 import MuiTheme from '@/components/layout/MuiTheme'
 import ThemeProvider from '@/context/themeContext'
+import Footer from '@/components/page/Footer'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -48,7 +49,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" id="home" className={`${inter.variable}`}>
-      <body style={{ backgroundColor: 'rgb(14, 14, 20)' }}>
+      <body style={{ backgroundColor: 'var(--background-color)' }}>
         <Analytics />
         <SpeedInsights />
         <CrispChat CRISP_WEBSITE_ID={process.env.CRISP_WEBSITE_ID!} />
@@ -57,6 +58,7 @@ export default function RootLayout({
             <MuiTheme>
               <NavBar />
               {children}
+              <Footer />
             </MuiTheme>
           </ThemeProvider>
         </AppRouterCacheProvider>
