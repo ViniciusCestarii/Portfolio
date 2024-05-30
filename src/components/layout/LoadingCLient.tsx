@@ -31,7 +31,6 @@ const LoadingClient = () => {
   const handleReady = () => {
     document.body.style.overflow = 'auto'
     setIsReady(true)
-    console.log('ready')
   }
 
   const theme = useTheme()
