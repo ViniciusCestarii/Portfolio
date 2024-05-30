@@ -1,4 +1,4 @@
-import AnimatedIconOnHover from '@/components/icons/animated-icons/AnimatedIconOnHover'
+import DynamicAnimatedIconOnHover from '@/components/icons/animated-icons/DynamicAnimatedIconInHover'
 import LockIcon from '@/components/icons/animated-icons/icons/LockIcon'
 import ShareIcon from '@/components/icons/animated-icons/icons/ShareIcon'
 import { ProjectItemProps } from '@/types/layout/Project'
@@ -57,7 +57,7 @@ const ProjectItem = ({
         sx={{
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgb(14, 14, 20)',
+          backgroundColor: 'var(--background-color)',
           borderRadius: '10px',
           display: 'flex',
           flexDirection: 'column',
@@ -73,7 +73,10 @@ const ProjectItem = ({
             alignItems: 'end',
           }}
         >
-          <AnimatedIconOnHover {...animatedIconProps} direction={direction} />
+          <DynamicAnimatedIconOnHover
+            {...animatedIconProps}
+            direction={direction}
+          />
         </Box>
         <Typography variant="h5" color="textPrimary">
           {title}

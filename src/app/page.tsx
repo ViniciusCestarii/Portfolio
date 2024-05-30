@@ -1,5 +1,5 @@
+import LoadingCLient from '@/components/layout/LoadingCLient'
 import PageContainer from '@/components/layout/PageContainer'
-import Footer from '@/components/page/Footer'
 import Contact from '@/components/page/contact'
 import Home from '@/components/page/home'
 import Knowledge from '@/components/page/knowledge'
@@ -15,7 +15,7 @@ export default function MainPage() {
         <Projects />
         <Knowledge />
       </PageContainer>
-      <Footer />
+      <LoadingCLient />
     </Box>
   )
 }

@@ -7,6 +7,9 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Inter } from 'next/font/google'
 import MuiTheme from '@/components/layout/MuiTheme'
+import ThemeProvider from '@/context/themeContext'
+import Footer from '@/components/page/Footer'
+import getThemeColor from '@/utils/theme/getThemeFromCookie'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -41,25 +44,29 @@ export default function RootLayout({
 }: {
   readonly children: React.ReactNode
 }) {
-  const ThemeProvider = dynamic(() => import('@/context/themeContext'), {
-    ssr: false,
-  })
-
   const CrispChat = dynamic(() => import('@/components/chat/Crisp'), {
     ssr: false,
   })
 
+  const themeColor = getThemeColor()
+
   return (
     <html lang="en" id="home" className={`${inter.variable}`}>
-      <body style={{ backgroundColor: 'rgb(14, 14, 20)' }}>
+      <body
+        style={{
+          backgroundColor: 'var(--background-color)',
+          overflow: 'hidden',
+        }}
+      >
         <Analytics />
         <SpeedInsights />
-        <CrispChat />
+        <CrispChat CRISP_WEBSITE_ID={process.env.CRISP_WEBSITE_ID!} />
         <AppRouterCacheProvider>
-          <ThemeProvider>
+          <ThemeProvider themeColor={themeColor}>
             <MuiTheme>
               <NavBar />
               {children}
+              <Footer />
             </MuiTheme>
           </ThemeProvider>
         </AppRouterCacheProvider>
