@@ -9,6 +9,7 @@ import { Inter } from 'next/font/google'
 import MuiTheme from '@/components/layout/MuiTheme'
 import ThemeProvider from '@/context/themeContext'
 import Footer from '@/components/page/Footer'
+import getThemeColor from '@/utils/theme/getThemeFromCookie'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -47,14 +48,21 @@ export default function RootLayout({
     ssr: false,
   })
 
+  const themeColor = getThemeColor()
+
   return (
     <html lang="en" id="home" className={`${inter.variable}`}>
-      <body style={{ backgroundColor: 'var(--background-color)' }}>
+      <body
+        style={{
+          backgroundColor: 'var(--background-color)',
+          overflow: 'hidden',
+        }}
+      >
         <Analytics />
         <SpeedInsights />
         <CrispChat CRISP_WEBSITE_ID={process.env.CRISP_WEBSITE_ID!} />
         <AppRouterCacheProvider>
-          <ThemeProvider>
+          <ThemeProvider themeColor={themeColor}>
             <MuiTheme>
               <NavBar />
               {children}

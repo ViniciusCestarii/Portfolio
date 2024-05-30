@@ -1,6 +1,6 @@
 'use client'
-import useLocalStorage from '@/hooks/useLocalStorage'
 import { ThemeColor } from '@/types/layout/Theme'
+import setThemeCookie from '@/utils/theme/setThemeCookie'
 import React, {
   createContext,
   useContext,
@@ -42,10 +42,13 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 interface ThemeProviderProps {
   children: ReactNode
+  themeColor: ThemeColor | undefined
 }
 
-const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [themeColor, setThemeColor] = useLocalStorage('color', themeColors[0])
+const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
+  const [themeColor, setThemeColor] = React.useState(
+    props.themeColor ?? themeColors[0],
+  )
 
   const toggleTheme = useCallback(() => {
     const currentIndex = themeColors.findIndex(
@@ -54,6 +57,7 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const nextIndex = (currentIndex + 1) % themeColors.length
     const nextTheme = themeColors[nextIndex]
     setThemeColor(nextTheme)
+    setThemeCookie(nextTheme)
   }, [themeColor, setThemeColor])
 
   const contextValue = useMemo(
