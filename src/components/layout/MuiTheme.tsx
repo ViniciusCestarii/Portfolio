@@ -17,6 +17,20 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
 
   const theme = responsiveFontSizes(
     createTheme({
+      components: {
+        MuiTypography: {
+          defaultProps: {
+            variantMapping: {
+              h1: 'h1',
+              h2: 'h2',
+              h3: 'h3',
+              h4: 'h3',
+              h5: 'h3',
+              h6: 'h3',
+            },
+          },
+        },
+      },
       palette: {
         mode: 'dark',
         contrastThreshold: 4.5,
