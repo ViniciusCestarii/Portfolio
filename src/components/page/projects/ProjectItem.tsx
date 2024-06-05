@@ -22,6 +22,7 @@ const ProjectItem = ({
     <Box
       onMouseEnter={() => setDirection(1)}
       onMouseLeave={() => setDirection(-1)}
+      component="article"
       sx={{
         width: '100%',
         minHeight: 400,

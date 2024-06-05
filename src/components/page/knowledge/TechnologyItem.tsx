@@ -12,6 +12,7 @@ const TechnologyItem = ({
   const theme = useTheme()
   return (
     <Box
+      component="article"
       sx={{
         position: 'relative',
         borderRadius: '14px',
