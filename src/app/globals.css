@@ -4,6 +4,7 @@
 
 :root {
   --background-color: rgb(14, 14, 20);
+  --scrollbar-color: transparent;
 }
 
 .MuiTypography-root,
@@ -35,4 +36,13 @@ a {
   100% {
     transform: rotate(360deg);
   }
+}
+
+* ::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+}
+
+* {
+  scrollbar-color: var(--scrollbar-color) whitesmoke;
+  transition: scrollbar-color 0.43s ease-in-out;
 }

@@ -1,5 +1,6 @@
 'use client'
 import { ThemeColor } from '@/types/layout/Theme'
+import { changeScrollbarColor } from '@/utils/theme/changeScrollbarColor'
 import setThemeCookie from '@/utils/theme/setThemeCookie'
 import React, {
   createContext,
@@ -25,6 +26,10 @@ const themeColors: ThemeColor[] = [
   {
     hex: '#DB2316',
     name: 'red',
+  },
+  {
+    hex: '#E95325',
+    name: 'orange',
   },
   {
     hex: '#F5A92A',
@@ -56,6 +61,8 @@ const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
     )
     const nextIndex = (currentIndex + 1) % themeColors.length
     const nextTheme = themeColors[nextIndex]
+
+    changeScrollbarColor(nextTheme.hex)
     setThemeColor(nextTheme)
     setThemeCookie(nextTheme)
   }, [themeColor, setThemeColor])

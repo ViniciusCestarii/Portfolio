@@ -3,8 +3,8 @@
 import { useTheme } from '@mui/material'
 import { useState } from 'react'
 import ICON from '@/json/home.json'
-
 import dynamic from 'next/dynamic'
+import { changeScrollbarColor } from '@/utils/theme/changeScrollbarColor'
 
 const DynamicPlayer = dynamic(
   () => import('@lordicon/react').then((module) => module.Player),
@@ -28,12 +28,14 @@ const LogoIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const LoadingClient = () => {
   const [isReady, setIsReady] = useState(false)
 
+  const theme = useTheme()
+
   const handleReady = () => {
+    changeScrollbarColor(theme.palette.primary.main)
+
     document.body.style.overflow = 'auto'
     setIsReady(true)
   }
-
-  const theme = useTheme()
 
   return (
     <div
