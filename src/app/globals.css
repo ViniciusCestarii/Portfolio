@@ -4,7 +4,7 @@
 
 :root {
   --background-color: rgb(14, 14, 20);
-  --scrollbar-color: #2E995E;
+  --scrollbar-color: transparent;
 }
 
 .MuiTypography-root,
