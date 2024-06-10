@@ -51,11 +51,15 @@ const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
   )
 
   const toggleTheme = useCallback(() => {
+    const root = document.querySelector(':root')
+
     const currentIndex = themeColors.findIndex(
       (color) => color.name === themeColor.name,
     )
     const nextIndex = (currentIndex + 1) % themeColors.length
     const nextTheme = themeColors[nextIndex]
+    root.style.setProperty('--scrollbar-color', themeColors[nextIndex].hex)
+
     setThemeColor(nextTheme)
     setThemeCookie(nextTheme)
   }, [themeColor, setThemeColor])

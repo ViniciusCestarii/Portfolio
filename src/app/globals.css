@@ -4,6 +4,7 @@
 
 :root {
   --background-color: rgb(14, 14, 20);
+  --scrollbar-color: #2E995E;
 }
 
 .MuiTypography-root,
@@ -35,4 +36,29 @@ a {
   100% {
     transform: rotate(360deg);
   }
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+
+.scrollbar-default::-webkit-scrollbar {
+  width: 15px;
+}
+
+
+/* Green */
+* ::-webkit-scrollbar-track {
+  background: var(--scrollbar-color);
+}
+
+* ::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color) var(--scrollbar-color);
 }
