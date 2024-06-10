@@ -3,7 +3,6 @@
 import { useTheme } from '@mui/material'
 import { useState } from 'react'
 import ICON from '@/json/home.json'
-
 import dynamic from 'next/dynamic'
 import { changeScrollbarColor } from '@/utils/theme/changeScrollbarColor'
 

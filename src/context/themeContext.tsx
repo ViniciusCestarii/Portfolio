@@ -28,6 +28,10 @@ const themeColors: ThemeColor[] = [
     name: 'red',
   },
   {
+    hex: '#E95325',
+    name: 'orange',
+  },
+  {
     hex: '#F5A92A',
     name: 'yellow',
   },
