@@ -5,7 +5,7 @@ import { useState } from 'react'
 import ICON from '@/json/home.json'
 
 import dynamic from 'next/dynamic'
-import { useMyTheme } from '@/context/themeContext'
+import { changeScrollbarColor } from '@/utils/theme/changeScrollbarColor'
 
 const DynamicPlayer = dynamic(
   () => import('@lordicon/react').then((module) => module.Player),
@@ -32,9 +32,7 @@ const LoadingClient = () => {
   const theme = useTheme()
 
   const handleReady = () => {
-    const root = document.querySelector(':root')
-
-    root.style.setProperty('--scrollbar-color', theme.palette.primary.dark)
+    changeScrollbarColor(theme.palette.primary.main)
 
     document.body.style.overflow = 'auto'
     setIsReady(true)

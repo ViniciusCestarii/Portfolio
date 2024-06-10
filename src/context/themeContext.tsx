@@ -1,5 +1,6 @@
 'use client'
 import { ThemeColor } from '@/types/layout/Theme'
+import { changeScrollbarColor } from '@/utils/theme/changeScrollbarColor'
 import setThemeCookie from '@/utils/theme/setThemeCookie'
 import React, {
   createContext,
@@ -51,15 +52,13 @@ const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
   )
 
   const toggleTheme = useCallback(() => {
-    const root = document.querySelector(':root')
-
     const currentIndex = themeColors.findIndex(
       (color) => color.name === themeColor.name,
     )
     const nextIndex = (currentIndex + 1) % themeColors.length
     const nextTheme = themeColors[nextIndex]
-    root.style.setProperty('--scrollbar-color', themeColors[nextIndex].hex)
 
+    changeScrollbarColor(nextTheme.hex)
     setThemeColor(nextTheme)
     setThemeCookie(nextTheme)
   }, [themeColor, setThemeColor])

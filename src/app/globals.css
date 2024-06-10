@@ -38,27 +38,11 @@ a {
   }
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: var(--secondary);
-  border-radius: 14px;
-  border: 3px solid var(--primary);
-}
-
-.scrollbar-default::-webkit-scrollbar {
-  width: 15px;
-}
-
-
-/* Green */
-* ::-webkit-scrollbar-track {
-  background: var(--scrollbar-color);
-}
-
 * ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);
 }
 
 * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-color) var(--scrollbar-color);
+  scrollbar-color: var(--scrollbar-color) whitesmoke;
+  transition: scrollbar-color 0.43s ease-in-out;
 }
