@@ -6,6 +6,7 @@
   --background-color: rgb(14, 14, 20);
 }
 
+.MuiTypography-root,
 .MuiBox-root,
 .MuiBox-root *::before,
 .MuiBox-root *::after {

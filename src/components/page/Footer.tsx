@@ -18,7 +18,7 @@ const Footer = () => {
         flexDirection: 'column',
         minHeight: 80,
         backgroundColor: rgbToHex(theme.palette.primary.main) + '10',
-        ':before': {
+        '::before': {
           content: '""',
           position: 'absolute',
           top: 0,
@@ -26,6 +26,7 @@ const Footer = () => {
           height: 2,
           width: '100%',
           backgroundColor: rgbToHex(theme.palette.primary.main) + '60',
+          transition: 'all 0.75s ease-in-out',
         },
       }}
     >
