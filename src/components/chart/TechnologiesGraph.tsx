@@ -449,7 +449,7 @@ const TechnologiesGraph = () => {
   const theme = useTheme()
 
   useEffect(() => {
-    const myChart = echarts.init(chartRef.current, 'dark')
+    const myChart = echarts.init(chartRef.current, 'dark', { renderer: 'svg' })
 
     myChart.setOption(option)
 
@@ -469,7 +469,9 @@ const TechnologiesGraph = () => {
     echartRef.current.setOption(newOption)
   }, [theme])
 
-  return <div ref={chartRef} style={{ height: '600px', width: '100%' }} />
+  return (
+    <div role="img" ref={chartRef} style={{ height: '600px', width: '100%' }} />
+  )
 }
 
 export default TechnologiesGraph
