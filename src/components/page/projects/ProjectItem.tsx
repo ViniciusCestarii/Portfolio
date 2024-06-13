@@ -101,7 +101,7 @@ const ProjectItem = ({
           }}
         >
           {privateProject && (
-            <Tooltip title="Private Project">
+            <Tooltip title="Private Project" describeChild>
               <Box>
                 <LockIcon colorize={theme.palette.primary.main} size={26} />
               </Box>
