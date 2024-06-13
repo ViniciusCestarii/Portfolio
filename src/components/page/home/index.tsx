@@ -6,7 +6,7 @@ const Home = () => {
     <Box
       component="section"
       sx={{
-        minHeight: '100vh',
+        minHeight: '100svh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
