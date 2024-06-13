@@ -18,6 +18,11 @@
   transition: color 0.75s ease-in-out;
 }
 
+.home {
+  min-height: 100vh; /* fallback for svh */
+  min-height: 100svh;
+}
+
 svg {
   transition: all 0.75s ease-in-out;
 }
