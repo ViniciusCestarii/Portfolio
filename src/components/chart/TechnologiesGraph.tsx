@@ -1,7 +1,7 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useMemo, useRef } from 'react'
 import * as echarts from 'echarts'
-import { useTheme } from '@mui/material'
+import { useMediaQuery, useTheme } from '@mui/material'
 import hexToRgba from '@/utils/theme/hexToRgba'
 
 const app =
@@ -236,7 +236,7 @@ const data = [
     name: 'API',
     value: 5,
   },
-].map((node) => ({ ...node, symbolSize: node.value * 10 }))
+]
 
 const links = [
   { source: 'HTML', target: 'React' },
@@ -355,101 +355,117 @@ const links = [
   { source: 'API', target: 'App' },
 ]
 
-const graph = {
-  data,
-  categories: Object.values(TechnologyCategory),
-  links,
-}
-
-const option: echarts.EChartsCoreOption = {
-  tooltip: {
-    formatter: '{b}',
-  },
-  aria: {
-    show: true, // auto generate aria description
-  },
-  title: {
-    text: 'Technologies Graph',
-    subtext: 'Technologies I used in projects (more to come 🚀)',
-    top: 10,
-    left: 10,
-  },
-  legend: {
-    orient: 'vertical',
-    right: 10,
-    top: 'center',
-  },
-  media: [
-    {
-      query: {
-        maxWidth: 600,
-      },
-      option: {
-        legend: {
-          show: false,
-        },
-      },
-    },
-  ],
-  series: [
-    {
-      ...graph,
-      type: 'graph',
-      layout: 'circular',
-      roam: true,
-      legendHoverLink: false,
-      categories: graph.categories.map((category) => ({ name: category })),
-      label: {
-        show: true,
-        formatter: '{b}',
-      },
-      zoom: 0.8,
-      circular: {
-        rotateLabel: true,
-      },
-      labelLayout: {
-        hideOverlap: true,
-      },
-      emphasis: {
-        focus: 'adjacency',
-        lineStyle: {
-          width: 5,
-        },
-      },
-      scaleLimit: {
-        min: 0.6,
-        max: 3,
-      },
-      lineStyle: {
-        color: 'source',
-        curveness: 0.3,
-      },
-    },
-  ],
-  graphic: {
-    elements: [
-      {
-        type: 'text',
-        left: 10,
-        bottom: 10,
-        width: 100,
-        cursor: 'default',
-        style: {
-          text: '❤ Beloved Technologies',
-          fill: '#EEE',
-        },
-      },
-    ],
-  },
-}
-
 const TechnologiesGraph = () => {
   const chartRef = useRef(null)
   const echartRef = useRef<echarts.ECharts>()
   const theme = useTheme()
 
+  const isSmallScreen = useMediaQuery('(max-width:600px)')
+
+  const graph = useMemo(
+    () => ({
+      data: data.map((node) => ({
+        ...node,
+        symbolSize: isSmallScreen ? node.value * 3 : node.value * 8,
+      })),
+      categories: Object.values(TechnologyCategory),
+      links,
+    }),
+    [isSmallScreen],
+  )
+
+  const option: echarts.EChartsCoreOption = useMemo(
+    () => ({
+      tooltip: {
+        formatter: '{b}',
+      },
+      aria: {
+        show: true, // auto generate aria description
+      },
+      title: {
+        text: 'Technologies Graph',
+        subtext: 'Technologies I used in projects (more to come 🚀)',
+        top: 10,
+        left: 10,
+      },
+      legend: {
+        orient: 'vertical',
+        right: 10,
+        top: 'center',
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {},
+        },
+      },
+      media: [
+        {
+          query: {
+            maxWidth: 600,
+          },
+          option: {
+            legend: {
+              show: false,
+            },
+          },
+        },
+      ],
+      series: [
+        {
+          ...graph,
+          type: 'graph',
+          layout: 'circular',
+          roam: true,
+          legendHoverLink: false,
+          categories: graph.categories.map((category) => ({ name: category })),
+          label: {
+            show: true,
+            formatter: '{b}',
+          },
+          zoom: 0.8,
+          circular: {
+            rotateLabel: true,
+          },
+          labelLayout: {
+            hideOverlap: true,
+          },
+          emphasis: {
+            focus: 'adjacency',
+            lineStyle: {
+              width: 5,
+            },
+          },
+          scaleLimit: {
+            min: 0.6,
+            max: 3,
+          },
+          lineStyle: {
+            color: 'source',
+            curveness: 0.3,
+          },
+        },
+      ],
+      graphic: {
+        elements: [
+          {
+            type: 'text',
+            left: 10,
+            bottom: 10,
+            width: 100,
+            cursor: 'default',
+            style: {
+              text: '❤ Beloved Technologies',
+              fill: '#EEE',
+            },
+          },
+        ],
+      },
+    }),
+    [graph],
+  )
+
   useEffect(() => {
-    const myChart = echarts.init(chartRef.current, 'dark', { renderer: 'svg' })
+    const myChart = echarts.init(chartRef.current, 'dark')
 
     myChart.setOption(option)
 
@@ -458,6 +474,7 @@ const TechnologiesGraph = () => {
     return () => {
       myChart.dispose()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -467,11 +484,9 @@ const TechnologiesGraph = () => {
 
     const newOption = { ...option, backgroundColor: primaryColor }
     echartRef.current.setOption(newOption)
-  }, [theme])
+  }, [theme, option])
 
-  return (
-    <div role="img" ref={chartRef} style={{ height: '600px', width: '100%' }} />
-  )
+  return <div ref={chartRef} style={{ height: '600px', width: '100%' }} />
 }
 
 export default TechnologiesGraph
