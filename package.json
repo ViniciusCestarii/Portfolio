@@ -20,6 +20,7 @@
     "@vercel/speed-insights": "1.0.12",
     "crisp-sdk-web": "1.0.25",
     "echarts": "5.5.0",
+    "echarts-wordcloud": "2",
     "lottie-web": "5.12.2",
     "mdi-material-ui": "7.9.1",
     "next": "14.2.4",

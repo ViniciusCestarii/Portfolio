@@ -10,6 +10,12 @@ import { Box, useTheme } from '@mui/material'
 import TechnologyItem from './TechnologyItem'
 import SmileVercel from '../SmileVercel'
 import TechnologiesGraph from '@/components/chart/TechnologiesGraph'
+import dynamic from 'next/dynamic'
+
+const ViniciusWordCloud = dynamic(
+  () => import('@/components/chart/ViniciusWordCloud'),
+  { ssr: false },
+)
 
 const technologies: TechnologyItemProps[] = [
   {
@@ -235,6 +241,7 @@ const Knowledge = () => {
         />
       </Box>
       <TechnologiesGraph />
+      <ViniciusWordCloud />
     </>
   )
 }
