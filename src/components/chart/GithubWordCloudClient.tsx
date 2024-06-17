@@ -35,14 +35,14 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
   const option: echarts.EChartsCoreOption = useMemo(
     () => ({
       tooltip: {
-        formatter: '{b}',
+        formatter: 'Topic {b} mentioned {c} times',
       },
       aria: {
         show: true,
       },
       title: {
         text: 'My Github Topics WordCloud',
-        subtext: "Topics i'm interested in",
+        subtext: "Topics i'm interested in.",
         top: 10,
         left: 10,
       },
@@ -57,10 +57,24 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
         },
       },
       backgroundColor: hexToRgba(theme.palette.primary.main, 0.1),
+      media: [
+        {
+          query: {
+            maxWidth: 600,
+          },
+          option: {
+            series: [
+              {
+                sizeRange: [7, 60],
+              },
+            ],
+          },
+        },
+      ],
       series: [
         {
           type: 'wordCloud',
-          sizeRange: [10, 60],
+          sizeRange: [12, 60],
           rotationRange: [0, 0],
           gridSize: 0,
           shape: 'pentagon',
@@ -73,7 +87,7 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
           },
           emphasis: {
             textStyle: {
-              color: '#528',
+              color: theme.palette.primary.dark,
             },
           },
           data: data.toSorted(function (a, b) {
@@ -82,7 +96,12 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
         },
       ],
     }),
-    [data, generateRandomColor, theme.palette.primary.main],
+    [
+      data,
+      generateRandomColor,
+      theme.palette.primary.dark,
+      theme.palette.primary.main,
+    ],
   )
 
   useEffect(() => {
