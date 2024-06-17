@@ -10,6 +10,7 @@ import MuiTheme from '@/components/layout/MuiTheme'
 import ThemeProvider from '@/context/themeContext'
 import Footer from '@/components/page/Footer'
 import getThemeColor from '@/utils/theme/getThemeFromCookie'
+import { env } from '@/env'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -60,7 +61,7 @@ export default function RootLayout({
       >
         <Analytics />
         <SpeedInsights />
-        <CrispChat CRISP_WEBSITE_ID={process.env.CRISP_WEBSITE_ID!} />
+        <CrispChat CRISP_WEBSITE_ID={env.CRISP_WEBSITE_ID} />
         <AppRouterCacheProvider>
           <ThemeProvider themeColor={themeColor}>
             <MuiTheme>
