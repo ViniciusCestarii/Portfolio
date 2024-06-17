@@ -62,7 +62,7 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
           },
           option: {
             tooltip: {
-              formatter: '{b} mentioned {c} times',
+              formatter: '{b}: {c}',
             },
             series: [
               {
