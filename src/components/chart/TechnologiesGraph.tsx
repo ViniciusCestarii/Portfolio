@@ -404,6 +404,11 @@ const TechnologiesGraph = () => {
             maxWidth: 600,
           },
           option: {
+            series: [
+              {
+                roam: false
+              }
+            ],
             legend: {
               show: false,
             },
