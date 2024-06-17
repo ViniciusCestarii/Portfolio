@@ -406,8 +406,8 @@ const TechnologiesGraph = () => {
           option: {
             series: [
               {
-                roam: false
-              }
+                roam: false,
+              },
             ],
             legend: {
               show: false,
