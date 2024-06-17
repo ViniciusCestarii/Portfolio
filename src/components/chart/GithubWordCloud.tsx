@@ -8,16 +8,22 @@ const GithubWordCloudClient = dynamic(
 )
 
 const GithubWordCloud = async () => {
-  const repositories = await getRepositories()
+  let repositoriesWithTopics
+  try {
+    const repositories = await getRepositories()
 
-  // fetch topics for each repository because getRepositories() doens't return all topics
-  const topics = await Promise.all(
-    repositories.map((repo) => getRepositoryTopics(repo.name)),
-  )
-  const repositoriesWithTopics = repositories.map((repo, index) => ({
-    ...repo,
-    topics: topics[index].names,
-  }))
+    // fetch topics for each repository because getRepositories() doens't return all topics
+    const topics = await Promise.all(
+      repositories.map((repo) => getRepositoryTopics(repo.name)),
+    )
+    repositoriesWithTopics = repositories.map((repo, index) => ({
+      ...repo,
+      topics: topics[index].names,
+    }))
+  } catch (error) {
+    console.error(error)
+    return null
+  }
   const keywords = countGithubTopics(repositoriesWithTopics)
 
   const data = Object.keys(keywords).map((key) => ({
