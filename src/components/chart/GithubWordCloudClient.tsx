@@ -40,7 +40,7 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
       },
       title: {
         text: 'My Github Topics WordCloud',
-        subtext: "Topics i'm interested in.",
+        subtext: 'Topics I mentioned on my repositories.',
         top: 10,
         left: 10,
       },
