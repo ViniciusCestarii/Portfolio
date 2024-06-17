@@ -1,3 +1,4 @@
+'use client'
 import { Box, BoxProps, Typography, useTheme } from '@mui/material'
 import SmileIcon from '../icons/animated-icons/icons/Smile'
 import Link from 'next/link'
