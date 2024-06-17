@@ -380,7 +380,7 @@ const TechnologiesGraph = () => {
         formatter: '{b}',
       },
       aria: {
-        show: true, // auto generate aria description
+        show: true,
       },
       title: {
         text: 'Technologies Graph',
@@ -465,7 +465,7 @@ const TechnologiesGraph = () => {
   )
 
   useEffect(() => {
-    const myChart = echarts.init(chartRef.current, 'dark')
+    const myChart = echarts.init(chartRef.current, 'dark', { renderer: 'svg' })
 
     myChart.setOption(option)
 

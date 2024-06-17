@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react'
 import * as echarts from 'echarts'
 import 'echarts-wordcloud'
-import { useMediaQuery, useTheme } from '@mui/material'
+import { useTheme } from '@mui/material'
 import hexToRgba from '@/utils/theme/hexToRgba'
 
 interface GithubWordCloudClientProps {
@@ -13,8 +13,6 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
   const chartRef = useRef(null)
   const echartRef = useRef<echarts.ECharts>()
   const theme = useTheme()
-
-  const isSmallScreen = useMediaQuery('(max-width:600px)')
 
   const generateRandomColor = useCallback(() => {
     const color = theme.palette.primary.main
@@ -63,9 +61,12 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
             maxWidth: 600,
           },
           option: {
+            tooltip: {
+              formatter: '{b} mentioned {c} times',
+            },
             series: [
               {
-                sizeRange: [7, 60],
+                sizeRange: [7, 16],
               },
             ],
           },
@@ -74,10 +75,9 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
       series: [
         {
           type: 'wordCloud',
-          sizeRange: [12, 60],
+          sizeRange: [12, 22],
           rotationRange: [0, 0],
           gridSize: 0,
-          shape: 'pentagon',
           drawOutOfBound: false,
           layoutAnimation: true,
           keepAspect: true,
@@ -96,12 +96,8 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
         },
       ],
     }),
-    [
-      data,
-      generateRandomColor,
-      theme.palette.primary.dark,
-      theme.palette.primary.main,
-    ],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [theme.palette.primary.main],
   )
 
   useEffect(() => {
