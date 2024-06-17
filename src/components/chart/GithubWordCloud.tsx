@@ -9,6 +9,8 @@ const GithubWordCloudClient = dynamic(
 
 const GithubWordCloud = async () => {
   const repositories = await getRepositories()
+
+  // fetch topics for each repository because getRepositories() doens't return all topics
   const topics = await Promise.all(
     repositories.map((repo) => getRepositoryTopics(repo.name)),
   )
