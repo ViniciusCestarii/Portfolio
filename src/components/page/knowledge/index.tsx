@@ -4,6 +4,7 @@ import TechnologiesGraph from '@/components/chart/TechnologiesGraph'
 import GithubWordCloud from '@/components/chart/GithubWordCloud'
 import TechnologiesList from './TechnologiesList'
 import FloatingIcons from './FloatingIcons'
+import { Suspense } from 'react'
 
 const Knowledge = () => {
   return (
@@ -23,7 +24,9 @@ const Knowledge = () => {
         <FloatingIcons />
       </Box>
       <TechnologiesGraph />
-      <GithubWordCloud />
+      <Suspense fallback={null}>
+        <GithubWordCloud />
+      </Suspense>
     </>
   )
 }
