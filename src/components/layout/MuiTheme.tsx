@@ -87,7 +87,6 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
         },
       },
     },
-    ...theme.components,
     MuiButton: {
       ...theme.components?.MuiButton,
       styleOverrides: {
