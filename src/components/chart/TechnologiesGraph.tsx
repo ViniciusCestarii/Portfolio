@@ -491,7 +491,9 @@ const TechnologiesGraph = () => {
     echartRef.current.setOption(newOption)
   }, [theme, option])
 
-  return <div ref={chartRef} style={{ height: '600px', width: '100%' }} />
+  return (
+    <div role="img" ref={chartRef} style={{ height: '600px', width: '100%' }} />
+  )
 }
 
 export default TechnologiesGraph
