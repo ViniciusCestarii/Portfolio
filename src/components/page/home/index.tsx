@@ -1,7 +1,8 @@
 import { Box } from '@mui/material'
 import Hero from './hero/Hero'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 
-const Home = () => {
+const Home = (props: DictionaryProps) => {
   return (
     <Box
       className="home"
@@ -61,7 +62,7 @@ const Home = () => {
           opacity: '0.3',
         }}
       />
-      <Hero />
+      <Hero {...props} />
     </Box>
   )
 }
