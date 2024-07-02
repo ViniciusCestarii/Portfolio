@@ -27,7 +27,11 @@ const NavBar = ({ dict }: DictionaryProps) => {
 
   return (
     <Box component="div" sx={{ mt: '80px' }}>
-      <AppBar handleDrawerToggle={handleDrawerToggle} navItems={navItems} />
+      <AppBar
+        handleDrawerToggle={handleDrawerToggle}
+        navItems={navItems}
+        dict={dict}
+      />
       <MobileDrawer
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}

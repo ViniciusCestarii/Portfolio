@@ -6,4 +6,7 @@ export type DictionaryType = {
   hero: {
     fullStackDeveloper: string
   }
+  color: {
+    changeThemeColor: string
+  }
 }

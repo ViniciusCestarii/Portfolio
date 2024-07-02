@@ -8,6 +8,9 @@ const pt: DictionaryType = {
   hero: {
     fullStackDeveloper: 'Desenvolvedor Full Stack',
   },
+  color: {
+    changeThemeColor: 'Mudar para a próxima cor do tema',
+  },
 }
 
 export default pt
