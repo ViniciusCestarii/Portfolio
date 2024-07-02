@@ -1,24 +1,36 @@
-import React from 'react'
-import CurriculumLink from './CurriculumLink'
+import DocumentIcon from '@/components/icons/animated-icons/icons/DocumentIcon'
+import { Button, useTheme } from '@mui/material'
+import React, { useState } from 'react'
 
 interface CurriculumProps {
-  lang: 'en' | 'pt'
+  href: string
+  name: string
 }
 
-const Curriculum = ({ lang }: CurriculumProps) => {
-  if (lang === 'en') {
-    return (
-      <CurriculumLink
-        name="English Resume"
-        href="https://drive.google.com/file/d/1vcZX5LxOHDkelsbvBp3eeDzx5Ljrb7DS/view?usp=drive_link"
-      />
-    )
-  }
+const Curriculum = ({ href, name }: CurriculumProps) => {
+  const [trigger, setTrigger] = useState(false)
+  const theme = useTheme()
   return (
-    <CurriculumLink
-      name="Portuguese Resume"
-      href="https://drive.google.com/file/d/1JJ209MnxHEW_1jPS9ME3Z0LIQ0SknsYY/view?usp=drive_link"
-    />
+    <Button
+      variant="outlined"
+      component="a"
+      target="_blank"
+      href={href}
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 1,
+        textDecoration: 'none',
+      }}
+      onMouseEnter={() => setTrigger((prev) => !prev)}
+    >
+      {name}{' '}
+      <DocumentIcon
+        colorize={theme.palette.primary.dark}
+        size={32}
+        trigger={trigger}
+      />{' '}
+    </Button>
   )
 }
 

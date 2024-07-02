@@ -8,6 +8,7 @@ const GithubWordCloudClient = dynamic(
 )
 
 const GithubWordCloud = async () => {
+  return null
   let repositoriesWithTopics
   try {
     const repositories = await getRepositories()

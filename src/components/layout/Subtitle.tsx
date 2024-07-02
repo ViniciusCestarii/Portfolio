@@ -14,6 +14,7 @@ const Subtitle = ({ id, children }: SubtitleProps) => {
       variant="h2"
       id={id}
       sx={{
+        textTransform: 'capitalize',
         position: 'relative',
         width: 'fit-content',
       }}

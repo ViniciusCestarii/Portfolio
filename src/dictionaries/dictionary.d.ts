@@ -1,7 +1,17 @@
+/* eslint-disable no-use-before-define */
 export type DictionaryType = {
   section: {
-    home: string
-    contact: string
+    home: {
+      name: string
+    }
+    contact: {
+      name: string
+      greeting: string
+      resume: {
+        en: ResumeType
+        pt: ResumeType
+      }
+    }
   }
   hero: {
     fullStackDeveloper: string
@@ -9,4 +19,9 @@ export type DictionaryType = {
   color: {
     changeThemeColor: string
   }
+}
+
+export type ResumeType = {
+  name: string
+  href: string
 }

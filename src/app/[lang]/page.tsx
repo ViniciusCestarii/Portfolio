@@ -20,7 +20,7 @@ export default async function MainPage({ params: { lang } }: MainPageProps) {
     <Box component="main">
       <Home dict={dict} />
       <PageContainer>
-        <Contact />
+        <Contact dict={dict} />
         <Projects />
         <Knowledge />
       </PageContainer>

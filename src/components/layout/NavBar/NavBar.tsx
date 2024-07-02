@@ -12,11 +12,11 @@ const NavBar = ({ dict }: DictionaryProps) => {
 
   const navItems: NavItem[] = [
     {
-      name: dict.section.home,
+      name: dict.section.home.name,
       elementId: 'home',
     },
     {
-      name: dict.section.contact,
+      name: dict.section.contact.name,
       elementId: 'contact',
     },
   ]

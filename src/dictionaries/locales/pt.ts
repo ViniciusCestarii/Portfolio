@@ -2,8 +2,8 @@ import { DictionaryType } from '../dictionary'
 
 const pt: DictionaryType = {
   section: {
-    home: 'home',
-    contact: 'contato',
+    home: { name: 'home' },
+    contact: { name: 'contato' },
   },
   hero: {
     fullStackDeveloper: 'Desenvolvedor Full Stack',
