@@ -4,12 +4,21 @@ import Contact from '@/components/page/contact'
 import Home from '@/components/page/home'
 import Knowledge from '@/components/page/knowledge'
 import Projects from '@/components/page/projects'
+import { DictionaryKeyType, getDictionary } from '@/dictionaries/getDictionary'
 import { Box } from '@mui/material'
 
-export default function MainPage() {
+interface MainPageProps {
+  params: {
+    lang: DictionaryKeyType
+  }
+}
+
+export default async function MainPage({ params: { lang } }: MainPageProps) {
+  const dict = await getDictionary(lang)
+
   return (
     <Box component="main">
-      <Home />
+      <Home dict={dict} />
       <PageContainer>
         <Contact />
         <Projects />

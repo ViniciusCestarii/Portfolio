@@ -1,5 +1,5 @@
 import NavBar from '@/components/layout/NavBar/NavBar'
-import './globals.css'
+import '../globals.css'
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter' // improves mui for nextjs
@@ -11,6 +11,7 @@ import ThemeProvider from '@/context/themeContext'
 import Footer from '@/components/page/Footer'
 import getThemeColor from '@/utils/theme/getThemeFromCookie'
 import { env } from '@/env'
+import { DictionaryKeyType, getDictionary } from '@/dictionaries/getDictionary'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -40,19 +41,27 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+interface RootLayoutProps {
+  params: {
+    lang: DictionaryKeyType
+  }
+  children: React.ReactNode
+}
+
+export default async function RootLayout({
   children,
-}: {
-  readonly children: React.ReactNode
-}) {
+  params: { lang },
+}: RootLayoutProps) {
   const CrispChat = dynamic(() => import('@/components/chat/Crisp'), {
     ssr: false,
   })
 
+  const dict = await getDictionary(lang)
+
   const themeColor = getThemeColor()
 
   return (
-    <html lang="en" id="home" className={`${inter.variable}`}>
+    <html lang={lang} id="home" className={`${inter.variable}`}>
       <body
         style={{
           backgroundColor: 'var(--background-color)',
@@ -65,7 +74,7 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProvider themeColor={themeColor}>
             <MuiTheme>
-              <NavBar />
+              <NavBar dict={dict} />
               {children}
               <Footer />
             </MuiTheme>
