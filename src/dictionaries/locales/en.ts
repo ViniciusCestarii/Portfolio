@@ -5,6 +5,7 @@ import PUSHUPSICON from '@/json/pushups.json'
 import BARCHART from '@/json/bar-chart.json'
 
 const en: DictionaryType = {
+  lang: 'en',
   section: {
     home: {
       name: 'home',
@@ -234,6 +235,22 @@ const en: DictionaryType = {
           technologyLink: 'https://about.gitlab.com/',
         },
       ],
+      technoloiesGraph: {
+        title: 'Technologies Graph',
+        description: 'Technologies I used in projects (more to come 🚀)',
+        belovedTechnologies: '❤ Beloved Technologies',
+        technologyCategory: {
+          app: 'App',
+          cloud: 'Cloud',
+          database: 'Database',
+          devOps: 'DevOps',
+          markupLanguage: 'Markup Language',
+          framework: 'Framework',
+          library: 'Library',
+          programmingLanguage: 'Programming Language',
+          other: 'Other',
+        },
+      },
     },
   },
   hero: {

@@ -24,7 +24,7 @@ const Knowledge = (props: DictionaryProps) => {
         <TechnologiesList {...props} />
         <FloatingIcons />
       </Box>
-      <TechnologiesGraph />
+      <TechnologiesGraph {...props} />
       <Suspense fallback={null}>
         <GithubWordCloud />
       </Suspense>

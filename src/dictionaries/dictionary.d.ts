@@ -2,6 +2,7 @@ import { AnimatedIconOnHoverProps } from '@/types/layout/AnimatedIcon'
 
 /* eslint-disable no-use-before-define */
 export type DictionaryType = {
+  lang: string
   section: {
     home: {
       name: string
@@ -26,6 +27,12 @@ export type DictionaryType = {
     knowledge: {
       name: string
       technologyItens: TechnologyItemType[]
+      technoloiesGraph: {
+        title: string
+        description: string
+        belovedTechnologies: string
+        technologyCategory: TechnologyCategoryType
+      }
     }
   }
   hero: {
@@ -58,3 +65,16 @@ export interface TechnologyItemType {
   technologyLink: string
   iconName: string
 }
+
+type TechnologyCategoryType = Record<
+  | 'library'
+  | 'framework'
+  | 'markupLanguage'
+  | 'programmingLanguage'
+  | 'cloud'
+  | 'devOps'
+  | 'app'
+  | 'database'
+  | 'other',
+  string
+>
