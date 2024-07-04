@@ -33,6 +33,11 @@ export type DictionaryType = {
         belovedTechnologies: string
         technologyCategory: TechnologyCategoryType
       }
+      githubWordCloud: {
+        title: string
+        description: string
+        tooltipFormat: string
+      }
     }
   }
   hero: {

@@ -1,4 +1,5 @@
 import { getRepositories, getRepositoryTopics } from '@/api/githubFetch'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 import { countGithubTopics } from '@/utils/github'
 import dynamic from 'next/dynamic'
 
@@ -7,8 +8,7 @@ const GithubWordCloudClient = dynamic(
   { ssr: false, loading: () => <div style={{ height: '600px' }} /> },
 )
 
-const GithubWordCloud = async () => {
-  return null
+const GithubWordCloud = async (props: DictionaryProps) => {
   let repositoriesWithTopics
   try {
     const repositories = await getRepositories()
@@ -32,7 +32,7 @@ const GithubWordCloud = async () => {
     value: keywords[key],
   }))
 
-  return <GithubWordCloudClient data={data} />
+  return <GithubWordCloudClient data={data} {...props} />
 }
 
 export default GithubWordCloud

@@ -251,6 +251,11 @@ const en: DictionaryType = {
           other: 'Other',
         },
       },
+      githubWordCloud: {
+        title: 'My Github Topics WordCloud',
+        description: 'Topics I mentioned on my repositories.',
+        tooltipFormat: 'Topic {b} mentioned {c} times',
+      },
     },
   },
   hero: {
