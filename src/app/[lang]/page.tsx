@@ -22,7 +22,7 @@ export default async function MainPage({ params: { lang } }: MainPageProps) {
       <PageContainer>
         <Contact dict={dict} />
         <Projects dict={dict} />
-        <Knowledge />
+        <Knowledge dict={dict} />
       </PageContainer>
       <LoadingCLient />
     </Box>

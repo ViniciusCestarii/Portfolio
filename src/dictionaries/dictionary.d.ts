@@ -23,6 +23,10 @@ export type DictionaryType = {
       privateProject: string
       seeAllProjects: string
     }
+    knowledge: {
+      name: string
+      technologyItens: TechnologyItemType[]
+    }
   }
   hero: {
     fullStackDeveloper: string
@@ -46,4 +50,11 @@ export interface ProjectItemType {
   animatedIconProps: Omit<AnimatedIconOnHoverProps, 'colorize'> & {
     colorize?: string
   }
+}
+
+export interface TechnologyItemType {
+  title: string
+  description: string
+  technologyLink: string
+  iconName: string
 }
