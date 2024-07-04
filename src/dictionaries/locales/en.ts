@@ -93,6 +93,7 @@ const en: DictionaryType = {
     },
     knowledge: {
       name: 'knowledge',
+      smileWatchingBy: 'Smile you are being watched by',
       technologyItens: [
         {
           title: 'Next.js',
@@ -252,7 +253,7 @@ const en: DictionaryType = {
         },
       },
       githubWordCloud: {
-        title: 'My Github Topics WordCloud',
+        title: 'Github Topics WordCloud',
         description: 'Topics I mentioned on my repositories.',
         tooltipFormat: 'Topic {b} mentioned {c} times',
       },

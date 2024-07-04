@@ -121,7 +121,7 @@ const ProjectItem = ({
               }}
             >
               <Typography variant="body2" color="primary">
-                know more
+                {projects.knowMore}
               </Typography>
               <Tooltip title={projects.openProject}>
                 <Image

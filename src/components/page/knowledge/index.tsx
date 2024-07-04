@@ -22,7 +22,7 @@ const Knowledge = (props: DictionaryProps) => {
       >
         <Subtitle>{props.dict.section.knowledge.name}</Subtitle>
         <TechnologiesList {...props} />
-        <FloatingIcons />
+        <FloatingIcons {...props} />
       </Box>
       <TechnologiesGraph {...props} />
       <Suspense fallback={null}>

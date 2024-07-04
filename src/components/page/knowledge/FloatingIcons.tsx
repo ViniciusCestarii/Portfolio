@@ -4,9 +4,10 @@ import CodeForkIcon from '@/components/icons/animated-icons/icons/CodeForkIcon'
 import CommandIcon from '@/components/icons/animated-icons/icons/CommandIcon'
 import ServerIcon from '@/components/icons/animated-icons/icons/ServerIcon'
 import { useTheme } from '@mui/material'
-import SmileVercel from '../SmileVercel'
+import SmileVercel from './SmileVercel'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 
-const FloatingIcons = () => {
+const FloatingIcons = (props: DictionaryProps) => {
   const theme = useTheme()
   return (
     <>
@@ -56,6 +57,7 @@ const FloatingIcons = () => {
         size={80}
       />
       <SmileVercel
+        {...props}
         boxProps={{
           sx: {
             position: 'absolute',

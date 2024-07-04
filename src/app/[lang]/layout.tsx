@@ -12,13 +12,6 @@ import Footer from '@/components/page/Footer'
 import getThemeColor from '@/utils/theme/getThemeFromCookie'
 import { env } from '@/env'
 import { DictionaryKeyType, getDictionary } from '@/dictionaries/getDictionary'
-import { registerLocale } from 'echarts'
-
-import langEN from 'echarts/i18n/langEN-obj.js'
-import langPT from 'echarts/i18n/langPT-br-obj.js'
-
-registerLocale('en', langEN)
-registerLocale('pt', langPT)
 
 const inter = Inter({
   subsets: ['latin'],

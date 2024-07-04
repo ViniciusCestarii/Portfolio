@@ -27,6 +27,7 @@ export type DictionaryType = {
     knowledge: {
       name: string
       technologyItens: TechnologyItemType[]
+      smileWatchingBy: string
       technoloiesGraph: {
         title: string
         description: string
