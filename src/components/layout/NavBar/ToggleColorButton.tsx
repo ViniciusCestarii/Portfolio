@@ -1,13 +1,14 @@
 import ColorsIcon from '@/components/icons/animated-icons/icons/ColorsIcon'
 import { useMyTheme } from '@/context/themeContext'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 
-const ToggleColorButton = () => {
+const ToggleColorButton = ({ dict }: DictionaryProps) => {
   const { toggleTheme, themeColor } = useMyTheme()
 
   return (
-    <Tooltip title={`Change to next theme color`}>
+    <Tooltip title={dict.color.changeThemeColor}>
       <IconButton
         onClick={toggleTheme}
         sx={{

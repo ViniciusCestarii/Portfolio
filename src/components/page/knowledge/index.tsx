@@ -5,8 +5,9 @@ import GithubWordCloud from '@/components/chart/GithubWordCloud'
 import TechnologiesList from './TechnologiesList'
 import FloatingIcons from './FloatingIcons'
 import { Suspense } from 'react'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 
-const Knowledge = () => {
+const Knowledge = (props: DictionaryProps) => {
   return (
     <>
       <Box
@@ -19,13 +20,13 @@ const Knowledge = () => {
           flexDirection: 'column',
         }}
       >
-        <Subtitle>Knowledge</Subtitle>
-        <TechnologiesList />
-        <FloatingIcons />
+        <Subtitle>{props.dict.section.knowledge.name}</Subtitle>
+        <TechnologiesList {...props} />
+        <FloatingIcons {...props} />
       </Box>
-      <TechnologiesGraph />
+      <TechnologiesGraph {...props} />
       <Suspense fallback={null}>
-        <GithubWordCloud />
+        <GithubWordCloud {...props} />
       </Suspense>
     </>
   )

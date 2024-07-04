@@ -5,20 +5,21 @@ import Box from '@mui/material/Box'
 import * as React from 'react'
 import AppBar from './AppBar'
 import MobileDrawer from './MobileDrawer'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 
-const navItems: NavItem[] = [
-  {
-    name: 'Home',
-    elementId: 'home',
-  },
-  {
-    name: 'Contact',
-    elementId: 'contact',
-  },
-]
-
-const NavBar = () => {
+const NavBar = ({ dict }: DictionaryProps) => {
   const [mobileOpen, setMobileOpen] = React.useState(false)
+
+  const navItems: NavItem[] = [
+    {
+      name: dict.section.home.name,
+      elementId: 'home',
+    },
+    {
+      name: dict.section.contact.name,
+      elementId: 'contact',
+    },
+  ]
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState)
@@ -26,7 +27,11 @@ const NavBar = () => {
 
   return (
     <Box component="div" sx={{ mt: '80px' }}>
-      <AppBar handleDrawerToggle={handleDrawerToggle} navItems={navItems} />
+      <AppBar
+        handleDrawerToggle={handleDrawerToggle}
+        navItems={navItems}
+        dict={dict}
+      />
       <MobileDrawer
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}

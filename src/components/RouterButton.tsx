@@ -16,11 +16,11 @@ const RouterButton: FC<RouterButtonProps> = ({
 }: RouterButtonProps) => {
   const [trigger, setTrigger] = useState(false)
   let Icon
-  switch (name) {
-    case 'Home':
+  switch (elementId) {
+    case 'home':
       Icon = HomeIcon
       break
-    case 'Contact':
+    case 'contact':
       Icon = ContactIcon
       break
     default:

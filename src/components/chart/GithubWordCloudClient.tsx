@@ -4,12 +4,15 @@ import * as echarts from 'echarts'
 import 'echarts-wordcloud'
 import { useTheme } from '@mui/material'
 import hexToRgba from '@/utils/theme/hexToRgba'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 
-interface GithubWordCloudClientProps {
+interface GithubWordCloudClientProps extends DictionaryProps {
   data: { name: string; value: number }[]
 }
 
-const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
+const GithubWordCloudClient = ({ data, dict }: GithubWordCloudClientProps) => {
+  const { githubWordCloud } = dict.section.knowledge
+
   const chartRef = useRef(null)
   const echartRef = useRef<echarts.ECharts>()
   const theme = useTheme()
@@ -33,14 +36,14 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
   const option: echarts.EChartsCoreOption = useMemo(
     () => ({
       tooltip: {
-        formatter: 'Topic {b} mentioned {c} times',
+        formatter: githubWordCloud.tooltipFormat,
       },
       aria: {
         show: true,
       },
       title: {
-        text: 'My Github Topics WordCloud',
-        subtext: 'Topics I mentioned on my repositories.',
+        text: githubWordCloud.title,
+        subtext: githubWordCloud.description,
         top: 10,
         left: 10,
       },
@@ -101,7 +104,10 @@ const GithubWordCloudClient = ({ data }: GithubWordCloudClientProps) => {
   )
 
   useEffect(() => {
-    const myChart = echarts.init(chartRef.current, 'dark', { renderer: 'svg' })
+    const myChart = echarts.init(chartRef.current, 'dark', {
+      renderer: 'svg',
+      locale: dict.lang,
+    })
 
     const maskImage = new Image()
 

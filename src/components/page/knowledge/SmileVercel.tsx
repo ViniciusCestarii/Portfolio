@@ -1,14 +1,17 @@
 'use client'
 import { Box, BoxProps, Typography, useTheme } from '@mui/material'
-import SmileIcon from '../icons/animated-icons/icons/Smile'
+import SmileIcon from '../../icons/animated-icons/icons/Smile'
 import Link from 'next/link'
 import { useState } from 'react'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 
-interface SmileVercelProps {
+interface SmileVercelProps extends DictionaryProps {
   boxProps: BoxProps
 }
 
-const SmileVercel = ({ boxProps }: SmileVercelProps) => {
+const SmileVercel = ({ boxProps, dict }: SmileVercelProps) => {
+  const { smileWatchingBy } = dict.section.knowledge
+
   const theme = useTheme()
   const [trigger, setTrigger] = useState(false)
 
@@ -44,7 +47,7 @@ const SmileVercel = ({ boxProps }: SmileVercelProps) => {
           },
         }}
       >
-        Smile you are being watched by{' '}
+        {smileWatchingBy}{' '}
         <Link
           href="https://vercel.com/analytics"
           target="_blank"

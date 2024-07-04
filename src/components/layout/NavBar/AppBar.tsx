@@ -7,13 +7,18 @@ import useScrollTrigger from '@mui/material/useScrollTrigger'
 import Logo from '../Logo'
 import MenuButton from './MenuButton'
 import ToggleColorButton from './ToggleColorButton'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 
-interface MobileDrawerProps {
+interface MobileDrawerProps extends DictionaryProps {
   handleDrawerToggle: () => void
   navItems: NavItem[]
 }
 
-const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
+const AppBar = ({
+  handleDrawerToggle,
+  navItems,
+  ...props
+}: MobileDrawerProps) => {
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -66,7 +71,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
             transition: 'right 500ms cubic-bezier(0.4, 0, 0.2, 1) !important',
           }}
         >
-          <ToggleColorButton />
+          <ToggleColorButton {...props} />
         </Box>
         <Box
           component="div"
@@ -90,7 +95,7 @@ const AppBar = ({ handleDrawerToggle, navItems }: MobileDrawerProps) => {
               style={{ color: 'white' }}
             />
           ))}
-          <ToggleColorButton />
+          <ToggleColorButton {...props} />
         </Box>
       </Toolbar>
     </MuiAppBar>

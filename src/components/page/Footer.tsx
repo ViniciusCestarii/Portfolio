@@ -4,8 +4,11 @@ import Link from 'next/link'
 import Logo from '../layout/Logo'
 import LinkIcon from '../icons/LinkIcon'
 import BalanceIcon from '../icons/animated-icons/icons/BalanceIcon'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 
-const Footer = () => {
+const Footer = ({ dict }: DictionaryProps) => {
+  const { footer } = dict.section
+
   const theme = useTheme()
   return (
     <Box
@@ -60,7 +63,7 @@ const Footer = () => {
               Vinicius Cestari
             </Typography>
             <Typography variant="body1" color="textPrimary">
-              Full Stack Developer
+              {dict.hero.fullStackDeveloper}
             </Typography>
             <Box
               sx={{
@@ -103,8 +106,8 @@ const Footer = () => {
             }}
           >
             <Typography variant="caption" color="textSecondary">
-              © {new Date().getFullYear()} Vinicius Cestari. All rights
-              reserved
+              © {new Date().getFullYear()} Vinicius Cestari.{' '}
+              {footer.allRightsReserved}
             </Typography>
             <Box sx={{ display: 'flex', gap: '0.25rem' }}>
               <Typography
@@ -112,13 +115,13 @@ const Footer = () => {
                 color="textSecondary"
                 sx={{ display: 'flex', gap: '0.25rem' }}
               >
-                Released under the{' '}
+                {footer.releasedUnderThe}{' '}
                 <Link
                   target="_blank"
                   href="https://github.com/ViniciusCestarii/Portfolio/blob/main/LICENSE"
                 >
                   {' '}
-                  MIT License
+                  {footer.mitLicense}
                 </Link>
                 <BalanceIcon
                   colorize={theme.palette.text.secondary}
@@ -127,13 +130,15 @@ const Footer = () => {
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ width: '100%' }}>
-            <Typography variant="caption" color="textSecondary">
-              <Link href="https://lordicon.com/" target="_blank">
-                Icons by Lordicon.com 👑
-              </Link>
-            </Typography>
-          </Box>
+          <Typography
+            variant="caption"
+            color="textSecondary"
+            sx={{ width: '100%' }}
+          >
+            <Link href="https://lordicon.com/" target="_blank">
+              {footer.iconsByLordicon}
+            </Link>
+          </Typography>
         </Box>
       </Box>
     </Box>

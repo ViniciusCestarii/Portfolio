@@ -3,8 +3,9 @@ import EyeIcon from '@/components/icons/animated-icons/icons/EyeIcon'
 import { useMyTheme } from '@/context/themeContext'
 import { Box, Typography } from '@mui/material'
 import HeroTypography from './HeroTypography'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 
-const Hero = () => {
+const Hero = ({ dict }: DictionaryProps) => {
   const myTheme = useMyTheme()
 
   return (
@@ -29,7 +30,7 @@ const Hero = () => {
           fontSize: { xs: '32px', sm: '40px' },
         }}
       >
-        Full-Stack Developer
+        {dict.hero.fullStackDeveloper}
       </Typography>
     </Box>
   )

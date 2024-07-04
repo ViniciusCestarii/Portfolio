@@ -4,9 +4,11 @@ import Subtitle from '@/components/layout/Subtitle'
 import { Box, Typography, useTheme } from '@mui/material'
 import { useState } from 'react'
 import ContactItem from './ContactItem'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 import Curriculum from './Curriculum'
 
-const Contact = () => {
+const Contact = (props: DictionaryProps) => {
+  const { contact } = props.dict.section
   const theme = useTheme()
   const [trigger, setTrigger] = useState(false)
   return (
@@ -21,7 +23,7 @@ const Contact = () => {
         flexDirection: 'column',
       }}
     >
-      <Subtitle>Contact</Subtitle>
+      <Subtitle>{contact.name}</Subtitle>
       <Box
         component="div"
         sx={{ display: 'flex', flexDirection: 'column' }}
@@ -36,9 +38,7 @@ const Contact = () => {
           }}
         >
           <Typography variant="body1" color="textSecondary">
-            {
-              "Hey there, don't hesitate to reach out! I'm always open to connecting with fellow enthusiasts, collaborators, or anyone who shares a passion for technology."
-            }
+            {contact.greeting}
           </Typography>
           <Box
             sx={{
@@ -80,7 +80,7 @@ const Contact = () => {
           />
           <ContactItem
             link="https://www.linkedin.com/in/-vinicius-cestari/"
-            linkText="Vinicius Cestari"
+            linkText="in/-vinicius-cestari"
             imgAlt="Linkedin Icon"
             imgSrc="assets/linkedinLogo.svg"
             caption="Linkedin:"
@@ -95,8 +95,12 @@ const Contact = () => {
           flexDirection: { xs: 'column', sm: 'row' },
         }}
       >
-        <Curriculum lang="en" />
-        <Curriculum lang="pt" />
+        {Object.keys(contact.resume).map((key) => (
+          <Curriculum
+            key={key}
+            {...contact.resume[key as keyof typeof contact.resume]}
+          />
+        ))}
       </Box>
     </Box>
   )
