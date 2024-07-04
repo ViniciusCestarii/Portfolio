@@ -1,9 +1,10 @@
 import SearchIcon from '@/components/icons/animated-icons/icons/SearchIcon'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 import { Typography, useTheme, Box } from '@mui/material'
 import Link from 'next/link'
 import { useState } from 'react'
 
-const SeeAllProjects = () => {
+const SeeAllProjects = ({ dict }: DictionaryProps) => {
   const theme = useTheme()
   const [trigger, setTrigger] = useState(false)
   return (
@@ -32,7 +33,7 @@ const SeeAllProjects = () => {
           onMouseEnter={() => setTrigger(!trigger)}
           onMouseLeave={() => setTrigger(!trigger)}
         >
-          see all projects
+          {dict.section.projects.seeAllProjects}
         </Typography>
       </Link>
     </Box>

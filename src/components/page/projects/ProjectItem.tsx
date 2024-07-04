@@ -1,7 +1,8 @@
 import DynamicAnimatedIconOnHover from '@/components/icons/animated-icons/DynamicAnimatedIconInHover'
 import LockIcon from '@/components/icons/animated-icons/icons/LockIcon'
 import ShareIcon from '@/components/icons/animated-icons/icons/ShareIcon'
-import { ProjectItemProps } from '@/types/layout/Project'
+import { ProjectItemType } from '@/dictionaries/dictionary'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
 import { Box, Tooltip, Typography, useTheme } from '@mui/material'
 import { AnimationDirection } from 'lottie-web'
 import Image from 'next/image'
@@ -15,9 +16,11 @@ const ProjectItem = ({
   projectLink,
   applicationLink,
   privateProject,
-}: ProjectItemProps) => {
+  dict,
+}: ProjectItemType & DictionaryProps) => {
   const theme = useTheme()
   const [direction, setDirection] = useState<AnimationDirection | undefined>()
+  const { projects } = dict.section
   return (
     <Box
       onMouseEnter={() => setDirection(1)}
@@ -101,7 +104,7 @@ const ProjectItem = ({
           }}
         >
           {privateProject && (
-            <Tooltip title="Private Project" describeChild>
+            <Tooltip title={projects.privateProject} describeChild>
               <Box>
                 <LockIcon colorize={theme.palette.primary.main} size={26} />
               </Box>
@@ -120,7 +123,7 @@ const ProjectItem = ({
               <Typography variant="body2" color="primary">
                 know more
               </Typography>
-              <Tooltip title="Open Project">
+              <Tooltip title={projects.openProject}>
                 <Image
                   alt={'Github Icon'}
                   src={'/assets/githubLogo.svg'}
@@ -134,7 +137,7 @@ const ProjectItem = ({
             </Link>
           )}
           {applicationLink && (
-            <Tooltip title="Open Application">
+            <Tooltip title={projects.viewLiveApplication}>
               <Link target="_blank" href={applicationLink}>
                 <ShareIcon colorize={theme.palette.primary.main} size={24} />
               </Link>

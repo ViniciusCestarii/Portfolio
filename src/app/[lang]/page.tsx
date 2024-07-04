@@ -21,7 +21,7 @@ export default async function MainPage({ params: { lang } }: MainPageProps) {
       <Home dict={dict} />
       <PageContainer>
         <Contact dict={dict} />
-        <Projects />
+        <Projects dict={dict} />
         <Knowledge />
       </PageContainer>
       <LoadingCLient />
