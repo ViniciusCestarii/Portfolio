@@ -7,8 +7,8 @@ import { DictionaryProps } from '@/dictionaries/getDictionary'
 
 const Projects = (props: DictionaryProps) => {
   const theme = useTheme()
-
-  const { projectItens } = props.dict.section.projects
+  const { projects } = props.dict.section
+  const { projectItens } = projects
 
   return (
     <Box
@@ -20,7 +20,7 @@ const Projects = (props: DictionaryProps) => {
         flexDirection: 'column',
       }}
     >
-      <Subtitle>Projects</Subtitle>
+      <Subtitle>{props.dict.section.projects.name}</Subtitle>
       <Box
         component="div"
         sx={{

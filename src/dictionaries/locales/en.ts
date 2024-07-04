@@ -258,6 +258,12 @@ const en: DictionaryType = {
         tooltipFormat: 'Topic {b} mentioned {c} times',
       },
     },
+    footer: {
+      allRightsReserved: 'All rights reserved',
+      releasedUnderThe: 'Released under the',
+      mitLicense: 'MIT License',
+      iconsByLordicon: 'Icons by Lordicon 👑',
+    },
   },
   hero: {
     fullStackDeveloper: 'Full Stack Developer',

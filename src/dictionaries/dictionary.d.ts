@@ -40,6 +40,12 @@ export type DictionaryType = {
         tooltipFormat: string
       }
     }
+    footer: {
+      allRightsReserved: string
+      releasedUnderThe: string
+      mitLicense: string
+      iconsByLordicon: string
+    }
   }
   hero: {
     fullStackDeveloper: string

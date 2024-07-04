@@ -29,7 +29,7 @@ const pt: DictionaryType = {
       name: 'projetos',
       projectItens: [
         {
-          title: 'Gráficos de Dados IBGE',
+          title: 'IBGE Data Charts',
           projectLink:
             'https://github.com/ViniciusCestarii/IBGE-data-charts?tab=readme-ov-file#ibge-data-charts-',
           applicationLink: 'https://ibge-data-charts.vercel.app/',
@@ -41,10 +41,10 @@ const pt: DictionaryType = {
             size: 150,
           },
           description:
-            'Gráficos de Dados IBGE liberam o poder dos dados do IBGE por meio de gráficos dinâmicos e visualizações. Explore tendências econômicas, mudanças demográficas e muito mais em níveis geográficos. Gráficos de Dados IBGE tornam dados complexos acessíveis e acionáveis para todos.',
+            'IBGE Data Charts libera o poder dos dados do IBGE por meio de gráficos dinâmicos e visualizações. Explore tendências econômicas, mudanças demográficas e muito mais em níveis geográficos. IBGE Data Charts torna dados complexos acessíveis e acionáveis para todos.',
         },
         {
-          title: 'Encontre um Amigo',
+          title: 'Find a Friend',
           projectLink:
             'https://github.com/ViniciusCestarii/FindAFriendWeb?tab=readme-ov-file#find-a-friend-',
           animatedIconProps: {
@@ -55,7 +55,7 @@ const pt: DictionaryType = {
             size: 158,
           },
           description:
-            'Encontre um Amigo conecta você com animais adoráveis para adoção perto de você! Descubra cães, gatos, coelhos e mais esperando por seus lares para sempre. Abrigos de animais e grupos de resgate, publiquem seus animais preciosos e encontrem famílias amorosas rápida e facilmente.',
+            'Find a Friend conecta você com animais adoráveis para adoção perto de você! Descubra cães, gatos, coelhos e mais esperando por seus lares. Abrigos de animais e grupos de resgate, podem publicar seus animais e econtrar famílias amorosas de forma rápida e fácil.',
         },
         {
           title: 'Site da Futura Equipamentos',
@@ -82,7 +82,7 @@ const pt: DictionaryType = {
             size: 144,
           },
           description:
-            'Gym Pass ajuda você a fazer check-in facilmente com um único toque no seu telefone. Explore uma rede diversificada de academias perto de você. Acompanhe seu próprio progresso. Academias, podem se juntar à plataforma e aproveitar um fluxo de membros motivados. Tudo dentro do app.',
+            'Gym Pass ajuda você a fazer check-in facilmente com um único toque no seu telefone. Explore uma rede diversificada de academias perto de você. Acompanhe seu próprio progresso. Academias podem se juntar à plataforma e aproveitar um fluxo de membros motivados. Tudo dentro do app.',
         },
       ],
       knowMore: 'saiba mais',
@@ -260,6 +260,12 @@ const pt: DictionaryType = {
         description: 'Tópicos que mencionei em meus repositórios.',
         tooltipFormat: 'Tópico {b} mencionado {c} vezes',
       },
+    },
+    footer: {
+      allRightsReserved: 'Todos os direitos reservados',
+      releasedUnderThe: 'Lançado sob a',
+      mitLicense: 'Licença MIT',
+      iconsByLordicon: 'Ícones por Lordicon 👑',
     },
   },
   hero: {

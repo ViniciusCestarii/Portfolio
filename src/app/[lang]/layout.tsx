@@ -76,7 +76,7 @@ export default async function RootLayout({
             <MuiTheme>
               <NavBar dict={dict} />
               {children}
-              <Footer />
+              <Footer dict={dict} />
             </MuiTheme>
           </ThemeProvider>
         </AppRouterCacheProvider>
