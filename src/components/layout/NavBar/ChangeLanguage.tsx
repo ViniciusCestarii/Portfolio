@@ -2,6 +2,7 @@
 import { DictionaryProps } from '@/dictionaries/getDictionary'
 import {
   Box,
+  BoxProps,
   SpeedDial,
   SpeedDialAction,
   SpeedDialIcon,
@@ -22,7 +23,15 @@ const languages: LanguageSelect[] = [
   { value: 'pt', label: 'Português', src: 'assets/flags/br.svg' },
 ]
 
-const ChangeLanguage = ({ dict }: DictionaryProps) => {
+interface ChangeLanguageProps extends DictionaryProps {
+  closeFunction?: () => void
+}
+
+const ChangeLanguage = ({
+  dict,
+  closeFunction,
+  ...boxProps
+}: ChangeLanguageProps & BoxProps) => {
   const router = useRouter()
 
   const theme = useTheme()
@@ -31,7 +40,14 @@ const ChangeLanguage = ({ dict }: DictionaryProps) => {
 
   return (
     <Box
-      sx={{ height: 304, width: 60, transform: 'translateZ(0px)', flexGrow: 1 }}
+      {...boxProps}
+      sx={{
+        height: 304,
+        width: 60,
+        transform: 'translateZ(0px)',
+        flexGrow: 1,
+        ...boxProps.sx,
+      }}
     >
       <SpeedDial
         direction={isSmall ? 'up' : 'down'}
@@ -98,7 +114,10 @@ const ChangeLanguage = ({ dict }: DictionaryProps) => {
         {languages.map((action) => (
           <SpeedDialAction
             key={action.value}
-            onClick={() => router.push(`/${action.value}`, { scroll: false })}
+            onClick={() => {
+              closeFunction && closeFunction()
+              router.push(`/${action.value}`, { scroll: false })
+            }}
             icon={
               <Image
                 src={action.src}

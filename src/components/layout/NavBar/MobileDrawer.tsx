@@ -58,35 +58,31 @@ const MobileDrawer = ({
           </IconButton>
         </Box>
         <Divider />
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            height: '89.8vh',
-          }}
-        >
-          <List>
-            {navItems.map((item) => (
-              <ListItem
-                key={item.elementId}
-                onClick={() => {
-                  scrollToElement(item.elementId)
-                  handleDrawerToggle()
-                }}
-                disablePadding
-              >
-                <ListItemButton sx={{ textAlign: 'center' }}>
-                  <ListItemText
-                    sx={{ textTransform: 'capitalize' }}
-                    primary={item.name}
-                  />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <ChangeLanguage dict={dict} />
-        </Box>
+
+        <List>
+          {navItems.map((item) => (
+            <ListItem
+              key={item.elementId}
+              onClick={() => {
+                scrollToElement(item.elementId)
+                handleDrawerToggle()
+              }}
+              disablePadding
+            >
+              <ListItemButton sx={{ textAlign: 'center' }}>
+                <ListItemText
+                  sx={{ textTransform: 'capitalize' }}
+                  primary={item.name}
+                />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <ChangeLanguage
+          dict={dict}
+          closeFunction={handleDrawerToggle}
+          sx={{ position: 'absolute', bottom: 12, left: 0 }}
+        />
       </Drawer>
     </nav>
   )
