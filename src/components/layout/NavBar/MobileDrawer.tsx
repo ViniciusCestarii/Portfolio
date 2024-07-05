@@ -12,8 +12,10 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import Close from 'mdi-material-ui/Close'
 import Logo from '../Logo'
+import { DictionaryProps } from '@/dictionaries/getDictionary'
+import ChangeLanguage from './ChangeLanguage'
 
-interface MobileDrawerProps {
+interface MobileDrawerProps extends DictionaryProps {
   mobileOpen: boolean
   handleDrawerToggle: () => void
   navItems: NavItem[]
@@ -23,6 +25,7 @@ const MobileDrawer = ({
   handleDrawerToggle,
   mobileOpen,
   navItems,
+  dict,
 }: MobileDrawerProps) => {
   return (
     <nav>
@@ -44,32 +47,45 @@ const MobileDrawer = ({
       >
         <Box
           component="div"
-          onClick={handleDrawerToggle}
-          sx={{ textAlign: 'center' }}
+          sx={{ py: 2, display: 'flex', justifyContent: 'center' }}
         >
-          <Box
-            component="div"
-            sx={{ py: 2, display: 'flex', justifyContent: 'center' }}
+          <Logo />
+          <IconButton
+            onClick={handleDrawerToggle}
+            sx={{ position: 'absolute', right: 42, top: 20 }}
           >
-            <Logo />
-            <IconButton sx={{ position: 'absolute', right: 42, top: 20 }}>
-              <Close />
-            </IconButton>
-          </Box>
-          <Divider />
+            <Close />
+          </IconButton>
+        </Box>
+        <Divider />
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '89.8vh',
+          }}
+        >
           <List>
             {navItems.map((item) => (
               <ListItem
                 key={item.elementId}
-                onClick={() => scrollToElement(item.elementId)}
+                onClick={() => {
+                  scrollToElement(item.elementId)
+                  handleDrawerToggle()
+                }}
                 disablePadding
               >
                 <ListItemButton sx={{ textAlign: 'center' }}>
-                  <ListItemText primary={item.name} />
+                  <ListItemText
+                    sx={{ textTransform: 'capitalize' }}
+                    primary={item.name}
+                  />
                 </ListItemButton>
               </ListItem>
             ))}
           </List>
+          <ChangeLanguage dict={dict} />
         </Box>
       </Drawer>
     </nav>
