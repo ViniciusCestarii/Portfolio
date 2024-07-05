@@ -6,6 +6,7 @@ import BARCHART from '@/json/bar-chart.json'
 
 const en: DictionaryType = {
   lang: 'en',
+  changeLanguage: 'Change Language',
   section: {
     home: {
       name: 'home',

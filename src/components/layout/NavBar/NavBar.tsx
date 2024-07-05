@@ -33,6 +33,7 @@ const NavBar = ({ dict }: DictionaryProps) => {
         dict={dict}
       />
       <MobileDrawer
+        dict={dict}
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}
         navItems={navItems}

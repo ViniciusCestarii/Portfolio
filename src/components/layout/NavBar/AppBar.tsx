@@ -8,6 +8,7 @@ import Logo from '../Logo'
 import MenuButton from './MenuButton'
 import ToggleColorButton from './ToggleColorButton'
 import { DictionaryProps } from '@/dictionaries/getDictionary'
+import ChangeLanguage from './ChangeLanguage'
 
 interface MobileDrawerProps extends DictionaryProps {
   handleDrawerToggle: () => void
@@ -86,7 +87,7 @@ const AppBar = ({
         <Box
           component="div"
           sx={{ display: { xs: 'none', sm: 'flex' }, ml: 'auto' }}
-          className="space-x-2"
+          className="space-x-2 items-center"
         >
           {navItems.map((item) => (
             <RouterButton
@@ -96,6 +97,7 @@ const AppBar = ({
             />
           ))}
           <ToggleColorButton {...props} />
+          <ChangeLanguage {...props} />
         </Box>
       </Toolbar>
     </MuiAppBar>

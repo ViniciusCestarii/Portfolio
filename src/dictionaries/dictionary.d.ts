@@ -3,6 +3,7 @@ import { AnimatedIconOnHoverProps } from '@/types/layout/AnimatedIcon'
 /* eslint-disable no-use-before-define */
 export type DictionaryType = {
   lang: string
+  changeLanguage: string
   section: {
     home: {
       name: string
