@@ -36,7 +36,7 @@ const en: DictionaryType = {
           applicationLink: 'https://ibge-data-charts.vercel.app/',
           animatedIconProps: {
             noIconHover: true,
-            inAnimation: 'in-diversified',
+            inAnimation: 'loop-all',
             hoverAnimation: 'loop-all',
             jsonIcon: BARCHART,
             size: 150,
@@ -63,7 +63,7 @@ const en: DictionaryType = {
           privateProject: true,
           animatedIconProps: {
             noIconHover: true,
-            inAnimation: 'in-reveal',
+            inAnimation: 'hover-spending',
             hoverAnimation: 'hover-spending',
             jsonIcon: COINICON,
             size: 142,
