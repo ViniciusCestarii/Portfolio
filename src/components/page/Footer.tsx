@@ -105,7 +105,11 @@ const Footer = ({ dict }: DictionaryProps) => {
               alignItems: 'center',
             }}
           >
-            <Typography variant="caption" color="textSecondary">
+            <Typography
+              variant="caption"
+              color="textSecondary"
+              className="text-center"
+            >
               © {new Date().getFullYear()} Vinicius Cestari.{' '}
               {footer.allRightsReserved}
             </Typography>

@@ -257,7 +257,7 @@ const pt: DictionaryType = {
         },
       },
       githubWordCloud: {
-        title: 'Wordcloud de Tópicos do GitHub',
+        title: 'Wordcloud do GitHub',
         description: 'Tópicos que mencionei em meus repositórios.',
         tooltipFormat: 'Tópico {b} mencionado {c} vezes',
       },
