@@ -56,7 +56,7 @@ const en: DictionaryType = {
             size: 158,
           },
           description:
-            'FindAFriend connects you with adorable adoptable pets near you! Discover dogs, cats, rabbits, and more waiting for their forever homes. Animal shelters and rescue groups, post your precious animals and find loving families quickly and easily.',
+            'FindAFriend connects you with adoptable pets near you! Discover dogs, cats, rabbits, and more waiting for their forever homes. Animal shelters and rescue groups can post their precious animals and find loving families quickly and easily.',
         },
         {
           title: 'Futura Equipamentos Website',
@@ -83,7 +83,7 @@ const en: DictionaryType = {
             size: 144,
           },
           description:
-            'Gym Pass help you check in seamlessly with a single tap on your phone. Explore a diverse network of gyms near you. Track your own progress.Gyms, can join the platform and tap into a stream of motivated members. all within the app.',
+            'Gym Pass help you check in seamlessly with a single tap on your phone. Explore a diverse network of gyms near you. Track your own progress. Gyms can join the platform and tap into a stream of motivated members. All within the app.',
         },
       ],
       knowMore: 'know more',
@@ -171,7 +171,7 @@ const en: DictionaryType = {
         {
           title: 'Docker',
           description:
-            'Platform for developinga and shipping applications inside containers.',
+            'Platform for developing and shipping applications inside containers.',
           iconName: 'simple-icons:docker',
           technologyLink: 'https://www.docker.com/',
         },

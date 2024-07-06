@@ -159,14 +159,14 @@ const pt: DictionaryType = {
         {
           title: '.NET',
           description:
-            'Plataforma de desenvolvimento multiplataforma para construir várias aplicações.',
+            'Plataforma de desenvolvimento multiplataforma para construir aplicações.',
           iconName: 'simple-icons:dotnet',
           technologyLink: 'https://dotnet.microsoft.com/',
         },
         {
           title: 'C#',
           description:
-            'Linguagem de programação moderna e orientada a objetos desenvolvida pela Microsoft.',
+            'Linguagem de programação orientada a objetos desenvolvida pela Microsoft.',
           iconName: 'simple-icons:csharp',
           technologyLink: 'https://docs.microsoft.com/pt-br/dotnet/csharp/',
         },
@@ -180,7 +180,7 @@ const pt: DictionaryType = {
         {
           title: 'PostgreSQL',
           description:
-            'Sistema de gerenciamento de banco de dados relacional poderoso e de código aberto.',
+            'Sistema de gerenciamento de banco de dados relacional de código aberto.',
           iconName: 'simple-icons:postgresql',
           technologyLink: 'https://www.postgresql.org/',
         },
