@@ -20,6 +20,7 @@ interface LanguageSelect {
 
 const languages: LanguageSelect[] = [
   { value: 'en', label: 'English', src: 'assets/flags/us.svg' },
+  { value: 'fr', label: 'Français', src: 'assets/flags/fr.svg' },
   { value: 'pt', label: 'Português', src: 'assets/flags/br.svg' },
 ]
 
@@ -42,7 +43,7 @@ const ChangeLanguage = ({
     <Box
       {...boxProps}
       sx={{
-        height: 304,
+        height: 416,
         width: 60,
         transform: 'translateZ(0px)',
         flexGrow: 1,
@@ -59,6 +60,7 @@ const ChangeLanguage = ({
           '& .MuiSpeedDial-fab': {
             width: isSmall ? 54 : 48,
             height: isSmall ? 54 : 48,
+            boxShadow: 'none',
             background: 'white !important',
             transition:
               'background 0.75s ease-in-out, transform 0.2s ease-in-out !important',
