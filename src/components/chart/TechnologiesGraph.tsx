@@ -7,8 +7,12 @@ import { DictionaryProps } from '@/dictionaries/getDictionary'
 
 import langEN from 'echarts/i18n/langEN-obj.js'
 import langPT from 'echarts/i18n/langPT-br-obj.js'
+import langFR from 'echarts/i18n/langFR-obj.js'
+import langES from 'echarts/i18n/langES-obj.js'
 
 echarts.registerLocale('en', langEN)
+echarts.registerLocale('es', langES)
+echarts.registerLocale('fr', langFR)
 echarts.registerLocale('pt', langPT)
 
 const app =

@@ -20,6 +20,7 @@ interface LanguageSelect {
 
 const languages: LanguageSelect[] = [
   { value: 'en', label: 'English', src: 'assets/flags/us.svg' },
+  { value: 'es', label: 'Español', src: 'assets/flags/es.svg' },
   { value: 'fr', label: 'Français', src: 'assets/flags/fr.svg' },
   { value: 'pt', label: 'Português', src: 'assets/flags/br.svg' },
 ]
@@ -43,7 +44,7 @@ const ChangeLanguage = ({
     <Box
       {...boxProps}
       sx={{
-        height: 416,
+        height: 528,
         width: 60,
         transform: 'translateZ(0px)',
         flexGrow: 1,
