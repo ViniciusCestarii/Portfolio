@@ -36,6 +36,8 @@ const AppBar = ({
         alignItems: 'center',
         backdropFilter: scrollTrigger ? 'blur(10px) opacity(0.8)' : 'none',
         transition: 'background 0.75s ease-in-out',
+        height: '100%',
+        maxHeight: { xs: 80, md: 66 },
       }}
     >
       <Toolbar
@@ -47,7 +49,6 @@ const AppBar = ({
         sx={{
           position: 'relative',
           py: 2,
-          height: { xs: 80, md: 66 },
           maxWidth: '1280px',
           width: '100%',
           transition: 'padding 500ms cubic-bezier(0.4, 0, 0.2, 1) !important',
@@ -87,7 +88,7 @@ const AppBar = ({
         <Box
           component="div"
           sx={{ display: { xs: 'none', sm: 'flex' }, ml: 'auto' }}
-          className="space-x-2 items-center"
+          className="space-x-2 items-center max-h-full"
         >
           {navItems.map((item) => (
             <RouterButton
