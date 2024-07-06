@@ -95,6 +95,7 @@ const pt: DictionaryType = {
     knowledge: {
       name: 'conhecimento',
       smileWatchingBy: 'Sorria, você está sendo observado por',
+      showMore: 'Mostrar Mais',
       technologyItens: [
         {
           title: 'Next.js',

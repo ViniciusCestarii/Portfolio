@@ -29,6 +29,7 @@ export type DictionaryType = {
       name: string
       technologyItens: TechnologyItemType[]
       smileWatchingBy: string
+      showMore: string
       technoloiesGraph: {
         title: string
         description: string
