@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: 'Vinicius Cestarii',
   description: 'Vinicius Cestarii - Full Stack Developer',
   keywords: ['Vinicius Cestarii', 'Full Stack Developer'],
-  icons: '/public-icon.svg',
+  icons: '/public-icon.png',
   twitter: {
     creator: 'vinicius-cestari',
     creatorId: 'vinicius-cestari',

@@ -29,5 +29,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next|.*\\.svg$|cover|.*\\.xml$).*)'],
+  matcher: ['/((?!_next|.*\\.svg$|.*\\.png$|.*\\.xml$|cover).*)'],
 }
