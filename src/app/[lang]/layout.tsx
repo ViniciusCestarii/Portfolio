@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     description: 'Vinicius Cestarii - Full Stack Developer',
     type: 'website',
   },
+  other: {
+    'google-site-verification': 'DKpd_K2e8-uwjV-xYsHwlWLPtL2GUT-6evJL9DCuY6k',
+  },
 }
 
 interface RootLayoutProps {
