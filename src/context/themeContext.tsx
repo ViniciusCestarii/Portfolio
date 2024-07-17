@@ -10,7 +10,7 @@ import React, {
   useCallback,
 } from 'react'
 
-const themeColors: ThemeColor[] = [
+export const themeColors: ThemeColor[] = [
   {
     hex: '#2E995E',
     name: 'green',

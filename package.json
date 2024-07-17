@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@emotion/cache": "11.11.0",
@@ -30,18 +32,31 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
     "@iconify/react": "^4.1.1",
     "@rocketseat/eslint-config": "2.1.0",
+    "@storybook/addon-essentials": "^8.2.4",
+    "@storybook/addon-interactions": "^8.2.4",
+    "@storybook/addon-links": "^8.2.4",
+    "@storybook/addon-onboarding": "^8.2.4",
+    "@storybook/addon-themes": "^8.2.4",
+    "@storybook/blocks": "^8.2.4",
+    "@storybook/nextjs": "^8.2.4",
+    "@storybook/react": "^8.2.4",
+    "@storybook/test": "^8.2.4",
+    "@types/bun": "latest",
+    "@types/negotiator": "0.6.3",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "eslint-plugin-storybook": "^0.8.0",
     "postcss": "latest",
+    "storybook": "^8.2.4",
+    "storybook-react-context": "^0.6.0",
     "tailwindcss": "latest",
-    "typescript": "^5.0.3",
-    "@types/bun": "latest",
-    "@types/negotiator": "0.6.3"
+    "typescript": "^5.0.3"
   }
 }

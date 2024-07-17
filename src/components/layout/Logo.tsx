@@ -19,7 +19,7 @@ const Logo = ({ router, black, ...props }: LogoProps) => {
       priority
       alt="Vinicius Cestarii logo"
       {...props}
-      className={`${style} ${props.className}`}
+      className={`${style} ${props?.className}`}
     />
   )
 }
