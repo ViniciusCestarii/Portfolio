@@ -2,7 +2,7 @@
 
 import { AnimatedIconOnHoverProps } from '@/types/layout/AnimatedIcon'
 import { Player } from '@lordicon/react'
-import { Box } from '@mui/material'
+import { Box, useTheme } from '@mui/material'
 import { useRef, useEffect, useState, RefObject } from 'react'
 
 interface AnimateIconProps {
@@ -37,6 +37,8 @@ const AnimatedIconOnHover = ({
   const playerRef = useRef<Player>(null)
   const [state, setState] = useState(inAnimation)
   const [triggerHover, setTriggerHover] = useState(false)
+
+  const theme = useTheme()
 
   useEffect(() => {
     playerRef.current?.playFromBeginning()
@@ -96,7 +98,7 @@ const AnimatedIconOnHover = ({
         ref={playerRef}
         icon={jsonIcon}
         state={state}
-        colorize={colorize}
+        colorize={colorize ?? theme.palette.primary.main}
         size={size}
         direction={
           playerRef.current?.currentState.name === inAnimation

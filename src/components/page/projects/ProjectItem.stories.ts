@@ -31,7 +31,18 @@ export const Basic: Story = {
     ...project,
     animatedIconProps: {
       ...project.animatedIconProps,
-      colorize: '#1976d2',
+    },
+    dict,
+  },
+}
+
+export const PrivateRepo: Story = {
+  args: {
+    ...project,
+    privateProject: true,
+    projectLink: undefined,
+    animatedIconProps: {
+      ...project.animatedIconProps,
     },
     dict,
   },
