@@ -16,19 +16,24 @@ type PageMap = {
   priority?: number
 }
 
-const addLanguage = (pageMap: PageMap): MetadataRoute.Sitemap =>
-  locales.map((lang) => {
-    const urlSplit = pageMap.url.split('/')
-    urlSplit.splice(3, 0, lang)
-    const urlWithLang = urlSplit.join('/')
+const addLanguage = (pageMap: PageMap): MetadataRoute.Sitemap => {
+  const urlMap: MetadataRoute.Sitemap = [pageMap]
 
-    return {
-      url: urlWithLang,
-      lastModified: pageMap.lastModified,
-      changeFrequency: pageMap.changeFrequency,
-      priority: pageMap.priority,
-    }
-  })
+  urlMap.push(
+    ...locales.map((lang) => {
+      const urlSplit = pageMap.url.split('/')
+      urlSplit.splice(3, 0, lang)
+      const urlWithLang = urlSplit.join('/')
+
+      return {
+        ...pageMap,
+        url: urlWithLang,
+      }
+    }),
+  )
+
+  return urlMap
+}
 
 const makeUrlMap = () => {
   const urlMap: MetadataRoute.Sitemap = []
