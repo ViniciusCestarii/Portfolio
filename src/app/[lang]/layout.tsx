@@ -6,7 +6,6 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter' // i
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Inter } from 'next/font/google'
-import MuiTheme from '@/context/MuiTheme'
 import ThemeProvider from '@/context/ThemeContext'
 import Footer from '@/components/page/Footer'
 import getThemeColor from '@/utils/theme/getThemeFromCookie'
