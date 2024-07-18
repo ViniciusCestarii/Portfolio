@@ -28,7 +28,7 @@ const SmileVercel = ({ boxProps, dict }: SmileVercelProps) => {
         borderRadius: '16px',
         p: '0.5rem',
         border: `2px solid ${theme.palette.primary.dark}`,
-        ...boxProps.sx,
+        ...boxProps?.sx,
       }}
     >
       <SmileIcon

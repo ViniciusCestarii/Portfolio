@@ -5,7 +5,7 @@ import ContactIcon from './icons/animated-icons/icons/ContactIcon'
 import { scrollToElement } from '@/utils/router/router'
 
 interface RouterButtonProps extends ButtonProps {
-  elementId: string
+  elementId: 'home' | 'contact'
   name: string
 }
 
