@@ -1,7 +1,12 @@
 'use client'
-import { TechnologyItemProps } from '@/types/layout/Knowledge'
 import { Icon } from '@iconify/react'
 import { Box, IconButton, Typography, useTheme } from '@mui/material'
+interface TechnologyItemProps {
+  title: string
+  description: string
+  technologyLink: string
+  iconName: string
+}
 
 const TechnologyItem = ({
   description,

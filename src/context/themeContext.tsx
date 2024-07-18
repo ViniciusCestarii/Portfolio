@@ -9,6 +9,7 @@ import React, {
   useMemo,
   useCallback,
 } from 'react'
+import MuiTheme from './MuiTheme'
 
 export const themeColors: ThemeColor[] = [
   {
@@ -47,13 +48,11 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 interface ThemeProviderProps {
   children: ReactNode
-  themeColor: ThemeColor | undefined
+  theme: ThemeColor | undefined
 }
 
-const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
-  const [themeColor, setThemeColor] = React.useState(
-    props.themeColor ?? themeColors[0],
-  )
+const ThemeProvider = ({ children, theme }: ThemeProviderProps) => {
+  const [themeColor, setThemeColor] = React.useState(theme ?? themeColors[0])
 
   const toggleTheme = useCallback(() => {
     const currentIndex = themeColors.findIndex(
@@ -80,7 +79,7 @@ const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      {children}
+      <MuiTheme>{children}</MuiTheme>
     </ThemeContext.Provider>
   )
 }

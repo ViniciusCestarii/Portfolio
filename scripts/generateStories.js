@@ -2,9 +2,8 @@
 const fs = require('fs')
 const path = require('path')
 
-// Function to generate the content of the story file
-const generateStoryContent = (componentName, storyDir) => `
-import type { Meta, StoryObj } from '@storybook/react'
+const generateStoryContentWithDict = (componentName, storyDir) =>
+  `import type { Meta, StoryObj } from '@storybook/react'
 import en from '@/dictionaries/locales/en'
 import '@/app/globals.css'
 import ${componentName} from './${componentName}'
@@ -26,23 +25,54 @@ const dict = en
 export const Basic: Story = {
   args: {
     dict,
-  },
+  } as any,
 }
 `
 
-const checkForStoryDir = (filePath) => {
-  if (filePath.includes('icons')) {
-    return 'icons/'
-  }
+const generateStoryContent = (componentName, storyDir) =>
+  `import type { Meta, StoryObj } from '@storybook/react'
+import '@/app/globals.css'
+import ${componentName} from './${componentName}'
+
+const meta = {
+  title: 'ViniciusCestarii/${storyDir ?? ''}${componentName}',
+  component: ${componentName},
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+} satisfies Meta<typeof ${componentName}>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Basic: Story = {
+  args: {} as any,
+}
+`
+
+const doesntContainsNames = (file) => {
+  const namesToExclude = ['index', 'Crisp', 'GithubWordCloud']
+
+  return !namesToExclude.some((name) => file.name.includes(name))
 }
 
-// Function to create the story file
 const createStoryFile = (filePath) => {
   const dir = path.dirname(filePath)
   const componentName = path.basename(filePath, '.tsx')
   const storyFilePath = path.join(dir, `${componentName}.stories.ts`)
 
-  const content = generateStoryContent(componentName, checkForStoryDir(dir))
+  if (fs.existsSync(storyFilePath)) {
+    // console.log(
+    //   `The story file for ${componentName} already exists at ${storyFilePath}`,
+    // )
+
+    return
+  }
+
+  const content = containsDictionaryProps(filePath)
+    ? generateStoryContentWithDict(componentName, checkForStoryDir(dir))
+    : generateStoryContent(componentName, checkForStoryDir(dir))
 
   fs.writeFile(storyFilePath, content, (err) => {
     if (err) {
@@ -69,7 +99,7 @@ const readFilesRecursively = (dir) => {
       } else if (
         file.isFile() &&
         file.name.endsWith('.tsx') &&
-        !file.name.includes('index')
+        doesntContainsNames(file)
       ) {
         createStoryFile(filePath)
       }
@@ -81,3 +111,14 @@ const readFilesRecursively = (dir) => {
 const projectRoot = path.join(__dirname, '../src/components')
 
 readFilesRecursively(projectRoot)
+
+const checkForStoryDir = (filePath) => {
+  if (filePath.includes('icons')) {
+    return 'icons/'
+  }
+}
+
+const containsDictionaryProps = (filePath) => {
+  const fileContent = fs.readFileSync(filePath, 'utf-8')
+  return fileContent.includes('DictionaryProps')
+}

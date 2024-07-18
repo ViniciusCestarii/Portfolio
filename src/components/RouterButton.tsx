@@ -4,16 +4,14 @@ import { FC, useState } from 'react'
 import ContactIcon from './icons/animated-icons/icons/ContactIcon'
 import { scrollToElement } from '@/utils/router/router'
 
+export type RouterButtonElementId = 'home' | 'contact'
+
 interface RouterButtonProps extends ButtonProps {
-  elementId: 'home' | 'contact'
+  elementId: RouterButtonElementId
   name: string
 }
 
-const RouterButton: FC<RouterButtonProps> = ({
-  elementId,
-  name,
-  ...props
-}: RouterButtonProps) => {
+const RouterButton: FC<RouterButtonProps> = ({ elementId, name, ...props }) => {
   const [trigger, setTrigger] = useState(false)
   let Icon
   switch (elementId) {

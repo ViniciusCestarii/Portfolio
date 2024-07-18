@@ -75,12 +75,10 @@ export default async function RootLayout({
         <SpeedInsights />
         <CrispChat CRISP_WEBSITE_ID={env.CRISP_WEBSITE_ID} />
         <AppRouterCacheProvider>
-          <ThemeProvider themeColor={themeColor}>
-            <MuiTheme>
-              <NavBar dict={dict} />
-              {children}
-              <Footer dict={dict} />
-            </MuiTheme>
+          <ThemeProvider theme={themeColor}>
+            <NavBar dict={dict} />
+            {children}
+            <Footer dict={dict} />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
