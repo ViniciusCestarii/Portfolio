@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import CommandIcon from './CommandIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/CommandIcon',
+  title: 'ViniciusCestarii/Icons/CommandIcon',
   component: CommandIcon,
   parameters: {
     layout: 'centered',

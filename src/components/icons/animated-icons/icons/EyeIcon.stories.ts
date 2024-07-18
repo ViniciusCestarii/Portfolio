@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import EyeIcon from './EyeIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/EyeIcon',
+  title: 'ViniciusCestarii/Icons/EyeIcon',
   component: EyeIcon,
   parameters: {
     layout: 'centered',

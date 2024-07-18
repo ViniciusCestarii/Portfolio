@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import Smile from './Smile'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/Smile',
+  title: 'ViniciusCestarii/Icons/Smile',
   component: Smile,
   parameters: {
     layout: 'centered',

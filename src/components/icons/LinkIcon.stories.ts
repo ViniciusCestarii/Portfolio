@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import LinkIcon from './LinkIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/LinkIcon',
+  title: 'ViniciusCestarii/Icons/LinkIcon',
   component: LinkIcon,
   parameters: {
     layout: 'centered',

@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import BalanceIcon from './BalanceIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/BalanceIcon',
+  title: 'ViniciusCestarii/Icons/BalanceIcon',
   component: BalanceIcon,
   parameters: {
     layout: 'centered',

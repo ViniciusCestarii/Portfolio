@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import DynamicAnimatedIconInHover from './DynamicAnimatedIconInHover'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/DynamicAnimatedIconInHover',
+  title: 'ViniciusCestarii/Icons/DynamicAnimatedIconInHover',
   component: DynamicAnimatedIconInHover,
   parameters: {
     layout: 'centered',

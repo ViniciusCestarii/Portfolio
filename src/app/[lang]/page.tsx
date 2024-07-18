@@ -1,9 +1,9 @@
 import LoadingCLient from '@/components/layout/LoadingCLient'
 import PageContainer from '@/components/layout/PageContainer'
-import Contact from '@/components/page/contact'
-import Home from '@/components/page/home'
-import Knowledge from '@/components/page/knowledge'
-import Projects from '@/components/page/projects'
+import Contact from '@/components/page/contact/ContactSection'
+import Home from '@/components/page/home/HomeSection'
+import Knowledge from '@/components/page/knowledge/KnowledgeSection'
+import Projects from '@/components/page/projects/ProjectsSection'
 import { DictionaryKeyType, getDictionary } from '@/dictionaries/getDictionary'
 import { Box } from '@mui/material'
 

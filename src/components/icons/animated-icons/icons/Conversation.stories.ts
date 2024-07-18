@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import Conversation from './Conversation'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/Conversation',
+  title: 'ViniciusCestarii/Icons/Conversation',
   component: Conversation,
   parameters: {
     layout: 'centered',

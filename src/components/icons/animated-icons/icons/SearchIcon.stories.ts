@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import SearchIcon from './SearchIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/SearchIcon',
+  title: 'ViniciusCestarii/Icons/SearchIcon',
   component: SearchIcon,
   parameters: {
     layout: 'centered',
