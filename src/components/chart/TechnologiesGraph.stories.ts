@@ -7,7 +7,7 @@ const meta = {
   title: 'ViniciusCestarii/TechnologiesGraph',
   component: TechnologiesGraph,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof TechnologiesGraph>

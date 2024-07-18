@@ -14,6 +14,16 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Basic: Story = {
-  args: {} as any,
+export const Home: Story = {
+  args: {
+    elementId: 'home',
+    name: 'home',
+  },
+}
+
+export const Contact: Story = {
+  args: {
+    elementId: 'contact',
+    name: 'contact',
+  },
 }

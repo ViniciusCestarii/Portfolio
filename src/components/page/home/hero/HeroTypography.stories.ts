@@ -15,5 +15,13 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
-  args: {} as any,
+  args: {
+    children: 'HeroTypography',
+  },
+}
+
+export const ViniciusCestarii: Story = {
+  args: {
+    children: 'ViniciusCestarii',
+  },
 }

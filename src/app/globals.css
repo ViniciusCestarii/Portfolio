@@ -59,3 +59,9 @@ a {
   scrollbar-color: var(--scrollbar-color) whitesmoke;
   transition: scrollbar-color 0.43s ease-in-out;
 }
+
+/* storybook styles */
+
+.docs-story, .sb-show-main {
+  background-color: var(--background-color);
+}

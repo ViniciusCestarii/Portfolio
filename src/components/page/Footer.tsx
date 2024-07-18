@@ -76,7 +76,6 @@ const Footer = ({ dict }: DictionaryProps) => {
                 link="https://www.linkedin.com/in/-vinicius-cestari/"
                 linkAriaLabel="LinkedIn Profile"
                 icon="simple-icons:linkedin"
-                color={theme.palette.primary.light}
                 width={20}
                 height={20}
               />
@@ -84,7 +83,6 @@ const Footer = ({ dict }: DictionaryProps) => {
                 link="https://github.com/ViniciusCestarii"
                 linkAriaLabel="GitHub Profile"
                 icon="simple-icons:github"
-                color={theme.palette.primary.light}
                 width={20}
                 height={20}
               />
@@ -92,7 +90,6 @@ const Footer = ({ dict }: DictionaryProps) => {
                 link="mailto:viniciuscestari01@gmail.com"
                 linkAriaLabel="Send me an email"
                 icon="simple-icons:gmail"
-                color={theme.palette.primary.light}
                 width={20}
                 height={20}
               />
