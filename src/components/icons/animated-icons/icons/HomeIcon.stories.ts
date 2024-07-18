@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import HomeIcon from './HomeIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/HomeIcon',
+  title: 'ViniciusCestarii/Icons/HomeIcon',
   component: HomeIcon,
   parameters: {
     layout: 'centered',

@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import ColorsIcon from './ColorsIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/ColorsIcon',
+  title: 'ViniciusCestarii/Icons/ColorsIcon',
   component: ColorsIcon,
   parameters: {
     layout: 'centered',

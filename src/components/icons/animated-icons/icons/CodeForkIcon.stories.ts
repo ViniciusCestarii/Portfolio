@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import CodeForkIcon from './CodeForkIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/CodeForkIcon',
+  title: 'ViniciusCestarii/Icons/CodeForkIcon',
   component: CodeForkIcon,
   parameters: {
     layout: 'centered',

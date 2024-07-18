@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import HeartIcon from './HeartIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/HeartIcon',
+  title: 'ViniciusCestarii/Icons/HeartIcon',
   component: HeartIcon,
   parameters: {
     layout: 'centered',

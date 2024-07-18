@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import ContactIcon from './ContactIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/ContactIcon',
+  title: 'ViniciusCestarii/Icons/ContactIcon',
   component: ContactIcon,
   parameters: {
     layout: 'centered',

@@ -6,6 +6,9 @@ import ThemeProvider from "../src/context/ThemeContext";
 
 const preview: Preview = {
   parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -19,7 +22,7 @@ const themes = themeColors.reduce((acc, color) => {
   acc[color.name] = color
   return acc;
 }, {});
- 
+
 export const decorators = [
   withThemeFromJSXProvider({
     themes,

@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import DocumentIcon from './DocumentIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/DocumentIcon',
+  title: 'ViniciusCestarii/Icons/DocumentIcon',
   component: DocumentIcon,
   parameters: {
     layout: 'centered',

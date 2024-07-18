@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import PolylineIcon from './PolylineIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/PolylineIcon',
+  title: 'ViniciusCestarii/Icons/PolylineIcon',
   component: PolylineIcon,
   parameters: {
     layout: 'centered',

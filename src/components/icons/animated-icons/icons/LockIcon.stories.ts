@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import LockIcon from './LockIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/LockIcon',
+  title: 'ViniciusCestarii/Icons/LockIcon',
   component: LockIcon,
   parameters: {
     layout: 'centered',

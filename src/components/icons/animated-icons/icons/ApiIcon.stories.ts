@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import ApiIcon from './ApiIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/ApiIcon',
+  title: 'ViniciusCestarii/Icons/ApiIcon',
   component: ApiIcon,
   parameters: {
     layout: 'centered',

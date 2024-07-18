@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import '@/app/globals.css'
 import Subtitle from './Subtitle'
+import en from '@/dictionaries/locales/en'
 
 const meta = {
   title: 'ViniciusCestarii/Subtitle',
@@ -14,6 +15,22 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Basic: Story = {
-  args: {} as any,
+const dict = en
+
+export const Contact: Story = {
+  args: {
+    children: dict.section.contact.name,
+  },
+}
+
+export const Projects: Story = {
+  args: {
+    children: dict.section.projects.name,
+  },
+}
+
+export const Knowledge: Story = {
+  args: {
+    children: dict.section.knowledge.name,
+  },
 }

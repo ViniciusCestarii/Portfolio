@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import ServerIcon from './ServerIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/ServerIcon',
+  title: 'ViniciusCestarii/Icons/ServerIcon',
   component: ServerIcon,
   parameters: {
     layout: 'centered',

@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import ShareIcon from './ShareIcon'
 
 const meta = {
-  title: 'ViniciusCestarii/icons/ShareIcon',
+  title: 'ViniciusCestarii/Icons/ShareIcon',
   component: ShareIcon,
   parameters: {
     layout: 'centered',
