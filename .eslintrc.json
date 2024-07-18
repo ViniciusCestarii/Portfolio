@@ -1,4 +1,7 @@
 {
-  "extends": ["next/core-web-vitals", 
-  "@rocketseat/eslint-config/react"]
+  "extends": [
+    "next/core-web-vitals",
+    "@rocketseat/eslint-config/react",
+    "plugin:storybook/recommended"
+  ]
 }

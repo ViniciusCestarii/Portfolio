@@ -1,6 +1,6 @@
 'use client'
 import EyeIcon from '@/components/icons/animated-icons/icons/EyeIcon'
-import { useMyTheme } from '@/context/themeContext'
+import { useMyTheme } from '@/context/ThemeContext'
 import { Box, Typography } from '@mui/material'
 import HeroTypography from './HeroTypography'
 import { DictionaryProps } from '@/dictionaries/getDictionary'

@@ -1,5 +1,5 @@
 'use client'
-import { useMyTheme } from '@/context/themeContext'
+import { useMyTheme } from '@/context/ThemeContext'
 import { ThemeProvider } from '@emotion/react'
 import {
   createTheme,
@@ -15,6 +15,14 @@ interface MuiThemeProps {
 const MuiTheme = ({ children }: MuiThemeProps) => {
   const { themeColor } = useMyTheme()
 
+  const theme = generateMuiThemeByColor(themeColor.hex)
+
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+}
+
+export default MuiTheme
+
+export const generateMuiThemeByColor = (color: string) => {
   const theme = responsiveFontSizes(
     createTheme({
       components: {
@@ -35,7 +43,7 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
         mode: 'dark',
         contrastThreshold: 4.5,
         primary: {
-          main: themeColor.hex,
+          main: color,
           contrastText: '#EDEDED',
         },
         text: {
@@ -98,7 +106,5 @@ const MuiTheme = ({ children }: MuiThemeProps) => {
     },
   }
 
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  return theme
 }
-
-export default MuiTheme
