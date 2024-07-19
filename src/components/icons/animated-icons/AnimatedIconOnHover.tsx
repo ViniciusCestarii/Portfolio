@@ -37,6 +37,14 @@ const AnimatedIconOnHover = ({
   const playerRef = useRef<Player>(null)
   const [state, setState] = useState(inAnimation)
   const [triggerHover, setTriggerHover] = useState(false)
+  const [invertXIcon, setInvertXIcon] = useState(!invertXTrigger)
+
+  useEffect(() => {
+    if (!playerRef.current?.isPlaying) {
+      setInvertXIcon(!invertXIcon)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [invertXTrigger])
 
   const theme = useTheme()
 
@@ -87,7 +95,7 @@ const AnimatedIconOnHover = ({
       component={'div'}
       sx={{
         width: 'fit-content',
-        transform: invertXTrigger ? 'scaleX(-1)' : '',
+        transform: invertXIcon ? 'scaleX(-1)' : '',
         ...sx,
       }}
       onMouseEnter={handleMouseEnter}
