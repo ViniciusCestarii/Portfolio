@@ -478,7 +478,7 @@ const TechnologiesGraph = ({ dict }: DictionaryProps) => {
 
   useEffect(() => {
     const myChart = echarts.init(chartRef.current, 'dark', {
-      renderer: 'svg',
+      renderer: 'canvas',
       locale: dict.lang,
     })
 
