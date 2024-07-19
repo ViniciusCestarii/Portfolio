@@ -105,7 +105,7 @@ const GithubWordCloudClient = ({ data, dict }: GithubWordCloudClientProps) => {
 
   useEffect(() => {
     const myChart = echarts.init(chartRef.current, 'dark', {
-      renderer: 'canvas',
+      renderer: 'svg',
       locale: dict.lang,
     })
 
