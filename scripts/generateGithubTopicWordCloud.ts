@@ -12,7 +12,6 @@ const wordCloudPath = path.join(__dirname, '../src/json/githubWordCloud.json')
 const generateGithubTopicWordCloud = async () => {
   const repositories = await getRepositories()
 
-  // fetch topics for each repository because getRepositories() doens't return all topics
   const topics = await Promise.all(
     repositories.map((repo) => getRepositoryTopics(repo.name)),
   )
@@ -39,7 +38,23 @@ const generateGithubTopicWordCloud = async () => {
 }
 
 const getRepositories = async (): Promise<RepositoryReturn[]> => {
-  return fetchGitHub(`/users/${env.GITHUB_USERNAME}/repos?per_page=100`)
+  const allRepositories: RepositoryReturn[] = []
+  let page = 1
+  let hasMore = true
+
+  while (hasMore) {
+    const repositories = await fetchGitHub(
+      `/users/${env.GITHUB_USERNAME}/repos?per_page=100&page=${page}`,
+    )
+    if (repositories.length > 0) {
+      allRepositories.push(...repositories)
+      page++
+    } else {
+      hasMore = false
+    }
+  }
+
+  return allRepositories
 }
 
 const getRepositoryTopics = async (repo: string): Promise<TopicReturn> => {
