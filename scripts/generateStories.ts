@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
 
-const generateStoryContentWithDict = (componentName, storyDir) =>
+const generateStoryContentWithDict = (
+  componentName: string,
+  storyDir?: string,
+) =>
   `import type { Meta, StoryObj } from '@storybook/react'
 import en from '@/dictionaries/locales/en'
 import '@/app/globals.css'
@@ -29,7 +32,7 @@ export const Basic: Story = {
 }
 `
 
-const generateStoryContent = (componentName, storyDir) =>
+const generateStoryContent = (componentName: string, storyDir?: string) =>
   `import type { Meta, StoryObj } from '@storybook/react'
 import '@/app/globals.css'
 import ${componentName} from './${componentName}'
@@ -50,41 +53,7 @@ export const Basic: Story = {
   args: {} as any,
 }
 `
-
-const doesntContainsNames = (file) => {
-  const namesToExclude = ['index', 'Crisp', 'GithubWordCloud']
-
-  return !namesToExclude.some((name) => file.name.includes(name))
-}
-
-const createStoryFile = (filePath) => {
-  const dir = path.dirname(filePath)
-  const componentName = path.basename(filePath, '.tsx')
-  const storyFilePath = path.join(dir, `${componentName}.stories.ts`)
-
-  if (fs.existsSync(storyFilePath)) {
-    // console.log(
-    //   `The story file for ${componentName} already exists at ${storyFilePath}`,
-    // )
-
-    return
-  }
-
-  const content = containsDictionaryProps(filePath)
-    ? generateStoryContentWithDict(componentName, checkForStoryDir(dir))
-    : generateStoryContent(componentName, checkForStoryDir(dir))
-
-  fs.writeFile(storyFilePath, content, (err) => {
-    if (err) {
-      console.error(`Error creating story for ${componentName}:`, err)
-    } else {
-      console.log(`Story for ${componentName} created successfully.`)
-    }
-  })
-}
-
-// Function to read files recursively
-const readFilesRecursively = (dir) => {
+const readFilesRecursively = (dir: string) => {
   fs.readdir(dir, { withFileTypes: true }, (err, files) => {
     if (err) {
       console.error(`Error reading directory ${dir}:`, err)
@@ -112,13 +81,45 @@ const projectRoot = path.join(__dirname, '../src/components')
 
 readFilesRecursively(projectRoot)
 
-const checkForStoryDir = (filePath) => {
+const checkForStoryDir = (filePath: string) => {
   if (filePath.includes('icons')) {
     return 'icons/'
   }
 }
 
-const containsDictionaryProps = (filePath) => {
+const containsDictionaryProps = (filePath: string) => {
   const fileContent = fs.readFileSync(filePath, 'utf-8')
   return fileContent.includes('DictionaryProps')
+}
+
+const doesntContainsNames = (file: fs.Dirent) => {
+  const namesToExclude = ['index', 'Crisp', 'GithubWordCloud']
+
+  return !namesToExclude.some((name) => file.name.includes(name))
+}
+
+const createStoryFile = (filePath: string) => {
+  const dir = path.dirname(filePath)
+  const componentName = path.basename(filePath, '.tsx')
+  const storyFilePath = path.join(dir, `${componentName}.stories.ts`)
+
+  if (fs.existsSync(storyFilePath)) {
+    // console.log(
+    //   `The story file for ${componentName} already exists at ${storyFilePath}`,
+    // )
+
+    return
+  }
+
+  const content = containsDictionaryProps(filePath)
+    ? generateStoryContentWithDict(componentName, checkForStoryDir(dir))
+    : generateStoryContent(componentName, checkForStoryDir(dir))
+
+  fs.writeFile(storyFilePath, content, (err) => {
+    if (err) {
+      console.error(`Error creating story for ${componentName}:`, err)
+    } else {
+      console.log(`Story for ${componentName} created successfully.`)
+    }
+  })
 }
