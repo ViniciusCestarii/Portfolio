@@ -1,6 +1,5 @@
-import { getRepositories, getRepositoryTopics } from '@/api/githubFetch'
 import { DictionaryProps } from '@/dictionaries/getDictionary'
-import { countGithubTopics } from '@/utils/github'
+import wordCloudData from '@/json/githubWordCloud.json'
 import dynamic from 'next/dynamic'
 
 const GithubWordCloudClient = dynamic(
@@ -8,31 +7,12 @@ const GithubWordCloudClient = dynamic(
   { ssr: false, loading: () => <div style={{ height: '600px' }} /> },
 )
 
-const GithubWordCloud = async (props: DictionaryProps) => {
-  let repositoriesWithTopics
-  try {
-    const repositories = await getRepositories()
+interface GithubWordCloudProps extends DictionaryProps {
+  data?: { name: string; value: number }[]
+}
 
-    // fetch topics for each repository because getRepositories() doens't return all topics
-    const topics = await Promise.all(
-      repositories.map((repo) => getRepositoryTopics(repo.name)),
-    )
-    repositoriesWithTopics = repositories.map((repo, index) => ({
-      ...repo,
-      topics: topics[index].names,
-    }))
-  } catch (error) {
-    console.error(error)
-    return null
-  }
-  const keywords = countGithubTopics(repositoriesWithTopics)
-
-  const data = Object.keys(keywords).map((key) => ({
-    name: key,
-    value: keywords[key],
-  }))
-
-  return <GithubWordCloudClient data={data} {...props} />
+const GithubWordCloud = async ({ data, ...props }: GithubWordCloudProps) => {
+  return <GithubWordCloudClient {...props} data={data ?? wordCloudData} />
 }
 
 export default GithubWordCloud

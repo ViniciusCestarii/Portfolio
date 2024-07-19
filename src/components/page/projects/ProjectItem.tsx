@@ -3,6 +3,7 @@ import LockIcon from '@/components/icons/animated-icons/icons/LockIcon'
 import ShareIcon from '@/components/icons/animated-icons/icons/ShareIcon'
 import { ProjectItemType } from '@/dictionaries/dictionary'
 import { DictionaryProps } from '@/dictionaries/getDictionary'
+import { Icon } from '@iconify/react/dist/iconify.js'
 import { Box, Tooltip, Typography, useTheme } from '@mui/material'
 import { AnimationDirection } from 'lottie-web'
 import Image from 'next/image'
@@ -124,14 +125,13 @@ const ProjectItem = ({
                 {projects.knowMore}
               </Typography>
               <Tooltip title={projects.openProject}>
-                <Image
-                  alt={'Github Icon'}
-                  src={'/assets/githubLogo.svg'}
+                <Icon
+                  role="img"
+                  aria-label="Github Icon"
+                  icon="simple-icons:github"
+                  color="white"
                   width={20}
                   height={20}
-                  style={{
-                    filter: 'invert()',
-                  }}
                 />
               </Tooltip>
             </Link>

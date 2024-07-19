@@ -5,7 +5,6 @@ import Link from 'next/link'
 interface LinkIconProps extends IconProps {
   link: string
   linkAriaLabel?: string
-  icon: string
 }
 
 const LinkIcon = ({ icon, link, linkAriaLabel, ...props }: LinkIconProps) => {

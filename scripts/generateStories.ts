@@ -76,10 +76,9 @@ const readFilesRecursively = (dir: string) => {
   })
 }
 
-// Starting point - specify your project root directory
-const projectRoot = path.join(__dirname, '../src/components')
+const componentsFolder = path.join(__dirname, '../src/components')
 
-readFilesRecursively(projectRoot)
+readFilesRecursively(componentsFolder)
 
 const checkForStoryDir = (filePath: string) => {
   if (filePath.includes('icons')) {
@@ -93,7 +92,7 @@ const containsDictionaryProps = (filePath: string) => {
 }
 
 const doesntContainsNames = (file: fs.Dirent) => {
-  const namesToExclude = ['index', 'Crisp', 'GithubWordCloud']
+  const namesToExclude = ['index', 'Crisp', 'GithubWordCloudClient']
 
   return !namesToExclude.some((name) => file.name.includes(name))
 }

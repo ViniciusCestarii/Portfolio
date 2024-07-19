@@ -1,39 +1,39 @@
 import { Box, Typography, useTheme } from '@mui/material'
-import Image from 'next/image'
+import {
+  Icon,
+  IconProps as IconifyIconProps,
+} from '@iconify/react/dist/iconify.js'
 import Link from 'next/link'
 
+interface IconProps {
+  alt: string
+  props: IconifyIconProps
+}
+
 interface ContactItemProps {
-  imgSrc?: string
-  imgAlt?: string
   link: string
   linkText: string
   caption: string
+  icon?: IconProps
 }
 
-const ContactItem = ({
-  link,
-  caption,
-  linkText,
-  imgAlt,
-  imgSrc,
-}: ContactItemProps) => {
+const ContactItem = ({ link, caption, linkText, icon }: ContactItemProps) => {
   const theme = useTheme()
+
   return (
     <Box sx={{ display: 'flex', gap: 1 }}>
       <Typography
         variant="body1"
         color="textPrimary"
-        sx={{ display: 'flex', gap: 1 }}
+        sx={{ display: 'flex', gap: 1, alignItems: 'center' }}
       >
-        {imgAlt && imgSrc && (
-          <Image
-            alt={imgAlt}
-            src={imgSrc}
-            width={20}
-            height={20}
-            style={{
-              filter: 'invert()',
-            }}
+        {icon && (
+          <Icon
+            {...icon.props}
+            role="img"
+            aria-label={icon.alt}
+            color={icon.props?.color ?? theme.palette.primary.light}
+            style={{ transition: 'none !important' }}
           />
         )}
         {caption}

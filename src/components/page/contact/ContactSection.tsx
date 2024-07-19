@@ -67,22 +67,28 @@ const Contact = (props: DictionaryProps) => {
           <ContactItem
             link="mailto:viniciuscestari01@gmail.com"
             linkText="viniciuscestari01@gmail.com"
-            imgAlt="Email Icon"
-            imgSrc="assets/email.svg"
+            icon={{
+              alt: 'Email Icon',
+              props: { color: 'white', icon: 'simple-icons:gmail' },
+            }}
             caption="Email:"
           />
           <ContactItem
             link="https://github.com/ViniciusCestarii"
             linkText="ViniciusCestarii"
-            imgAlt="Github Icon"
-            imgSrc="assets/githubLogo.svg"
+            icon={{
+              alt: 'Github Icon',
+              props: { color: 'white', icon: 'simple-icons:github' },
+            }}
             caption="Github:"
           />
           <ContactItem
             link="https://www.linkedin.com/in/-vinicius-cestari/"
             linkText="in/-vinicius-cestari"
-            imgAlt="Linkedin Icon"
-            imgSrc="assets/linkedinLogo.svg"
+            icon={{
+              alt: 'Linkedin Icon',
+              props: { color: 'white', icon: 'simple-icons:linkedin' },
+            }}
             caption="Linkedin:"
           />
         </Box>
