@@ -1,0 +1,47 @@
+# Name of workflow
+name: Update Word Cloud Data
+
+on:
+  schedule:
+    - cron: '1 0 */1 * *'
+  # Run workflow on pushes to main branch
+  push:
+    branches:
+      - main
+
+# Steps to carry out
+jobs:
+  build:
+    # Create a ubuntu virtual machine
+    runs-on: ubuntu-latest
+
+    # Checkout repo code
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    # Install Bun
+    - name: Use Node.js
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: 1.1.0
+
+    # Run script "generateGithubTopicWordCloud.ts" 
+    - name: Update githubWordCloud.json
+      env:
+        CRISP_WEBSITE_ID: 00000000-0000-0000-0000-000000000000
+        SITE_URL: https://example.com
+        GITHUB_API_URL: https://api.github.com
+        GITHUB_USERNAME: ViniciusCestarii
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      run: bun generate-wordcloud
+
+    # Commit changes
+    - name: Commit and push if changed
+      run: |-
+        git diff
+        git config --global user.email "update-bot@example.com"
+        git config --global user.name "UPDATE-bot"
+        git add -A
+        git commit -m "Update githubWordCloud.json" || exit 0
+        git push
