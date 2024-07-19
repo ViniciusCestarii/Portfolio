@@ -4,10 +4,6 @@ name: Update Word Cloud Data
 on:
   schedule:
     - cron: '1 0 */1 * *'
-  # Run workflow on pushes to main branch
-  push:
-    branches:
-      - main
 
 # Steps to carry out
 jobs:
