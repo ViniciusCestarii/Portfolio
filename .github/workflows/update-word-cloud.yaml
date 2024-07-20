@@ -3,7 +3,7 @@ name: Update Word Cloud Data
 
 on:
   schedule:
-    - cron: '1 0 */1 * *'
+    - cron: '0 0 1 * *'
 
 # Steps to carry out
 jobs:
