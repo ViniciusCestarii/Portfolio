@@ -59,8 +59,9 @@ const en: DictionaryType = {
             'FindAFriend connects you with adoptable pets near you! Discover dogs, cats, rabbits, and more waiting for their forever homes. Animal shelters and rescue groups can post their precious animals and find loving families quickly and easily.',
         },
         {
-          title: 'Futura Equipamentos Website',
+          title: 'Molas Futura Website',
           privateProject: true,
+          applicationLink: 'https://www.molasfutura.com.br',
           animatedIconProps: {
             noIconHover: true,
             inAnimation: 'hover-spending',
@@ -69,7 +70,7 @@ const en: DictionaryType = {
             size: 142,
           },
           description:
-            'Futura Equipamentos Website is a website for a company that sells and installs spring machines. Built with the latest technologies, it is a modern, fast, responsive, and SEO-friendly website.',
+            'The Molas Futura website is a site for a company that sells springs and formed wires. Built with the latest technologies, it is a modern, fast, responsive, and SEO-friendly website.',
         },
         {
           title: 'Gym Pass',

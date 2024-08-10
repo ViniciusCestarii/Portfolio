@@ -59,8 +59,9 @@ const pt: DictionaryType = {
             'Find a Friend conecta você com animais adoráveis para adoção perto de você! Descubra cães, gatos, coelhos e mais esperando por seus lares. Abrigos de animais e grupos de resgate, podem publicar seus animais e econtrar famílias amorosas de forma rápida e fácil.',
         },
         {
-          title: 'Site da Futura Equipamentos',
+          title: 'Site da Molas Futura',
           privateProject: true,
+          applicationLink: 'https://www.molasfutura.com.br',
           animatedIconProps: {
             noIconHover: true,
             inAnimation: 'hover-spending',
@@ -69,7 +70,7 @@ const pt: DictionaryType = {
             size: 142,
           },
           description:
-            'O site da Futura Equipamentos é um site para uma empresa que vende e instala máquinas de molas. Construído com as mais recentes tecnologias, é um site moderno, rápido, responsivo e amigável para SEO.',
+            'O site da Molas Futura é um site para uma empresa que vende molas e arames conformados. Construído com as mais recentes tecnologias, é um site moderno, rápido, responsivo e amigável para SEO.',
         },
         {
           title: 'Gym Pass',

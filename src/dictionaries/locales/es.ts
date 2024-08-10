@@ -59,8 +59,9 @@ const es: DictionaryType = {
             'FindAFriend te conecta con mascotas adoptables cerca de ti. Descubre perros, gatos, conejos y más esperando por sus hogares definitivos. Los refugios de animales y los grupos de rescate pueden publicar sus preciados animales y encontrar familias amorosas rápida y fácilmente.',
         },
         {
-          title: 'Futura Equipamentos Website',
+          title: 'Molas Futura Website',
           privateProject: true,
+          applicationLink: 'https://www.molasfutura.com.br',
           animatedIconProps: {
             noIconHover: true,
             inAnimation: 'hover-spending',
@@ -69,7 +70,7 @@ const es: DictionaryType = {
             size: 142,
           },
           description:
-            'Futura Equipamentos Website es un sitio web para una empresa que vende e instala máquinas de resorte. Construido con las últimas tecnologías, es un sitio web moderno, rápido, responsive y optimizado para SEO.',
+            'El sitio web de Molas Futura es un sitio para una empresa que vende resortes y alambres conformados. Construido con las últimas tecnologías, es un sitio web moderno, rápido, responsivo y amigable con el SEO.',
         },
         {
           title: 'Gym Pass',
