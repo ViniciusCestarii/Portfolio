@@ -37,7 +37,7 @@
   },
   {
     "name": "nodejs",
-    "value": 4
+    "value": 5
   },
   {
     "name": "solid",
@@ -93,6 +93,14 @@
   },
   {
     "name": "tdd",
+    "value": 1
+  },
+  {
+    "name": "nextjs14",
+    "value": 2
+  },
+  {
+    "name": "zustand",
     "value": 1
   },
   {
@@ -272,7 +280,11 @@
     "value": 1
   },
   {
-    "name": "nextjs14",
+    "name": "apis",
+    "value": 1
+  },
+  {
+    "name": "cookie",
     "value": 1
   }
 ]
