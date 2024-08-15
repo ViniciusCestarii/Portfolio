@@ -4,8 +4,19 @@ import Contact from '@/components/page/contact/ContactSection'
 import Home from '@/components/page/home/HomeSection'
 import Knowledge from '@/components/page/knowledge/KnowledgeSection'
 import Projects from '@/components/page/projects/ProjectsSection'
-import { DictionaryKeyType, getDictionary } from '@/dictionaries/getDictionary'
+import {
+  DictionaryKeyType,
+  getDictionary,
+  locales,
+} from '@/dictionaries/getDictionary'
 import { Box } from '@mui/material'
+
+export const dynamicParams = false
+export const dynamic = 'force-static'
+
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }))
+}
 
 interface MainPageProps {
   params: {

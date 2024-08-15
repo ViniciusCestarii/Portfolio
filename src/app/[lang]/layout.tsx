@@ -1,20 +1,16 @@
 import NavBar from '@/components/layout/NavBar/NavBar'
-import '../globals.css'
-import type { Metadata } from 'next'
-import dynamicImport from 'next/dynamic'
+import Footer from '@/components/page/Footer'
+import ThemeProvider from '@/context/ThemeContext'
+import { DictionaryKeyType, getDictionary } from '@/dictionaries/getDictionary'
+import { env } from '@/env'
+import getThemeColor from '@/utils/theme/getThemeFromCookie'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter' // improves mui for nextjs
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import type { Metadata } from 'next'
+import dynamicImport from 'next/dynamic'
 import { Inter } from 'next/font/google'
-import ThemeProvider from '@/context/ThemeContext'
-import Footer from '@/components/page/Footer'
-import getThemeColor from '@/utils/theme/getThemeFromCookie'
-import { env } from '@/env'
-import {
-  DictionaryKeyType,
-  getDictionary,
-  locales,
-} from '@/dictionaries/getDictionary'
+import '../globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -45,13 +41,6 @@ export const metadata: Metadata = {
   other: {
     'google-site-verification': 'DKpd_K2e8-uwjV-xYsHwlWLPtL2GUT-6evJL9DCuY6k',
   },
-}
-
-export const dynamicParams = false
-export const dynamic = 'force-static'
-
-export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }))
 }
 
 interface RootLayoutProps {
