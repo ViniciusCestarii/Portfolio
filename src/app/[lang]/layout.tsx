@@ -1,7 +1,7 @@
 import NavBar from '@/components/layout/NavBar/NavBar'
 import '../globals.css'
 import type { Metadata } from 'next'
-import dynamic from 'next/dynamic'
+import dynamicImport from 'next/dynamic'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter' // improves mui for nextjs
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -10,7 +10,11 @@ import ThemeProvider from '@/context/ThemeContext'
 import Footer from '@/components/page/Footer'
 import getThemeColor from '@/utils/theme/getThemeFromCookie'
 import { env } from '@/env'
-import { DictionaryKeyType, getDictionary } from '@/dictionaries/getDictionary'
+import {
+  DictionaryKeyType,
+  getDictionary,
+  locales,
+} from '@/dictionaries/getDictionary'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -43,6 +47,13 @@ export const metadata: Metadata = {
   },
 }
 
+export const dynamicParams = false
+export const dynamic = 'force-static'
+
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }))
+}
+
 interface RootLayoutProps {
   params: {
     lang: DictionaryKeyType
@@ -54,7 +65,7 @@ export default async function RootLayout({
   children,
   params: { lang },
 }: RootLayoutProps) {
-  const CrispChat = dynamic(() => import('@/components/chat/Crisp'), {
+  const CrispChat = dynamicImport(() => import('@/components/chat/Crisp'), {
     ssr: false,
   })
 
