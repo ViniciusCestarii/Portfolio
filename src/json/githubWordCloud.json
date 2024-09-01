@@ -80,6 +80,10 @@
     "value": 3
   },
   {
+    "name": "use-cases",
+    "value": 1
+  },
+  {
     "name": "axios",
     "value": 4
   },
@@ -101,6 +105,22 @@
   },
   {
     "name": "zustand",
+    "value": 1
+  },
+  {
+    "name": "api-tool",
+    "value": 1
+  },
+  {
+    "name": "dnd-kit",
+    "value": 1
+  },
+  {
+    "name": "radix-ui",
+    "value": 1
+  },
+  {
+    "name": "shadcn-ui",
     "value": 1
   },
   {
