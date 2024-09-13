@@ -486,7 +486,12 @@ const TechnologiesGraph = ({ dict }: DictionaryProps) => {
 
     echartRef.current = myChart
 
+    const handleResize = () => myChart.resize()
+
+    window.addEventListener('resize', handleResize)
+
     return () => {
+      window.removeEventListener('resize', handleResize)
       myChart.dispose()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

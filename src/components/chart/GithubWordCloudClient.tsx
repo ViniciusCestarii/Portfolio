@@ -122,11 +122,12 @@ const GithubWordCloudClient = ({ data, dict }: GithubWordCloudClientProps) => {
 
     echartRef.current = myChart
 
-    window.onresize = function () {
-      myChart.resize()
-    }
+    const handleResize = () => myChart.resize()
+
+    window.addEventListener('resize', handleResize)
 
     return () => {
+      window.removeEventListener('resize', handleResize)
       myChart.dispose()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
