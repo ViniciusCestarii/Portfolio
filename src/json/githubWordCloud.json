@@ -1,7 +1,19 @@
 [
   {
+    "name": "ai",
+    "value": 1
+  },
+  {
+    "name": "automation",
+    "value": 1
+  },
+  {
+    "name": "javascript",
+    "value": 5
+  },
+  {
     "name": "echarts",
-    "value": 2
+    "value": 3
   },
   {
     "name": "echarts5",
@@ -17,7 +29,7 @@
   },
   {
     "name": "tailwindcss",
-    "value": 5
+    "value": 6
   },
   {
     "name": "bun",
@@ -101,7 +113,7 @@
   },
   {
     "name": "nextjs14",
-    "value": 2
+    "value": 4
   },
   {
     "name": "zustand",
@@ -121,14 +133,22 @@
   },
   {
     "name": "shadcn-ui",
-    "value": 1
+    "value": 2
   },
   {
-    "name": "chartjs",
+    "name": "ibge",
     "value": 1
   },
   {
     "name": "ibge-api",
+    "value": 2
+  },
+  {
+    "name": "ssr",
+    "value": 3
+  },
+  {
+    "name": "chartjs",
     "value": 1
   },
   {
@@ -150,10 +170,6 @@
   {
     "name": "image-transformation",
     "value": 1
-  },
-  {
-    "name": "javascript",
-    "value": 4
   },
   {
     "name": "p5js",
@@ -185,10 +201,6 @@
   },
   {
     "name": "reactjs",
-    "value": 2
-  },
-  {
-    "name": "ssr",
     "value": 2
   },
   {
@@ -273,6 +285,22 @@
   },
   {
     "name": "threejs",
+    "value": 1
+  },
+  {
+    "name": "redis",
+    "value": 1
+  },
+  {
+    "name": "rsc",
+    "value": 1
+  },
+  {
+    "name": "ssg",
+    "value": 1
+  },
+  {
+    "name": "blog",
     "value": 1
   },
   {
