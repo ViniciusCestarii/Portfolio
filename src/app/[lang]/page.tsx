@@ -12,7 +12,6 @@ import {
 import { Box } from '@mui/material'
 
 export const dynamicParams = false
-export const dynamic = 'force-static'
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }))
