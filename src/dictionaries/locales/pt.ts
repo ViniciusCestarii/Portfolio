@@ -30,10 +30,9 @@ const pt: DictionaryType = {
       name: 'projetos',
       projectItens: [
         {
-          title: 'IBGE Data Charts',
-          projectLink:
-            'https://github.com/ViniciusCestarii/IBGE-data-charts?tab=readme-ov-file#ibge-data-charts-',
-          applicationLink: 'https://ibge-data-charts.vercel.app/',
+          title: 'IBGE Dados Web',
+          projectLink: 'https://github.com/ViniciusCestarii/ibge-dados-web',
+          applicationLink: 'https://ibge-dados-web.vercel.app/',
           animatedIconProps: {
             noIconHover: true,
             inAnimation: 'hover-diversified',
@@ -42,7 +41,7 @@ const pt: DictionaryType = {
             size: 150,
           },
           description:
-            'IBGE Data Charts libera o poder dos dados do IBGE por meio de gráficos dinâmicos e visualizações. Explore tendências econômicas, mudanças demográficas e muito mais em níveis geográficos. IBGE Data Charts torna dados complexos acessíveis e acionáveis para todos.',
+            'IBGE Dados Web libera o poder dos dados do IBGE por meio de gráficos dinâmicos e visualizações. Explore tendências econômicas, mudanças demográficas e muito mais em níveis geográficos. IBGE Dados Web torna dados complexos acessíveis e acionáveis para todos.',
         },
         {
           title: 'Find a Friend',
