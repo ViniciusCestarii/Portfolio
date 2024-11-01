@@ -9,7 +9,7 @@
   },
   {
     "name": "javascript",
-    "value": 5
+    "value": 6
   },
   {
     "name": "echarts",
@@ -49,7 +49,7 @@
   },
   {
     "name": "nodejs",
-    "value": 5
+    "value": 6
   },
   {
     "name": "solid",
@@ -57,7 +57,7 @@
   },
   {
     "name": "typescript",
-    "value": 7
+    "value": 8
   },
   {
     "name": "vitest",
@@ -285,6 +285,10 @@
   },
   {
     "name": "threejs",
+    "value": 1
+  },
+  {
+    "name": "server",
     "value": 1
   },
   {
