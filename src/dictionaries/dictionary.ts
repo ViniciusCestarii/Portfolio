@@ -18,7 +18,7 @@ export type DictionaryType = {
     }
     projects: {
       name: string
-      projectItens: ProjectItemProps[]
+      projectItens: ProjectItemType[]
       knowMore: string
       openProject: string
       viewLiveApplication: string
@@ -30,6 +30,10 @@ export type DictionaryType = {
       technologyItens: TechnologyItemType[]
       smileWatchingBy: string
       showMore: string
+      blogLink: {
+        name: string
+        link: string
+      }
       technoloiesGraph: {
         title: string
         description: string

@@ -96,6 +96,10 @@ const fr: DictionaryType = {
       name: 'connaissance',
       smileWatchingBy: 'Souriez, vous êtes observé par',
       showMore: 'Afficher plus',
+      blogLink: {
+        name: 'Visitez mon blog',
+        link: 'https://vinicius-blog.vercel.app',
+      },
       technologyItens: [
         {
           title: 'Next.js',

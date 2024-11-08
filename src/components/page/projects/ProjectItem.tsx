@@ -6,9 +6,10 @@ import { DictionaryProps } from '@/dictionaries/getDictionary'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Box, Tooltip, Typography, useTheme } from '@mui/material'
 import { AnimationDirection } from 'lottie-web'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+
+interface ProjectItemProps extends ProjectItemType, DictionaryProps {}
 
 const ProjectItem = ({
   title,
@@ -18,7 +19,7 @@ const ProjectItem = ({
   applicationLink,
   privateProject,
   dict,
-}: ProjectItemType & DictionaryProps) => {
+}: ProjectItemProps) => {
   const theme = useTheme()
   const [direction, setDirection] = useState<AnimationDirection | undefined>()
   const { projects } = dict.section

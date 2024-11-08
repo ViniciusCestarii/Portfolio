@@ -6,6 +6,7 @@ import TechnologiesList from './TechnologiesList'
 import FloatingIcons from './FloatingIcons'
 import { Suspense } from 'react'
 import { DictionaryProps } from '@/dictionaries/getDictionary'
+import BlogSection from './BlogSection'
 
 const Knowledge = (props: DictionaryProps) => {
   return (
@@ -24,6 +25,7 @@ const Knowledge = (props: DictionaryProps) => {
         <TechnologiesList {...props} />
         <FloatingIcons {...props} />
       </Box>
+      <BlogSection {...props} />
       <TechnologiesGraph {...props} />
       <Suspense fallback={null}>
         <GithubWordCloud {...props} />
