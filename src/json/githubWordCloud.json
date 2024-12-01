@@ -12,6 +12,22 @@
     "value": 6
   },
   {
+    "name": "clipboard",
+    "value": 1
+  },
+  {
+    "name": "clipboard-manager",
+    "value": 1
+  },
+  {
+    "name": "svelte",
+    "value": 1
+  },
+  {
+    "name": "tauri",
+    "value": 1
+  },
+  {
     "name": "echarts",
     "value": 3
   },
@@ -30,6 +46,18 @@
   {
     "name": "tailwindcss",
     "value": 6
+  },
+  {
+    "name": "cli",
+    "value": 1
+  },
+  {
+    "name": "db",
+    "value": 1
+  },
+  {
+    "name": "elixir",
+    "value": 2
   },
   {
     "name": "bun",
@@ -85,7 +113,7 @@
   },
   {
     "name": "postgresql",
-    "value": 3
+    "value": 4
   },
   {
     "name": "prisma",
@@ -184,11 +212,23 @@
     "value": 1
   },
   {
-    "name": "oh-my-zsh-theme",
+    "name": "asp-net-core",
     "value": 1
   },
   {
-    "name": "elixir",
+    "name": "dotnet8",
+    "value": 1
+  },
+  {
+    "name": "entity-framework-core",
+    "value": 1
+  },
+  {
+    "name": "multi-tenant",
+    "value": 1
+  },
+  {
+    "name": "oh-my-zsh-theme",
     "value": 1
   },
   {
