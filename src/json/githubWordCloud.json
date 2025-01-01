@@ -61,7 +61,7 @@
   },
   {
     "name": "bun",
-    "value": 4
+    "value": 5
   },
   {
     "name": "ffi",
@@ -85,7 +85,7 @@
   },
   {
     "name": "typescript",
-    "value": 8
+    "value": 9
   },
   {
     "name": "vitest",
@@ -137,7 +137,7 @@
   },
   {
     "name": "tdd",
-    "value": 1
+    "value": 2
   },
   {
     "name": "nextjs14",
@@ -212,6 +212,46 @@
     "value": 1
   },
   {
+    "name": "drizzle-orm",
+    "value": 1
+  },
+  {
+    "name": "elysia",
+    "value": 2
+  },
+  {
+    "name": "modular-monolith",
+    "value": 1
+  },
+  {
+    "name": "open-api",
+    "value": 1
+  },
+  {
+    "name": "post",
+    "value": 1
+  },
+  {
+    "name": "test-e2e",
+    "value": 1
+  },
+  {
+    "name": "typebox",
+    "value": 1
+  },
+  {
+    "name": "unit-test",
+    "value": 1
+  },
+  {
+    "name": "ddd",
+    "value": 1
+  },
+  {
+    "name": "unit-testing",
+    "value": 1
+  },
+  {
     "name": "asp-net-core",
     "value": 1
   },
@@ -257,10 +297,6 @@
   },
   {
     "name": "rinha-de-backend-2024-q1",
-    "value": 1
-  },
-  {
-    "name": "elysia",
     "value": 1
   },
   {
