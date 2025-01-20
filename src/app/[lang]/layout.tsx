@@ -20,16 +20,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://viniciuscestarii-portfolio.vercel.app/'),
-  title: 'Vinicius Cestarii',
-  description: 'Vinicius Cestarii - Full Stack Developer',
-  keywords: ['Vinicius Cestarii', 'Full Stack Developer'],
+  title: 'Vinicius Cestari',
+  description: 'Vinicius Cestari - Full Stack Developer',
+  keywords: ['Vinicius Cestari', 'Full Stack Developer'],
   icons: '/public-icon.png',
   twitter: {
     creator: 'vinicius-cestari',
     creatorId: 'vinicius-cestari',
     images: '/cover.png',
-    title: 'Vinicius Cestarii',
-    description: 'Vinicius Cestarii - Full Stack Developer',
+    title: 'Vinicius Cestari',
+    description: 'Vinicius Cestari - Full Stack Developer',
   },
   openGraph: {
     url: 'https://viniciuscestarii-portfolio.vercel.app/',
