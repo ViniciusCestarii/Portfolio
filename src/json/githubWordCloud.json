@@ -1,7 +1,7 @@
 [
   {
     "name": "ai",
-    "value": 1
+    "value": 2
   },
   {
     "name": "automation",
@@ -21,11 +21,27 @@
   },
   {
     "name": "svelte",
-    "value": 1
+    "value": 2
   },
   {
     "name": "tauri",
     "value": 1
+  },
+  {
+    "name": "github-pages",
+    "value": 1
+  },
+  {
+    "name": "sveltekit",
+    "value": 1
+  },
+  {
+    "name": "daisyui",
+    "value": 1
+  },
+  {
+    "name": "tailwindcss",
+    "value": 8
   },
   {
     "name": "echarts",
@@ -41,11 +57,7 @@
   },
   {
     "name": "react",
-    "value": 4
-  },
-  {
-    "name": "tailwindcss",
-    "value": 6
+    "value": 5
   },
   {
     "name": "cli",
@@ -113,7 +125,7 @@
   },
   {
     "name": "postgresql",
-    "value": 4
+    "value": 5
   },
   {
     "name": "prisma",
@@ -268,6 +280,22 @@
     "value": 1
   },
   {
+    "name": "object-detection",
+    "value": 1
+  },
+  {
+    "name": "tensorflow",
+    "value": 1
+  },
+  {
+    "name": "website",
+    "value": 1
+  },
+  {
+    "name": "coco-ssd",
+    "value": 1
+  },
+  {
     "name": "oh-my-zsh-theme",
     "value": 1
   },
@@ -293,6 +321,30 @@
   },
   {
     "name": "workflow-automation",
+    "value": 1
+  },
+  {
+    "name": "postgresql-driver",
+    "value": 1
+  },
+  {
+    "name": "postgresql-protocol",
+    "value": 1
+  },
+  {
+    "name": "puppeteer",
+    "value": 1
+  },
+  {
+    "name": "resume-generator",
+    "value": 1
+  },
+  {
+    "name": "vite",
+    "value": 1
+  },
+  {
+    "name": "groq",
     "value": 1
   },
   {
@@ -381,6 +433,10 @@
   },
   {
     "name": "blog",
+    "value": 1
+  },
+  {
+    "name": "cms",
     "value": 1
   },
   {
