@@ -32,6 +32,18 @@ To run this project locally, follow these steps:
 5. **Open your browser**:
     Open your browser and navigate to `http://localhost:3000` to view the portfolio.
 
+### Run with Docker
+
+1. Build to create the image:
+    ```bash 
+    docker build . -t portfolio
+    ```
+
+2. Create the container and run:
+    ```bash
+    docker run --env-file .env.local -p 3000:3000 portfolio
+    ```
+
 Want to check out the components in isolation? Follow this step:
 
 - **Run the Storybook**:
