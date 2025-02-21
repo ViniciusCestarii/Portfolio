@@ -19,13 +19,13 @@ interface MobileDrawerProps extends DictionaryProps {
 function HideOnScroll({ children }: { children: React.ReactElement }) {
   const trigger = useScrollTrigger({
     threshold: 200,
-  });
+  })
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
       {children ?? <div />}
     </Slide>
-  );
+  )
 }
 
 const AppBar = ({
@@ -49,7 +49,8 @@ const AppBar = ({
           display: 'flex',
           alignItems: 'center',
           backdropFilter: scrollTrigger ? 'blur(10px) opacity(0.8)' : 'none',
-          transition: 'transform 0.1s ease-in-out, background-color 0.75s ease-in-out !important',
+          transition:
+            'transform 0.1s ease-in-out, background-color 0.75s ease-in-out !important',
           height: '100%',
           maxHeight: { xs: 80, md: 66 },
         }}
