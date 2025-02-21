@@ -98,7 +98,7 @@ const pt: DictionaryType = {
       showMore: 'Mostrar Mais',
       blogLink: {
         name: 'Conheça o meu Blog',
-        link: 'https://vinicius-blog.vercel.app',
+        link: 'https://blog.viniciuscestari.dev',
       },
       technologyItens: [
         {
