@@ -61,7 +61,7 @@
   },
   {
     "name": "cli",
-    "value": 1
+    "value": 2
   },
   {
     "name": "db",
@@ -69,7 +69,7 @@
   },
   {
     "name": "elixir",
-    "value": 2
+    "value": 1
   },
   {
     "name": "bun",
@@ -93,11 +93,11 @@
   },
   {
     "name": "solid",
-    "value": 2
+    "value": 3
   },
   {
     "name": "typescript",
-    "value": 9
+    "value": 10
   },
   {
     "name": "vitest",
@@ -113,7 +113,7 @@
   },
   {
     "name": "best-practices",
-    "value": 2
+    "value": 3
   },
   {
     "name": "api-rest",
@@ -152,10 +152,6 @@
     "value": 2
   },
   {
-    "name": "nextjs14",
-    "value": 4
-  },
-  {
     "name": "zustand",
     "value": 1
   },
@@ -176,6 +172,10 @@
     "value": 2
   },
   {
+    "name": "nextjs15",
+    "value": 1
+  },
+  {
     "name": "ibge",
     "value": 1
   },
@@ -184,8 +184,16 @@
     "value": 2
   },
   {
+    "name": "nextjs14",
+    "value": 3
+  },
+  {
     "name": "ssr",
     "value": 3
+  },
+  {
+    "name": "rsc",
+    "value": 2
   },
   {
     "name": "chartjs",
@@ -221,6 +229,14 @@
   },
   {
     "name": "leetcode",
+    "value": 1
+  },
+  {
+    "name": "interpreter",
+    "value": 1
+  },
+  {
+    "name": "lox",
     "value": 1
   },
   {
@@ -300,14 +316,6 @@
     "value": 1
   },
   {
-    "name": "fullstack",
-    "value": 1
-  },
-  {
-    "name": "phoenix",
-    "value": 1
-  },
-  {
     "name": "reactjs",
     "value": 2
   },
@@ -329,6 +337,10 @@
   },
   {
     "name": "postgresql-protocol",
+    "value": 1
+  },
+  {
+    "name": "scram-sha-256",
     "value": 1
   },
   {
@@ -424,10 +436,6 @@
     "value": 1
   },
   {
-    "name": "rsc",
-    "value": 1
-  },
-  {
     "name": "ssg",
     "value": 1
   },
@@ -448,11 +456,39 @@
     "value": 1
   },
   {
+    "name": "vinx",
+    "value": 1
+  },
+  {
+    "name": "viniciuscestari",
+    "value": 1
+  },
+  {
     "name": "vscode",
     "value": 1
   },
   {
     "name": "vscode-settings",
+    "value": 1
+  },
+  {
+    "name": "fcm-notifications",
+    "value": 1
+  },
+  {
+    "name": "push-notifications",
+    "value": 1
+  },
+  {
+    "name": "web",
+    "value": 1
+  },
+  {
+    "name": "web-push",
+    "value": 1
+  },
+  {
+    "name": "node",
     "value": 1
   },
   {
