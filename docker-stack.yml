@@ -1,0 +1,22 @@
+services:
+  portfolio:
+    image: portfolio:latest
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`test.viniciuscestari.dev`)"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
+    environment:
+      - SITE_URL=https://test.viniciuscestari.dev
+      - GITHUB_API_URL=https://api.github.com
+      - GITHUB_USERNAME=viniciuscestarii
+      - CRISP_WEBSITE_ID=85a384e8-4460-49ac-a291-8c7c056274b2
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    networks:
+      - public
+
+networks:
+  public:
+    external:
+      name: public
