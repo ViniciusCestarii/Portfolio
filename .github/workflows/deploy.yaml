@@ -29,7 +29,7 @@ jobs:
           tags: |
             ghcr.io/viniciuscestarii/portfolio:latest
             ghcr.io/viniciuscestarii/portfolio:${{ github.sha }}
-          env:
+          build-args: |
             SITE_URL=https://test.viniciuscestari.dev
             CRISP_WEBSITE_ID=85a384e8-4460-49ac-a291-8c7c056274b2
 
