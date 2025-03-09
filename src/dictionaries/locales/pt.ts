@@ -150,7 +150,7 @@ const pt: DictionaryType = {
         {
           title: 'Prisma',
           description:
-            'Kit de ferramentas de banco de dados de código aberto para TypeScript e Node.js.',
+            'Kit de ferramentas de banco de dados de código aberto para JavaScript',
           iconName: 'simple-icons:prisma',
           technologyLink: 'https://www.prisma.io/',
         },
