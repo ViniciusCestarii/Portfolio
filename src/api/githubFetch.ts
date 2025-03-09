@@ -1,12 +1,12 @@
-import { env } from '@/env'
+import { wordCloudEnv } from '@/env/word-cloud'
 import { RepositoryReturn, TopicReturn } from '@/types/api/githubProfileDate'
 
 const headers = {
-  Authorization: `token ${env.GITHUB_TOKEN}`,
+  Authorization: `token ${wordCloudEnv.GITHUB_TOKEN}`,
 }
 
 const fetchGitHub = async (endpoint: string) => {
-  const response = await fetch(`${env.GITHUB_API_URL}${endpoint}`, {
+  const response = await fetch(`${wordCloudEnv.GITHUB_API_URL}${endpoint}`, {
     headers,
   })
   if (!response.ok) {
@@ -16,11 +16,13 @@ const fetchGitHub = async (endpoint: string) => {
 }
 
 export const getRepositories = async (): Promise<RepositoryReturn[]> => {
-  return fetchGitHub(`/users/${env.GITHUB_USERNAME}/repos?per_page=100`)
+  return fetchGitHub(
+    `/users/${wordCloudEnv.GITHUB_USERNAME}/repos?per_page=100`,
+  )
 }
 
 export const getRepositoryTopics = async (
   repo: string,
 ): Promise<TopicReturn> => {
-  return fetchGitHub(`/repos/${env.GITHUB_USERNAME}/${repo}/topics`)
+  return fetchGitHub(`/repos/${wordCloudEnv.GITHUB_USERNAME}/${repo}/topics`)
 }
