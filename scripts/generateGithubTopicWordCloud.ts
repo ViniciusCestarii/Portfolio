@@ -1,4 +1,4 @@
-import { env } from '@/env'
+import { wordCloudEnv } from '@/env/word-cloud'
 import {
   RepositoryReturn,
   TopicReturn,
@@ -44,7 +44,7 @@ const getRepositories = async (): Promise<RepositoryReturn[]> => {
 
   while (hasMore) {
     const repositories = await fetchGitHub(
-      `/users/${env.GITHUB_USERNAME}/repos?per_page=100&page=${page}`,
+      `/users/${wordCloudEnv.GITHUB_USERNAME}/repos?per_page=100&page=${page}`,
     )
     if (repositories.length > 0) {
       allRepositories.push(...repositories)
@@ -58,7 +58,7 @@ const getRepositories = async (): Promise<RepositoryReturn[]> => {
 }
 
 const getRepositoryTopics = async (repo: string): Promise<TopicReturn> => {
-  return fetchGitHub(`/repos/${env.GITHUB_USERNAME}/${repo}/topics`)
+  return fetchGitHub(`/repos/${wordCloudEnv.GITHUB_USERNAME}/${repo}/topics`)
 }
 
 const countGithubTopics = (repositories: Repository[]) => {
@@ -74,11 +74,11 @@ const countGithubTopics = (repositories: Repository[]) => {
 }
 
 const headers = {
-  Authorization: `token ${env.GITHUB_TOKEN}`,
+  Authorization: `token ${wordCloudEnv.GITHUB_TOKEN}`,
 }
 
 const fetchGitHub = async (endpoint: string) => {
-  const response = await fetch(`${env.GITHUB_API_URL}${endpoint}`, {
+  const response = await fetch(`${wordCloudEnv.GITHUB_API_URL}${endpoint}`, {
     headers,
   })
   if (!response.ok) {

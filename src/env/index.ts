@@ -3,9 +3,6 @@ import { z } from 'zod'
 const envSchema = z.object({
   CRISP_WEBSITE_ID: z.string().uuid(),
   SITE_URL: z.string().url(),
-  GITHUB_API_URL: z.string().url(),
-  GITHUB_USERNAME: z.string(),
-  GITHUB_TOKEN: z.string(),
 })
 
 const _env = envSchema.safeParse(process.env)
