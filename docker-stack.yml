@@ -1,6 +1,6 @@
 services:
   portfolio:
-    image: ghcr.io/viniciuscestarii/portfolio:1a345f4dc44e06b4a25201bfceb7edd5f69b5585
+    image: ghcr.io/viniciuscestarii/portfolio:${GIT_COMMIT_HASH}
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.portfolio.rule=Host(`test.viniciuscestari.dev`)"
