@@ -21,7 +21,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: create env.local file
+      - name: create env.local file (build variables)
         run: |
           echo "SITE_URL=https://test.viniciuscestari.dev" > .env.local
           echo "CRISP_WEBSITE_ID=85a384e8-4460-49ac-a291-8c7c056274b2" >> .env.local
