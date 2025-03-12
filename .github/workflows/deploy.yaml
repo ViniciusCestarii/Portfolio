@@ -52,7 +52,7 @@ jobs:
       with:
         name: portfolio
         file: docker-stack.yaml
-        host: test.viniciuscestari.dev
+        host: viniciuscestari.dev
         user: deploy
         ssh_key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
         env_file: ./envfile
