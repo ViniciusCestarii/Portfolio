@@ -15,5 +15,5 @@ services:
 
 networks:
   public:
-    name: public
-    external: true
+    external:
+      name: public
