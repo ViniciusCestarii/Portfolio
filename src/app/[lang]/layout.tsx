@@ -5,8 +5,6 @@ import { DictionaryKeyType, getDictionary } from '@/dictionaries/getDictionary'
 import { env } from '@/env'
 import getThemeColor from '@/utils/theme/getThemeFromCookie'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter' // improves mui for nextjs
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import dynamicImport from 'next/dynamic'
 import { Inter } from 'next/font/google'
@@ -67,8 +65,6 @@ export default async function RootLayout({
           overflow: 'hidden',
         }}
       >
-        <Analytics />
-        <SpeedInsights />
         <CrispChat CRISP_WEBSITE_ID={env.CRISP_WEBSITE_ID} />
         <AppRouterCacheProvider>
           <ThemeProvider theme={themeColor}>

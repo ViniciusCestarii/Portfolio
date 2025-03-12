@@ -94,7 +94,7 @@ const pt: DictionaryType = {
     },
     knowledge: {
       name: 'conhecimento',
-      smileWatchingBy: 'Sorria, você está sendo observado por',
+      proudlySelfHost: 'Orgulhosamente auto-hospedado',
       showMore: 'Mostrar Mais',
       blogLink: {
         name: 'Conheça o meu Blog',

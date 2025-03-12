@@ -94,7 +94,7 @@ const fr: DictionaryType = {
     },
     knowledge: {
       name: 'connaissance',
-      smileWatchingBy: 'Souriez, vous êtes observé par',
+      proudlySelfHost: 'Fièrement auto-hébergé',
       showMore: 'Afficher plus',
       blogLink: {
         name: 'Visitez mon blog',
