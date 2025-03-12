@@ -7,10 +7,6 @@ services:
       - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
       - "traefik.http.routers.portfolio.entrypoints=websecure"
       - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
-        # Redirect www to non-www middleware
-      - "traefik.http.middlewares.redirect-to-non-www.redirectregex.regex=^https?://www\\.(.*)"
-      - "traefik.http.middlewares.redirect-to-non-www.redirectregex.replacement=https://$${1}"
-      - "traefik.http.middlewares.redirect-to-non-www.redirectregex.permanent=true"
       - "traefik.http.routers.portfolio.middlewares=redirect-to-non-www"
     networks:
       - public
