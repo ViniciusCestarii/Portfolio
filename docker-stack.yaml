@@ -7,7 +7,8 @@ services:
       - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
       - "traefik.http.routers.portfolio.entrypoints=websecure"
       - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
-      - "traefik.http.routers.portfolio.middlewares=redirect-to-non-www"
+      - "traefik.http.routers.portfolio.middlewares=redirect-to-non-www,custom-server-header"
+
     networks:
       - public
     deploy:
