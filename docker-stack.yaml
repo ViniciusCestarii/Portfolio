@@ -3,7 +3,7 @@ services:
     image: ghcr.io/viniciuscestarii/portfolio:${GIT_COMMIT_HASH}
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.portfolio.rule=Host(`viniciuscestari.dev`)"
+      - "traefik.http.routers.portfolio.rule=Host(`viniciuscestari.dev`) || Host(`www.viniciuscestari.dev`)"
       - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
       - "traefik.http.routers.portfolio.entrypoints=websecure"
       - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
