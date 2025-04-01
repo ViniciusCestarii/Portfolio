@@ -173,7 +173,7 @@
   },
   {
     "name": "nextjs15",
-    "value": 1
+    "value": 2
   },
   {
     "name": "ibge",
@@ -185,7 +185,7 @@
   },
   {
     "name": "nextjs14",
-    "value": 3
+    "value": 2
   },
   {
     "name": "ssr",
