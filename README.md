@@ -1,5 +1,7 @@
 # 🚀 Welcome to My Portfolio!
 
+[![deploy](https://github.com/ViniciusCestarii/Portfolio/actions/workflows/deploy.yaml/badge.svg)](https://github.com/ViniciusCestarii/Portfolio/actions/workflows/deploy.yaml)
+
 Hey there! I'm Vinicius Cestari, a passionate Full Stack Engineer, and this is my portfolio. Here, you’ll find my latest projects, skills, and experiences. Whether you're a recruiter, fellow developer, or just curious about my work, feel free to explore!
 
 Want to run this project locally? Follow the steps below. 👇
