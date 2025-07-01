@@ -45,7 +45,7 @@
   },
   {
     "name": "echarts",
-    "value": 3
+    "value": 4
   },
   {
     "name": "echarts5",
@@ -53,11 +53,11 @@
   },
   {
     "name": "nextjs",
-    "value": 6
+    "value": 7
   },
   {
     "name": "react",
-    "value": 5
+    "value": 6
   },
   {
     "name": "cli",
@@ -125,7 +125,7 @@
   },
   {
     "name": "postgresql",
-    "value": 5
+    "value": 6
   },
   {
     "name": "prisma",
@@ -280,6 +280,14 @@
     "value": 1
   },
   {
+    "name": "mqtt",
+    "value": 1
+  },
+  {
+    "name": "tawilwindcss",
+    "value": 1
+  },
+  {
     "name": "asp-net-core",
     "value": 1
   },
@@ -357,6 +365,22 @@
   },
   {
     "name": "groq",
+    "value": 1
+  },
+  {
+    "name": "docker-stack",
+    "value": 1
+  },
+  {
+    "name": "self-hosted",
+    "value": 1
+  },
+  {
+    "name": "traefik",
+    "value": 1
+  },
+  {
+    "name": "vps",
     "value": 1
   },
   {
