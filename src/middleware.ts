@@ -3,12 +3,17 @@ import Negotiator from 'negotiator'
 import { locales } from './dictionaries/getDictionary'
 import { match } from '@formatjs/intl-localematcher'
 
-function getLocale(request: NextRequest) {
-  const defaultLocale = 'en'
-  const userLanguages = request.headers.get('accept-language') ?? defaultLocale
+const defaultLocale = 'en'
 
+const getNegotiator = (request: NextRequest) => {
+  const userLanguages = request.headers.get('accept-language') ?? defaultLocale
   const headers = { 'accept-language': userLanguages }
-  const languages = new Negotiator({ headers }).languages()
+
+  return new Negotiator({ headers })
+}
+
+function getLocale(request: NextRequest) {
+  const languages = getNegotiator(request).languages()
 
   return match(languages, locales, defaultLocale)
 }
