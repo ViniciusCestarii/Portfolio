@@ -1,23 +1,25 @@
-ARG BUN_VERSION=1.2.16-alpine
+ARG NODE_VERSION=22.16.0-alpine
 
-FROM oven/bun:${BUN_VERSION} AS base
+FROM node:${NODE_VERSION} AS base
 
 WORKDIR /app
 
-COPY package.json bun.lockb ./
-RUN bun install --frozen-lockfile
+COPY package.json package-lock.json* ./
+RUN npm ci
 
 COPY . .
-RUN bun run build
+RUN npm run build
 
-FROM oven/bun:${BUN_VERSION} AS runner
+FROM node:${NODE_VERSION} AS runner
+
+WORKDIR /app
 
 COPY --from=base /app/.next/standalone ./
-COPY --from=base /app/.next/static ./.next/standalone/.next/static
+COPY --from=base /app/.next/static ./.next/static
 COPY --from=base /app/public ./public
 
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
 EXPOSE 3000
-CMD ["bun", "server.js"]
+CMD ["node", "server.js"]
