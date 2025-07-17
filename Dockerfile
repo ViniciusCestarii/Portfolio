@@ -13,7 +13,7 @@ RUN bun run build
 FROM oven/bun:${BUN_VERSION} AS runner
 
 COPY --from=base /app/.next/standalone ./
-COPY --from=base /app/.next/static ./.next/standalone/.next/static
+COPY --from=base /app/.next/static ./.next/static
 COPY --from=base /app/public ./public
 
 ENV PORT=3000
