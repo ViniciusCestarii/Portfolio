@@ -1,4 +1,6 @@
-FROM oven/bun:1.2.16-alpine AS base
+ARG BUN_VERSION=1.2.16-alpine
+
+FROM oven/bun:${BUN_VERSION} AS base
 
 WORKDIR /app
 
@@ -8,11 +10,11 @@ RUN bun install --frozen-lockfile
 COPY . .
 RUN bun run build
 
-FROM base AS runner
+FROM oven/bun:${BUN_VERSION} AS runner
 
 COPY --from=base /app/.next/standalone ./
 COPY --from=base /app/.next/static ./.next/standalone/.next/static
-# COPY --from=base /app/public ./public not using
+COPY --from=base /app/public ./public
 
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
