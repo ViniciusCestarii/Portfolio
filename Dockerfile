@@ -15,6 +15,7 @@ FROM oven/bun:${BUN_VERSION} AS runner
 COPY --from=base /app/.next/standalone ./
 COPY --from=base /app/.next/static ./.next/static
 COPY --from=base /app/public ./public
+COPY --from=base /app/.env.local ./.env.local
 
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
