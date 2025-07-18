@@ -111,7 +111,7 @@ const AnimatedIconOnHover = ({
         direction={
           playerRef.current?.currentState.name === inAnimation
             ? 1
-            : direction ?? 1
+            : (direction ?? 1)
         }
       />
     </Box>
