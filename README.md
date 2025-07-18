@@ -34,16 +34,31 @@ To run this project locally, follow these steps:
 5. **Open your browser**:
     Open your browser and navigate to `http://localhost:3000` to view the portfolio.
 
-### Run with Docker
+## Run with Docker
 
-1. Build to create the image:
+### Option 1: Using Pre-built Image
+
+- Run the container:
+   ```bash
+   docker run -p 3000:3000 ghcr.io/viniciuscestarii/portfolio:latest
+    ```
+
+### Option 2: Build the image yourself
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/ViniciusCestarii/Portfolio.git
+    cd portfolio
+    ```
+
+2. Build to create the image:
     ```bash 
     docker build . -t portfolio
     ```
 
-2. Create the container and run:
+3. Run the container:
     ```bash
-    docker run --env-file .env.local -p 3000:3000 portfolio
+    docker run -p 3000:3000 portfolio
     ```
 
 Want to check out the components in isolation? Follow this step:
