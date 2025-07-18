@@ -20,15 +20,15 @@ To run this project locally, follow these steps:
     ```
 
 3. **Install dependencies**:
-    Ensure you have Bun installed. Then, install the required packages:
+    Ensure you have Node installed. Then, install the required packages:
     ```bash
-    bun i
+    npm i
     ```
 
 4. **Run the development server**:
     Start the local development server:
     ```bash
-    bun dev
+    npm run dev
     ```
 
 5. **Open your browser**:
@@ -51,7 +51,7 @@ Want to check out the components in isolation? Follow this step:
 - **Run the Storybook**:
     Start the Storybook server:
     ```bash
-    bun storybook
+    npm run storybook
     ```
 
 To build and start this project locally for production, follow these steps:
@@ -59,13 +59,13 @@ To build and start this project locally for production, follow these steps:
 1. **Build for production**:
     To build the project for production, use the following command:
     ```bash
-    bun run build
+    npm run build
     ```
 
 2. **Run the production server**:
     After building, you can start the production server with:
     ```bash
-    bun start
+    npm run start
     ```
 
 If you encounter any issues or have any questions, feel free to reach out through the contact information provided above. Happy coding!
